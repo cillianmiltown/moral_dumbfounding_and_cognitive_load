@@ -18,7 +18,7 @@ editor_options:
 
 # Study 6
 
-Below is a sample analysis for cognitive load Study 6.
+Below is an overview analysis for cognitive load Study 6.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, include = FALSE)
@@ -71,9 +71,9 @@ getwd()
 
 
 
-# Study 6: Video Task
+# Video Task
 
-![Hypothesised relationship between responses in the dumbfounding paradigm and level of deliberation](resources/videos/num_scroll_test9.mp4)
+![Sample Video Task](resources/videos/num_scroll_test9.mp4)
 
 
 ```{r loaddatasetStudy6}
@@ -162,7 +162,7 @@ apa_table(
    , align = c("l", "l", "c", "c", "c")
    , caption = "Study 6 – Response to the critical slide depending on cognitive load"
    #, added_stub_head = "Response to critical slide"
-   #, col_spanners = makespanners()
+   , col_spanners = makespanners()
    #, note = "* = sig. at \\emph{p} < .05; ** = sig. at \\emph{p} < .001"
    , escape = FALSE
    
@@ -459,7 +459,7 @@ apa_table(
    , align = c("l", "l", "c", "c", "c")
    , caption = "Study 6 – Response to the critical slide depending on cognitive load"
    #, added_stub_head = "Response to critical slide"
-   #, col_spanners = makespanners()
+   , col_spanners = makespanners()
    #, note = "* = sig. at \\emph{p} < .05; ** = sig. at \\emph{p} < .001"
    , escape = FALSE
    
@@ -755,7 +755,7 @@ apa_table(
    , align = c("l", "l", "c", "c", "c")
    , caption = "Study 6 – Response to the critical slide depending on cognitive load"
    #, added_stub_head = "Response to critical slide"
-   #, col_spanners = makespanners()
+   , col_spanners = makespanners()
    #, note = "* = sig. at \\emph{p} < .05; ** = sig. at \\emph{p} < .001"
    , escape = FALSE
    
@@ -1050,7 +1050,7 @@ apa_table(
    , align = c("l", "l", "c", "c", "c")
    , caption = "Study 6 – Response to the critical slide depending on cognitive load"
    #, added_stub_head = "Response to critical slide"
-   #, col_spanners = makespanners()
+   , col_spanners = makespanners()
    #, note = "* = sig. at \\emph{p} < .05; ** = sig. at \\emph{p} < .001"
    , escape = FALSE
    
@@ -1345,7 +1345,7 @@ apa_table(
    , align = c("l", "l", "c", "c", "c")
    , caption = "Study 6 – Response to the critical slide depending on cognitive load"
    #, added_stub_head = "Response to critical slide"
-   #, col_spanners = makespanners()
+   , col_spanners = makespanners()
    #, note = "* = sig. at \\emph{p} < .05; ** = sig. at \\emph{p} < .001"
    , escape = FALSE
    
