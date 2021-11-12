@@ -1,0 +1,457 @@
+"condition","InCS","cog_load_CS_num","NFC","reason_always","changed","gender","Ju1_bin","Ju2_bin","right_change","study","right_right"
+"cog_load","There is nothing wrong.",6,1.5,"reason","changed","Female","neutral","wrong","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",7,1.94444444444444,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",5,1,"not_always_reason","not_changed","Male","right","right","right initially","study_1",TRUE
+"cog_load","There is nothing wrong.",8,0,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",2,-0.166666666666667,"not_always_reason","not_changed","Female","neutral","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",3,-0.5,"not_always_reason","not_changed","Female","neutral","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",4,0.777777777777778,"not_always_reason","not_changed","Female","neutral","right","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",4,1.11111111111111,"reason","changed","Female","wrong","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",8,1.61111111111111,"reason","not_changed","Female","right","right","right initially","study_1",TRUE
+"cog_load","There is nothing wrong.",5,0.833333333333333,"not_always_reason","changed","Male","wrong","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",5,-0.388888888888889,"not_always_reason","changed","Female","neutral","neutral","nothing wrong","study_1",FALSE
+"cog_load","There is nothing wrong.",3,0.666666666666667,"reason","not_changed","Female","right","right","right initially","study_1",TRUE
+"cog_load","There is nothing wrong.",7,-0.444444444444445,"reason","not_changed","Female","right","right","right initially","study_1",TRUE
+"cog_load","There is nothing wrong.",7,1.33333333333333,"not_always_reason","not_changed","Female","right","right","right initially","study_1",TRUE
+"cog_load","There is nothing wrong.",8,-1.5,"not_always_reason","not_changed","Female","neutral","neutral","nothing wrong","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",7,0.722222222222222,"not_always_reason","changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",2,-3.55555555555556,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",7,0.444444444444445,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,0.722222222222222,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",8,-0.111111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",8,-0.722222222222222,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,2.27777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,0.944444444444445,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,1,"reason","not_changed","Male","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,1.16666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,1.11111111111111,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,-0.222222222222222,"not_always_reason","changed","Male","wrong","neutral","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,0.444444444444445,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,-0.111111111111111,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,0.555555555555555,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,1,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,0.388888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,0.166666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","There is nothing wrong.",0,0.722222222222222,"not_always_reason","not_changed","Female","right","right","right initially","study_1",TRUE
+"control","There is nothing wrong.",0,-0.222222222222222,"not_always_reason","not_changed","Female","neutral","neutral","nothing wrong","study_1",FALSE
+"control","There is nothing wrong.",0,-1.22222222222222,"not_always_reason","not_changed","Male","right","right","right initially","study_1",TRUE
+"control","There is nothing wrong.",0,1.16666666666667,"reason","not_changed","Female","right","right","right initially","study_1",TRUE
+"control","There is nothing wrong.",0,2,"reason","not_changed","Male","right","right","right initially","study_1",TRUE
+"control","It's wrong but I can't think of a reason.",0,-0.444444444444445,"not_always_reason","changed","Female","wrong","neutral","dumbfounded","study_1",FALSE
+"control","It's wrong but I can't think of a reason.",0,0,"not_always_reason","changed","Female","wrong","neutral","dumbfounded","study_1",FALSE
+"control","It's wrong but I can't think of a reason.",0,0.333333333333333,"not_always_reason","changed","Female","wrong","neutral","dumbfounded","study_1",FALSE
+"control","It's wrong but I can't think of a reason.",0,-0.666666666666667,"not_always_reason","changed","Female","neutral","wrong","dumbfounded","study_1",FALSE
+"control","It's wrong but I can't think of a reason.",0,-1,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"control","It's wrong but I can't think of a reason.",0,0.111111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"control","It's wrong but I can't think of a reason.",0,0.944444444444445,"not_always_reason","changed","Female","wrong","wrong","dumbfounded","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,1.38888888888889,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.333333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,1.16666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.166666666666667,"reason","changed","Female","wrong","neutral","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.944444444444445,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-0.888888888888889,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-1.88888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.111111111111111,"not_always_reason","changed","Female","wrong","right","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.666666666666667,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-0.722222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.833333333333333,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.222222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.666666666666667,"not_always_reason","changed","Female","neutral","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,1.44444444444444,"reason","not_changed","Male","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,2.88888888888889,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-0.277777777777778,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.111111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-0.333333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-1.66666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,-0.111111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_1",FALSE
+"control","It's wrong and I can provide a valid reason.",0,0.833333333333333,"not_always_reason","not_changed","Male","wrong","wrong","reasons","study_1",FALSE
+"cog_load","It's wrong but I can't think of a reason.",7,0.888888888888889,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","There is nothing wrong.",5,1.5,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"cog_load","There is nothing wrong.",9,2.38888888888889,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"cog_load","There is nothing wrong.",8,1.88888888888889,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",7,-0.333333333333333,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","There is nothing wrong.",9,-0.222222222222222,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_2",FALSE
+"cog_load","There is nothing wrong.",7,1.16666666666667,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"cog_load","There is nothing wrong.",4,-0.444444444444445,"not_always_reason","not_changed","Female","right","neutral","right initially","study_2",TRUE
+"cog_load","There is nothing wrong.",9,2.33333333333333,"reason","changed","Male","wrong","neutral","nothing wrong","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,-0.444444444444445,"not_always_reason","changed","Female","neutral","neutral","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,0.666666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-0.555555555555555,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.166666666666667,"reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","There is nothing wrong.",4,-0.944444444444445,"not_always_reason","not_changed","Male","neutral","right","nothing wrong","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.111111111111111,"reason","changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,-0.0555555555555554,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,1,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,-1.94444444444444,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.0555555555555554,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,1.94444444444444,"not_always_reason","changed","Female","neutral","neutral","dumbfounded","study_2",FALSE
+"cog_load","There is nothing wrong.",3,3.22222222222222,"not_always_reason","changed","Male","wrong","neutral","nothing wrong","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,-3.55555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,0.5,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",6,-2.33333333333333,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,-1.61111111111111,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","There is nothing wrong.",3,1.83333333333333,"reason","changed","Female","wrong","neutral","nothing wrong","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",7,1,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.333333333333333,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-1.22222222222222,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",3,0,"not_always_reason","changed","Male","right","right","right initially","study_2",FALSE
+"cog_load","There is nothing wrong.",4,0,"not_always_reason","not_changed","Male","right","right","right initially","study_2",TRUE
+"cog_load","It's wrong but I can't think of a reason.",7,3.55555555555556,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,-0.333333333333333,"not_always_reason","changed","Female","neutral","neutral","dumbfounded","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,2.83333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.388888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,1.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,-2.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,-0.166666666666667,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,0.388888888888889,"not_always_reason","changed","Male","right","right","right initially","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,1.66666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,2.61111111111111,"reason","changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,1,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,0.666666666666667,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,-2.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,0.111111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-0.166666666666667,"reason","changed","Female","wrong","right","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,1.66666666666667,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,0.222222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,0.222222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.166666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-1.27777777777778,"not_always_reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","There is nothing wrong.",9,2.27777777777778,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",9,2.27777777777778,"not_always_reason","not_changed","Male","right","right","right initially","study_2",TRUE
+"control","There is nothing wrong.",9,-2.44444444444444,"reason","changed","Male","wrong","neutral","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",9,2.66666666666667,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",5,-0.0555555555555554,"not_always_reason","changed","Male","right","right","right initially","study_2",TRUE
+"control","There is nothing wrong.",5,-0.444444444444445,"not_always_reason","changed","Female","wrong","neutral","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",9,1.61111111111111,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,0.444444444444445,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,0.166666666666667,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,0,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",3,1.61111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,1.88888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,-2,"not_always_reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","There is nothing wrong.",9,-1.77777777777778,"not_always_reason","not_changed","Female","right","right","right initially","study_2",TRUE
+"control","There is nothing wrong.",9,2.83333333333333,"not_always_reason","changed","Male","wrong","neutral","nothing wrong","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,-0.0555555555555554,"not_always_reason","changed","Male","neutral","right","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,1.55555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,-0.5,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,-1.94444444444444,"reason","changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","There is nothing wrong.",3,1.83333333333333,"not_always_reason","changed","Female","neutral","neutral","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",5,0.388888888888889,"not_always_reason","changed","Female","wrong","wrong","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",5,1.11111111111111,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_2",FALSE
+"control","There is nothing wrong.",7,-0.222222222222222,"not_always_reason","changed","Male","neutral","neutral","nothing wrong","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,2.55555555555556,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,-0.0555555555555554,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,0.944444444444445,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,2.77777777777778,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,0.777777777777778,"reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,-1.05555555555556,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,-4,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,1.66666666666667,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong but I can't think of a reason.",9,2.05555555555556,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,0.944444444444445,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,1.55555555555556,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,-0.222222222222222,"not_always_reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,3.38888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,2.61111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,0.0555555555555554,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,1.44444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,2.77777777777778,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,-3.16666666666667,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,2.22222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,2.94444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,2,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,1.5,"reason","not_changed","Male","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,2.44444444444444,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",9,1.22222222222222,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,0.5,"reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"control","It's wrong and I can provide a valid reason.",5,-0.222222222222222,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_2",FALSE
+"cog_load","There is nothing wrong.",9,0,"reason","not_changed","Male","right","right","right initially","study_3",TRUE
+"cog_load","There is nothing wrong.",9,2,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,0.0555555555555554,"reason","not_changed","Female","right","right","right initially","study_3",TRUE
+"cog_load","There is nothing wrong.",4,-3,"not_always_reason","not_changed","Female","right","neutral","right initially","study_3",TRUE
+"cog_load","There is nothing wrong.",9,1.5,"reason","not_changed","Female","right","right","right initially","study_3",TRUE
+"cog_load","There is nothing wrong.",9,2.11111111111111,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,1.55555555555556,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,2.94444444444444,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,NA,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,2.94444444444444,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",4,2.16666666666667,"reason","not_changed","Female","right","right","right initially","study_3",TRUE
+"cog_load","It's wrong but I can't think of a reason.",9,1.77777777777778,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.0555555555555554,"reason","changed","Female","neutral","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.944444444444445,"not_always_reason","changed","Female","wrong","neutral","reasons","study_3",FALSE
+"cog_load","There is nothing wrong.",9,1.61111111111111,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.111111111111111,"not_always_reason","changed","Male","right","wrong","right initially","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,1.61111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,0.388888888888889,"reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,0.555555555555555,"not_always_reason","changed","Male","neutral","right","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,0.166666666666667,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","There is nothing wrong.",6,-2.11111111111111,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,0,"not_always_reason","changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.944444444444445,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,2.66666666666667,"not_always_reason","changed","Female","wrong","neutral","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.611111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-1.61111111111111,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-2,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,2.66666666666667,"reason","changed","Female","wrong","neutral","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,0.944444444444445,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,2.33333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.33333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,-1,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.11111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,4,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.5,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,2.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,0.444444444444445,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-1.61111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,1.05555555555556,"reason","changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,2.33333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-0.833333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","There is nothing wrong.",9,0.166666666666667,"not_always_reason","not_changed","Female","right","right","right initially","study_3",TRUE
+"cog_load","It's wrong but I can't think of a reason.",5,-0.0555555555555554,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,2.5,"reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.0555555555555554,"not_always_reason","changed","Male","right","neutral","right initially","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.222222222222222,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","There is nothing wrong.",9,3.27777777777778,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",8,-0.333333333333333,"not_always_reason","changed","Female","wrong","right","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",4,2.27777777777778,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","There is nothing wrong.",9,0,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",9,0.111111111111111,"reason","not_changed","Female","right","right","right initially","study_3",TRUE
+"cog_load","It's wrong but I can't think of a reason.",4,0.5,"not_always_reason","changed","Male","right","right","right initially","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.72222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,1.94444444444444,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.83333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.22222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",4,0.666666666666667,"not_always_reason","changed","Female","neutral","neutral","dumbfounded","study_3",FALSE
+"cog_load","There is nothing wrong.",4,1.5,"not_always_reason","changed","Female","wrong","neutral","nothing wrong","study_3",FALSE
+"cog_load","There is nothing wrong.",6,-0.388888888888889,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",4,-0.166666666666667,"not_always_reason","changed","Female","right","neutral","right initially","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",8,0.166666666666667,"not_always_reason","changed","Female","right","right","right initially","study_3",FALSE
+"cog_load","There is nothing wrong.",6,-0.0555555555555554,"not_always_reason","changed","Male","right","right","right initially","study_3",TRUE
+"cog_load","It's wrong and I can provide a valid reason.",7,2.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,0.166666666666667,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,0.166666666666667,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",4,3.66666666666667,"reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.777777777777778,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,1.55555555555556,"reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.277777777777778,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",5,NA,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,1.22222222222222,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.444444444444445,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,4,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.33333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.27777777777778,"reason","changed","Female","neutral","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,0,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.555555555555555,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",4,1.33333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.5,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.888888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.5,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,4,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,-3.44444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,0.388888888888889,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.44444444444444,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,1.27777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,2.55555555555556,"reason","changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.11111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.44444444444444,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",3,-2.61111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.61111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,-3.44444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,3.11111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",5,2.94444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.88888888888889,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,0.444444444444445,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,3.11111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-0.555555555555555,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,1.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",6,-0.0555555555555554,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","There is nothing wrong.",NA,-1.83333333333333,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,1.27777777777778,"reason","not_changed","Female","neutral","right","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,0.222222222222222,"not_always_reason","not_changed","Male","neutral","right","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,-1.44444444444444,"not_always_reason","changed","Female","wrong","right","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,-0.166666666666667,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,0.111111111111111,"not_always_reason","not_changed","Male","right","right","right initially","study_3",TRUE
+"control","There is nothing wrong.",NA,2.83333333333333,"reason","not_changed","Male","right","right","right initially","study_3",TRUE
+"control","There is nothing wrong.",NA,1.5,"not_always_reason","changed","Female","wrong","wrong","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,4,"not_always_reason","not_changed","Female","right","right","right initially","study_3",TRUE
+"control","There is nothing wrong.",NA,2.55555555555556,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,0.111111111111111,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"control","It's wrong but I can't think of a reason.",NA,1.83333333333333,"not_always_reason","changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.77777777777778,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.444444444444445,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.0555555555555554,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.5,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","There is nothing wrong.",NA,-0.166666666666667,"not_always_reason","not_changed","Male","right","neutral","right initially","study_3",TRUE
+"control","It's wrong but I can't think of a reason.",NA,-2.05555555555556,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"control","It's wrong but I can't think of a reason.",NA,-1,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.83333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.83333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.22222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","There is nothing wrong.",NA,0.388888888888889,"reason","not_changed","Male","right","right","right initially","study_3",TRUE
+"control","There is nothing wrong.",NA,2.16666666666667,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_3",FALSE
+"control","There is nothing wrong.",NA,0.0555555555555554,"not_always_reason","not_changed","Male","right","neutral","right initially","study_3",TRUE
+"control","It's wrong but I can't think of a reason.",NA,-0.111111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_3",FALSE
+"control","It's wrong but I can't think of a reason.",NA,-0.444444444444445,"not_always_reason","changed","Male","right","neutral","right initially","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.38888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.66666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.94444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.277777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.27777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.61111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.5,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.666666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.888888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.27777777777778,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.388888888888889,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.11111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.833333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.0555555555555554,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.555555555555555,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.555555555555555,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.77777777777778,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-2.66666666666667,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-4,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.44444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.11111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,NA,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.833333333333333,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.222222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.72222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.61111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.61111111111111,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.222222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1.05555555555556,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.33333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.83333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-4,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.777777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_3",FALSE
+"cog_load","There is nothing wrong.",9,1.33333333333333,"reason","not_changed","Male","right","right","right initially","study_4",TRUE
+"cog_load","There is nothing wrong.",9,0,"reason","not_changed","Male","right","right","right initially","study_4",TRUE
+"cog_load","There is nothing wrong.",9,2.16666666666667,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,1.44444444444444,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,-0.333333333333333,"not_always_reason","not_changed","Male","right","right","right initially","study_4",TRUE
+"cog_load","There is nothing wrong.",9,1.05555555555556,"not_always_reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,1.61111111111111,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.388888888888889,"reason","not_changed","Male","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.0555555555555554,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","There is nothing wrong.",9,-0.333333333333333,"reason","changed","Female","wrong","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,0.555555555555555,"not_always_reason","changed","Female","wrong","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,0.277777777777778,"not_always_reason","changed","Male","wrong","neutral","nothing wrong","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0.111111111111111,"reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.111111111111111,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.277777777777778,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.38888888888889,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1.27777777777778,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,-1.72222222222222,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,2.61111111111111,"reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,1.27777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.0555555555555554,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,3.5,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.444444444444445,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,-2.72222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.05555555555556,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.77777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-1.83333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,-2.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-1.22222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-1.61111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.666666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.611111111111111,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-1.11111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,2.33333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,NA,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","There is nothing wrong.",9,3.16666666666667,"reason","not_changed","Male","neutral","right","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,3.05555555555556,"reason","not_changed","Female","neutral","right","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,2.77777777777778,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,2.88888888888889,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,2.22222222222222,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,0.5,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,-0.611111111111111,"reason","not_changed","Male","right","right","right initially","study_4",TRUE
+"cog_load","It's wrong but I can't think of a reason.",9,-0.0555555555555554,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,0,"not_always_reason","changed","Male","right","right","right initially","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.222222222222222,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","There is nothing wrong.",9,-2.22222222222222,"reason","changed","Female","wrong","wrong","nothing wrong","study_4",FALSE
+"cog_load","There is nothing wrong.",9,-1.16666666666667,"reason","changed","Female","wrong","right","nothing wrong","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",9,1.44444444444444,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"cog_load","It's wrong but I can't think of a reason.",7,0.222222222222222,"not_always_reason","changed","Female","neutral","right","dumbfounded","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,3.16666666666667,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,2.72222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.77777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,0.222222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,1,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.44444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-0.166666666666667,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",8,-1.05555555555556,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,2.55555555555556,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",7,-2.55555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"cog_load","It's wrong and I can provide a valid reason.",9,-0.111111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","There is nothing wrong.",NA,0.833333333333333,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,2.61111111111111,"not_always_reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,0.833333333333333,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,1.94444444444444,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,-3.27777777777778,"not_always_reason","not_changed","Female","right","right","right initially","study_4",TRUE
+"control","There is nothing wrong.",NA,0.5,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,4,"not_always_reason","not_changed","Female","neutral","right","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,1.61111111111111,"reason","not_changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"control","There is nothing wrong.",NA,0,"reason","not_changed","Female","right","right","right initially","study_4",TRUE
+"control","It's wrong but I can't think of a reason.",NA,2.38888888888889,"reason","changed","Male","wrong","neutral","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,0.111111111111111,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.722222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.72222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.0555555555555554,"not_always_reason","changed","Female","right","neutral","right initially","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.111111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","There is nothing wrong.",NA,-2.66666666666667,"reason","changed","Female","wrong","neutral","nothing wrong","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.222222222222222,"not_always_reason","changed","Female","right","wrong","right initially","study_4",FALSE
+"control","There is nothing wrong.",NA,0.888888888888889,"reason","not_changed","Female","neutral","neutral","nothing wrong","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,2.11111111111111,"reason","changed","Female","wrong","neutral","dumbfounded","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.666666666666667,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.5,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","There is nothing wrong.",NA,-0.166666666666667,"not_always_reason","changed","Male","neutral","neutral","nothing wrong","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,-1.44444444444444,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,2.22222222222222,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,1.66666666666667,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,-0.111111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,-3.61111111111111,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,-0.666666666666667,"not_always_reason","not_changed","Male","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong but I can't think of a reason.",NA,0.0555555555555554,"not_always_reason","not_changed","Female","wrong","wrong","dumbfounded","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.777777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.16666666666667,"not_always_reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,NA,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.33333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.277777777777778,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.333333333333333,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.77777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.944444444444445,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1.44444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1.61111111111111,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.555555555555555,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.33333333333333,"not_always_reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.722222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1.55555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,NA,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.94444444444444,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-0.444444444444445,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1.05555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,1.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.944444444444445,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.33333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.722222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.777777777777778,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.33333333333333,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-3.55555555555556,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,3.77777777777778,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,2.5,"reason","changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.944444444444445,"reason","not_changed","Male","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,0.555555555555555,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE
+"control","It's wrong and I can provide a valid reason.",NA,-1.22222222222222,"reason","not_changed","Female","wrong","wrong","reasons","study_4",FALSE

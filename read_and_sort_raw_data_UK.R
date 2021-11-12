@@ -2,7 +2,7 @@ rm(list = ls())
 library(tidyverse)
 
 #df_raw <- read_csv("../data/moral-judgements-20-oct-2021.csv")
-df_raw <- read_csv("../data/study6/moral-judgements-9-nov-2021.csv")
+df_raw <- read_csv("../data/study6/moral-judgements-uk-sample-9-nov-2021.csv")
 
 df_raw <- df_raw[which(is.na(as.numeric(df_raw$run_id))==FALSE),]
 
@@ -54,5 +54,5 @@ df_raw_anon <- df_raw %>% select(
   ,-platform_version
   ,-source_code_version)
 
-write.csv(df, "../data/study6/sample_data.csv", row.names = FALSE)
-write.csv(df_raw, "../data/study6/sample_data_raw.csv", row.names = FALSE)
+write.csv(df, "../data/study6/sample_data_UK.csv", row.names = FALSE)
+write.csv(df_raw, "../data/study6/sample_data_raw_UK.csv", row.names = FALSE)

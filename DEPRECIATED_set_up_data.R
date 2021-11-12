@@ -1,10 +1,12 @@
+
+
 rm(list = ls())
 library(tidyverse)
 
 source("read_and_sort_raw_data.R")
 
 # read the data file
-df <- read_csv("sample_data.csv")
+df <- read_csv("../data/study6/sample_data.csv")
 
 # check variable names
 variable.names(df)
