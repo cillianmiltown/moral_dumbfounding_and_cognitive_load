@@ -1,0 +1,99 @@
+,variable.names(df3),details,type,description
+1,run_id,Id of the trial – assigned by cognition.run,,
+2,condition,which experimental condition participants were in,nominal,“cog_load” = experimental  “control” = control
+3,rt,reaction time for last task completed,reaction time in seconds,
+4,url,assigned by cognition.run,not of interest,
+5,trial_type,assigned by cognition.run,not of interest,
+6,trial_index,assigned by cognition.run,not of interest,
+7,time_elapsed,assigned by cognition.run,not of interest,
+8,internal_node_id,assigned by cognition.run,not of interest,
+9,PROLIFIC_PID,,,
+10,STUDY_ID,assigned by Prolific,not of interest,
+11,SESSION_ID,assigned by Prolific,not of interest,
+12,subject,assigned by cognition.run,not of interest,
+13,age,age of participant,scale,
+14,gender,gender of participant,nominal,0 = “Female” 1 = “Male” 2 = “Non-Binary” 3 = “Other” 4 = “Prefer not to say”
+15,gender_rt,reaction time for gender trial,reaction time in seconds,
+16,attention_check2,response for attention check 2,nominal,1 = “soccer” 4 = “swimmng”
+17,attention_check2_rt,reaction time for attention check 2,reaction time in seconds,
+18,cog_practice,response to the practice cognitive load trial,,
+19,CS_rt,reaction time for the critical slide,reaction time in seconds,
+20,cog_practice1,did participant respond for the first trial,nominal,Null = no response 1= response
+21,cog_practice2,did participant respond for the first trial,nominal,Null = no response 1= response
+22,cog_practice3,did participant respond for the first trial,nominal,Null = no response 1= response
+23,cog_load_response8,response to the question “how many times did you see the number 8”,string/numeric,
+24,attention_check1,response for attention check 1,nominal,"""Happy"" ""Satisfied"" ""Enthusiastic"" ""Sad"" ""Anxious"" ""Self-Conscious"" ""Grumpy"" ""Thankful"" ""none of the above"""
+25,attention_check1_rt,reaction time for attention check,reaction time in seconds,
+26,scenario,which scenario was displayed,nominal,heinz incest cannibal trolley
+27,test_condition,which experimental condition participants were in,nominal,“cog_load” = experimental  “control” = control
+28,InJu1,initial judgement,scale,1 = Morally wrong  4 = Neutral  7 = Morally right
+29,InJu1_rt,reaction time for initial judgment,reaction time in seconds,
+30,InJu1_trial1,did participant respond for the first trial,nominal,Null = no response 1= response
+31,InJu1_trial2,did participant respond for the first trial,nominal,Null = no response 1= response
+32,InJu1_trial3,did participant respond for the first trial,nominal,Null = no response 1= response
+33,cog_load_response0,response to the question “how many times did you see the number 0”,string/numeric,
+34,responses,response to last open ended response question completed,string,
+35,stimulus,stimulus being presented at last trial,not of interest,
+36,button_pressed,response for last trial,not of interest,
+37,key_press,response for last trial,not of interest,
+38,response,response for last trial,not of interest,
+39,conf1,initial confidence rating,scale,1 = Extremely unsure 4 = Neutral 7 = Extremely Confident
+40,ca1,response to counter argument, not of interest,
+41,sw1,do you (still) think it is wrong,nominal,yes/no
+42,rsn1,do you have a reason,nominal,Yes No Unsure
+43,ca2,response to counter argument, not of interest,
+44,sw2,do you (still) think it is wrong,nominal,yes/no
+45,rsn2,do you have a reason,nominal,Yes No Unsure
+46,ca3,response to counter argument, not of interest,
+47,sw3,do you (still) think it is wrong,nominal,yes/no
+48,rsn3,do you have a reason,nominal,Yes No Unsure
+49,CS,response to the critical slide (measure of dumbfounding),nominal,"""There is nothing wrong""  ""It's wrong but I can't think of a reason."" ""It's wrong and I can provide a valid reason."""
+50,CS_trial1,did participant respond for the first trial,nominal,Null = no response 1= response
+51,CS_trial2,did participant respond for the first trial,nominal,Null = no response 1= response
+52,CS_trial3,did participant respond for the first trial,nominal,Null = no response 1= response
+53,InJu2,revised judgement,scale,1 = Morally wrong  4 = Neutral  7 = Morally right
+54,InJu2_rt,reaction time for revised judgment,reaction time in seconds,
+55,InJu2_trial1,did participant respond for the first trial,nominal,Null = no response 1= response
+56,InJu2_trial2,did participant respond for the first trial,nominal,Null = no response 1= response
+57,InJu2_trial3,did participant respond for the first trial,nominal,Null = no response 1= response
+58,cog_load_response5,response to the question “how many times did you see the number 5”,string/numeric,
+59,conf2,revised confidence rating,scale,1 = Extremely unsure 4 = Neutral 7 = Extremely Confident
+60,previous_experience,Have you encountered this moral scenario before?,nominal,Yes No
+61,reason,reason provided after critical slide,string,
+62,gender_other,gender provided if “other” selected,string,
+63,preview,assigned by cognition.run,not of interest,
+64,country,country of participant,nominal,UK or US
+65,cog_practice_trial_number,the trial number when response was provided,numeric,1 2 or 3
+66,InJu1_trial_number,the trial number when response was provided,numeric,1 2 or 3
+67,CS_trial_number,the trial number when response was provided,numeric,1 2 or 3
+68,InJu2_trial_number,the trial number when response was provided,numeric,1 2 or 3
+69,Ju1_bin,initial judgement binned,nominal,wrong neutral right
+70,Ju2_bin,revised judgement binned,nominal,wrong neutral right
+71,InCS,response to the critical slide (measure of dumbfounding),nominal,"""There is nothing wrong""; ""It's wrong but I can't think of a reason.""; ""It's wrong and I can provide a valid reason."""
+72,j1,valence of first judgement,nominal,"""wrong""     ""not wrong"""
+73,j2,valence of second judgement,nominal,"""wrong""     ""not wrong"""
+74,j3,valence of third judgement,nominal,"""wrong""     ""not wrong"""
+75,j4,valence of fourth judgement,nominal,"""wrong""     ""not wrong"""
+76,j5,valence of fifth judgement,nominal,"""wrong""     ""not wrong"""
+77,j6,valence of sixth judgement,nominal,"""wrong""     ""not wrong"""
+78,ch1,change in valence j1-j2,logical,
+79,ch2,change in valence j2-j3,logical,
+80,ch3,change in valence j3-j4,logical,
+81,ch4,change in valence j4-j5,logical,
+82,ch5,change in valence j5-j6,logical,
+83,Rch1,change in reporting of reasons from InAr1 to InAr2,logical,
+84,Rch2,change in reporting of reasons from InAr2 to InAr3,logical,
+85,Rs_changed,did reporting of reasons change from InAr1 to InAr3,logical,
+86,Rs_changed_tot,how many times did reporting of reasons change from InAr1 to InAr3,,
+87,changed,did judgement change from j1 to j6,logical,
+88,changed_tot,number of times judgement changed from j1 to j6,scale,
+89,rs1,reasons provided at j1,nominal,“unstated”
+90,rs2,reasons provided at j2,nominal,"""reason""    ""unstated""  ""no reason"""
+91,rs3,reasons provided at j3,nominal,"""reason""    ""unstated""  ""no reason"""
+92,rs4,reasons provided at j4,nominal,"""reason""    ""unstated""  ""no reason"""
+93,rs5,reasons provided at j5,nominal,"""reason""    ""unstated""  ""no reason"""
+94,rs6,reasons provided at j6,nominal,"""reason""    ""unstated""  ""no reason"""
+95,rs1_bin,rsn1 binned,nominal,“reason”   “no reason”
+96,rs2_bin,rsn2 binned,nominal,“reason”   “no reason”
+97,rs3_bin,rsn3 binned,nominal,“reason”   “no reason”
+98,reason_always,was a reason consistently reported,logical,

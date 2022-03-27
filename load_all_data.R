@@ -1892,12 +1892,26 @@ df5 <- df3[which(df3$condition=="control"),]
 
 
 
+
+
+
+
 #### load data set Study 6 ####
 
-
+#source("~/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data_US.R")
+#source("~/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data_UK.R")
 
 # read the data file
-df_six <- read_csv("../data/study6/sample_data.csv")
+
+df_six_US <- read_csv("../data/study6/sample_data_US.csv")
+df_six_US$country <- rep("US",length(df_six_US$gender))
+
+df_six_UK <- read_csv("../data/study6/sample_data_UK.csv")
+df_six_UK$gender_other <- rep("NA",length(df_six_UK$gender))
+df_six_UK$country <- rep("UK",length(df_six_UK$gender))
+
+df_six <- rbind.data.frame(df_six_US,df_six_UK)
+
 
 # check variable names
 variable.names(df_six)
@@ -1990,6 +2004,8 @@ x <-
       InJu2_trial1+InJu2_trial2+InJu2_trial3
   )
 
+x <- x[which(grepl("5ea6083f726e4c000ab3daa4", x$PROLIFIC_PID)==FALSE),]
+
 
 x$Ju1_bin <- car::recode(x$InJu1,"1='wrong';2='wrong';3='wrong';4='neutral';5='right';6='right';7='right'")
 x$Ju2_bin <- car::recode(x$InJu2,"1='wrong';2='wrong';3='wrong';4='neutral';5='right';6='right';7='right'")
@@ -2041,18 +2057,124 @@ create_changed_variables <- function(y){
   
   df3$reason_always <- df3$rs1_bin=="reason"&df3$rs2_bin=="reason"&df3$rs3_bin=="reason"
   
+  
+  
   df3
 }
 
+
 x <- create_changed_variables(x)
+
+
+
+x$InCS <- factor(x$InCS,
+                   levels = c(
+                     "It's wrong and I can provide a valid reason."
+                     , "It's wrong but I can't think of a reason."
+                     ,"There is nothing wrong."
+                     ))
+
+
+x$InJu1 <- as.numeric(x$InJu1)
+x$InJu2 <- as.numeric(x$InJu2)
+
 study_6 <- x
 study6 <- x
 
 
+x <- study_6
+
+x <- x[which(((x$attention_check2==1|x$attention_check2==5)==FALSE&x$attention_check1!=8)==FALSE),]
+
+
+x <- x[which(x$InJu1!="null"),]
+x <- x[which(is.na(x$InJu1)==FALSE),]
+x <- x[which(x$InJu2!="null"),]
+x <- x[which(is.na(x$InJu2)==FALSE),]
+x <- x[which(is.na(x$InCS)==FALSE),]
+x <- x[which(x$InCS!="null"),]
+
+
+
+# 2 seconds 0
+# 3 seconds 1
+# 4 seconds 2
+# 11 seconds still 2
+# 12 seconds 3
+
+
+
+x$CS_rt <- as.numeric(x$CS_rt)
+sum(x$CS_rt < 2000)
+sum(x$CS_rt > 2000 & x$CS_rt < 3000)
+x$cog_load_response0
+
+x$cog_load_response3
+
+#x$cog_load_CS_num <- rep("null",length(x$gender))
+y <- x[which(x$condition=="cog_load"),]
+
+z0 <- y[which(y$CS_rt < 3000),]
+z0$cog_load_CS_num <- z0$cog_load_response0==0
+
+z1 <- y[which(y$CS_rt > 3000 & y$CS_rt < 4000),]
+z1$cog_load_CS_num <- z1$cog_load_response0==1
+
+z2 <- y[which(y$CS_rt > 4000 & y$CS_rt < 11000),]
+z2$cog_load_CS_num <- z2$cog_load_response0==2
+
+z3 <- y[which(y$CS_rt > 11000),]
+z3$cog_load_CS_num <- z3$cog_load_response0==3
+
+z_control <- x[which(x$condition=="control"),]
+z_control$cog_load_CS_num <- rep("null",length(z_control$gender))
+
+
+z <- rbind.data.frame(z0,z1,z2,z3, z_control)
+
+z <- z %>% select(PROLIFIC_PID,cog_load_CS_num)
+
+y <- as.data.frame(left_join(x,z,by="PROLIFIC_PID"))
+
+x <- y[!duplicated(y),]
+
+
+
+study_6_clean <- x
+
 
 #### load combined data ####
 
-df_0 <- cbind.data.frame(college$condition,college$InCS,college$cog_number_right,college$NFC,college$reason_always,college$changed,college$gender, college$Ju1_bin, college$Ju2_bin,college$right_change,rep("study_1", length(study_1$gender)))
+college$InCS <- reorder(college$InCS)
+study_1$InCS <- reorder(study_1$InCS)
+
+one$InCS <- reorder(one$InCS)
+study_2$InCS <- reorder(study_2$InCS)
+
+two$InCS <- reorder(two$InCS)
+study_3$InCS <- reorder(study_3$InCS)
+
+three$InCS <- reorder(three$InCS)
+study_4$InCS <- reorder(study_4$InCS)
+
+study5$InCS <- reorder(study5$InCS)
+study_5$InCS <- reorder(study_5$InCS)
+# 
+# study6$InCS <- reorder(study6$InCS)
+# study_6$InCS <- reorder(study_6$InCS)
+
+
+df_0 <- cbind.data.frame(college$condition,
+                         college$InCS,
+                         college$cog_number_right,
+                         college$NFC,
+                         college$reason_always,
+                         college$changed,
+                         college$gender, 
+                         college$Ju1_bin, 
+                         college$Ju2_bin,
+                         college$right_change,
+                         rep("study_1", length(study_1$gender)))
 colnames(df_0) <- c("condition","InCS","cog_load_CS_num","NFC","reason_always","changed","gender","Ju1_bin","Ju2_bin","right_change","study")
 
 #,rep("study_1", length(study_1$gender))
@@ -2073,7 +2195,19 @@ colnames(df3) <- c("condition","InCS","cog_load_CS_num","NFC","reason_always","c
 df5 <- cbind.data.frame(study5$condition,study5$InCS,study5$cog_number_right,study5$NFC,study5$reason_always,study5$changed,study5$gender, study5$Ju1_bin, study5$Ju2_bin,study5$right_change,rep("study_5", length(study_5$gender)))
 colnames(df5) <- c("condition","InCS","cog_load_CS_num","NFC","reason_always","changed","gender","Ju1_bin","Ju2_bin","right_change","study")
 
-df6 <- cbind.data.frame(study6$condition,study6$InCS,rep(NA, length(study6$gender)),rep(NA, length(study6$gender)),rep(NA, length(study6$gender)),rep(NA, length(study6$gender)),rep(NA, length(study6$gender)),study6$gender, study6$Ju1_bin, study6$Ju2_bin,rep("study_6", length(study6$gender)))
+study_6_clean$reason_always
+
+df6 <- cbind.data.frame(study_6_clean$condition,
+                        study_6_clean$InCS,
+                        study_6_clean$cog_load_CS_num,
+                        rep(NA, length(study_6_clean$gender)),
+                        study_6_clean$reason_always,
+                        study_6_clean$changed,
+                        study_6_clean$gender, 
+                        study_6_clean$Ju1_bin, 
+                        study_6_clean$Ju2_bin,
+                        rep(NA, length(study_6_clean$gender)),
+                        rep("study_6", length(study_6_clean$gender)))
 colnames(df6) <- c("condition","InCS","cog_load_CS_num","NFC","reason_always","changed","gender","Ju1_bin","Ju2_bin","right_change","study")
 
 
@@ -2175,8 +2309,8 @@ engaged0_2_3b <- rbind.data.frame(engaged2_3b,df_0)
 one_e <- cbind.data.frame(one$engaged, one$InCS, one$cog_load_CS_num, one$NFC, one$reason_always, one$changed,one$gender, one$Ju1_bin, one$Ju2_bin,one$right_change,rep("study_2", length(study_2$gender)))
 colnames(one_e) <- c("condition","InCS","cog_load_CS_num","NFC","reason_always","changed","gender","Ju1_bin","Ju2_bin","right_change","study")
 one_e$condition <- car::recode(one_e$condition, "'engaged'='cog_load';'not engaged'='control'")
-eng_0123a <- rbind(engaged0_2_3a,one_e, df5)
-eng_0123b <- rbind(engaged0_2_3b,one_e, df5)
+eng_0123a <- rbind(engaged0_2_3a,one_e, df5,df6)
+eng_0123b <- rbind(engaged0_2_3b,one_e, df5,df6)
 
 
 table(eng_0123a$InCS,eng_0123a$condition)
@@ -2185,18 +2319,20 @@ chisq.test(table(eng_0123a$InCS,eng_0123a$condition))
 table(eng_0123b$InCS,eng_0123b$condition)
 chisq.test(table(eng_0123b$InCS,eng_0123b$condition))
 
-# 
+#
+
+
 save(study_1, college, file = "loaded_data/one.RData")
 write.csv(study_1, "csv_files/study_1.csv", row.names = FALSE)
 write.csv(college, "csv_files/college.csv", row.names = FALSE)
 
 save(study_2, one, file = "loaded_data/two.RData")
 write.csv(study_2, "csv_files/study_2.csv", row.names = FALSE)
-write.csv(two, "csv_files/two.csv", row.names = FALSE)
+write.csv(one, "csv_files/one.csv", row.names = FALSE)
 
 save(study_3, two, file = "loaded_data/three.RData")
 write.csv(study_3, "csv_files/study_3.csv", row.names = FALSE)
-write.csv(three, "csv_files/three.csv", row.names = FALSE)
+write.csv(two, "csv_files/two.csv", row.names = FALSE)
 
 save(study_4, three, file = "loaded_data/four.RData")
 write.csv(study_4, "csv_files/study_4.csv", row.names = FALSE)
@@ -2206,12 +2342,15 @@ save(study_5, study5, file = "loaded_data/five.RData")
 write.csv(study_5, "csv_files/study_5.csv", row.names = FALSE)
 write.csv(study5, "csv_files/study5.csv", row.names = FALSE)
 
-save(study_6, study6, file = "loaded_data/six.RData")
+save(study_6, study6, study_6_clean, file = "loaded_data/six.RData")
 write.csv(study_6, "csv_files/study_6.csv", row.names = FALSE)
 write.csv(study6, "csv_files/study6.csv", row.names = FALSE)
 
+
+
 save(engaged0_2_3a,engaged0_2_3b,two_three,zero_two_three,zero_one_two_three,
-     zero_one_two_three_five,df5,eng_0123a,eng_0123b,zero_one_two_three_five_six, file = "loaded_data/combined.RData")
+     zero_one_two_three_five,df5,df6,eng_0123a,eng_0123b,
+     zero_one_two_three_five_six, file = "loaded_data/combined.RData")
 write.csv(engaged0_2_3a, "csv_files/engaged0_2_3a.csv", row.names = FALSE)
 write.csv(engaged0_2_3b, "csv_files/engaged0_2_3b.csv", row.names = FALSE)
 write.csv(two_three, "csv_files/two_three.csv", row.names = FALSE)

@@ -1,0 +1,16 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Study_6_files/figure-latex/S6ch5S6fig1criticalconditionb-1.pdf}
+\caption{\label{fig:S6ch5S6fig1criticalconditionb}Study 6: Responses to critical slide depending on cognitive load}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Study_6_files/figure-latex/S6ch5S6fig2criticalconditionb-1.pdf}
+\caption{\label{fig:S6ch5S6fig2criticalconditionb}Study 6: Responses to critical slide and for the experimental group and the control group for each scenario}
+\end{figure*}

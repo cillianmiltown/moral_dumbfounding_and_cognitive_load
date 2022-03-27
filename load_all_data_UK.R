@@ -1,4 +1,4 @@
-rm(list = ls())
+#rm(list = ls())
 library(citr)
 #install.packages("sjstats")
 library(plyr)
@@ -2232,4 +2232,4 @@ write.csv(study6, "csv_files/study6_UK.csv", row.names = FALSE)
 # write.csv(df_raw, "sample_data_raw.csv", row.names = FALSE)
 
 
-rm(list = ls())
+#rm(list = ls())

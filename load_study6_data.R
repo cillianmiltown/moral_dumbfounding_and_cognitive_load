@@ -200,6 +200,11 @@ create_changed_variables <- function(y){
 }
 
 x <- create_changed_variables(x)
+
+
+x$InJu1 <- as.numeric(x$InJu1)
+x$InJu2 <- as.numeric(x$InJu2)
+
 study_6 <- x
 study6 <- x
 

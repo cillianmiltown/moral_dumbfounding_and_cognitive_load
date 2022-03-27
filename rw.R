@@ -48,3 +48,7 @@ grepl('num_scroll_test9.mp4', x$stimulus) & grepl('1 = Morally Wrong', x$stimulu
 
 
 
+as.data.frame(df3[which(grepl("5ea6083f726e4c000ab3daa4", df3$PROLIFIC_PID)==TRUE),])
+
+
+as.data.frame(df3[which(grepl("cillian", df3$previous_experience)==TRUE),])

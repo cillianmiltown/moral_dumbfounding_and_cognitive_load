@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My experiment</title>
+    <script src="jspsych/jspsych.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugin-image-keyboard-response.js"></script>
+    <script src="jspsych/plugin-html-button-response.js"></script>
+    <script src="jspsych/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/plugin-html-slider-response.js"></script>
+    <script src="jspsych/plugin-external-html.js"></script>
+    <script src="jspsych/plugin-survey-text.js"></script>
+    <link href="jspsych/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body></body>
+  <script>
+  var jsPsych = initJsPsych();
+
+  var timeline = [];
+
+  var welcome = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: "Welcome to the experiment. Press any key to begin."
+};
+var blue_trial = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: 'img/blue.png',
+  choices: ['f', 'j']
+};
+
+var orange_trial = {
+  type: jsPsychImageKeyboardResponse,
+  stimulus: 'img/orange.png',
+  choices: ['f', 'j']
+};
+
+
+var trial = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<p style="font-size: 48px;">+</p>',
+    choices: "NO_KEYS",
+    trial_duration: 1000,
+};
+var countdown = {
+        timeline: [
+        {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '',
+              choices: "NO_KEYS",
+              trial_duration: 500,
+            },
+            {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">3</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            }
+            ,{
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">2</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            },{
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">1</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            }]
+    };
+
+var check_consent = function(elem) {
+    if (document.getElementById('consent_checkbox').checked) {
+        return true;
+    }
+    else {
+        alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+        return false;
+    }
+    return false;
+};
+
+// declare the block.
+var trial = {
+    type: jsPsychExternalHtml,
+    url: 'https://www.jspsych.org/7.2/plugins/external-html/#loading-a-consent-form',
+    cont_btn: "start",
+    check_fn: check_consent
+};
+var information_sheet = {
+        type: jsPsychExternalHtml,
+        url: "information_sheet.html",
+        cont_btn: "start",
+    };
+
+
+var cog_load_practice3 =  {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: ["<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"+
+                         '<p>Do you find multi-tasking difficult?</p>'],
+                choices: ["No, I'm great at multi-tasking!",
+                          "Yes! I hate multi-tasking.",
+                          "It's okay."],
+                response_ends_trial: true
+            };
+
+
+timeline.push(countdown,welcome,trial,welcome,cog_load_practice3, blue_trial, orange_trial,welcome);
+
+jsPsych.run(timeline);
+
+var video = [
+        'video/num_scroll_test7.mp4',
+        'video/num_scroll_test8.mp4',
+        'video/num_scroll_test9.mp4',
+        'video/num_scroll_test10.mp4',
+    ];
+
+
+
+  </script>
+</html>

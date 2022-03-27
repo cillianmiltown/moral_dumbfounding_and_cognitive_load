@@ -1,4 +1,4 @@
-rm(list = ls())
+#rm(list = ls())
 library(citr)
 #install.packages("sjstats")
 library(plyr)
@@ -2206,9 +2206,9 @@ study6 <- x
 # write.csv(study_5, "csv_files/study_5.csv", row.names = FALSE)
 # write.csv(study5, "csv_files/study5.csv", row.names = FALSE)
 
-save(study_6, study6, file = "loaded_data/six.RData")
-write.csv(study_6, "csv_files/study_6.csv", row.names = FALSE)
-write.csv(study6, "csv_files/study6.csv", row.names = FALSE)
+save(study_6, study6, file = "loaded_data/six_US.RData")
+write.csv(study_6, "csv_files/study_6_US.csv", row.names = FALSE)
+write.csv(study6, "csv_files/study6_US.csv", row.names = FALSE)
 
 # save(engaged0_2_3a,engaged0_2_3b,two_three,zero_two_three,zero_one_two_three,
 #      zero_one_two_three_five,df5,eng_0123a,eng_0123b,zero_one_two_three_five_six, file = "loaded_data/combined.RData")
@@ -2232,4 +2232,4 @@ write.csv(study6, "csv_files/study6.csv", row.names = FALSE)
 # write.csv(df_raw, "sample_data_raw.csv", row.names = FALSE)
 
 
-rm(list = ls())
+# rm(list = ls())

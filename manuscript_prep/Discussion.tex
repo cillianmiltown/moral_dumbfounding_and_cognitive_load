@@ -1,0 +1,228 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  american,
+  man,floatsintext]{apa7}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Understanding Moral Dumbfounding: Cognitive Load Increases the Liklihood of Moral Dumbfounding},
+  pdfauthor={Cillian McHugh1, Marek McGann2, Eric R. Igou1, \& Elaine L Kinsella1},
+  pdflang={en-US},
+  pdfkeywords={keywords},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\begin{center}\begin{threeparttable}}
+%   {\end{threeparttable}\end{center}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% Overwrite redefinition of paragraph and subparagraph by the default LaTeX template
+% See https://github.com/crsh/papaja/issues/292
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-1em}%
+  {\normalfont\normalsize\bfseries\itshape\typesectitle}}
+
+\renewcommand{\subparagraph}[1]{\@startsection{subparagraph}{5}{1em}%
+  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+  {-\z@\relax}%
+  {\normalfont\normalsize\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+\makeatother
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\HyOrg@maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+\keywords{keywords\newline\indent Word count: TBC}
+\usepackage{csquotes}
+\ifxetex
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[variant=american]{english}
+\else
+  \usepackage[main=american]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\title{Understanding Moral Dumbfounding: Cognitive Load Increases the Liklihood of Moral Dumbfounding}
+\author{Cillian McHugh\textsuperscript{1}, Marek McGann\textsuperscript{2}, Eric R. Igou\textsuperscript{1}, \& Elaine L Kinsella\textsuperscript{1}}
+\date{}
+
+
+\shorttitle{Cognitive Load and Moral Dumbfounding}
+
+\authornote{
+
+Correspondence concerning this article should be addressed to Cillian McHugh, University of Limerick, Limerick, Ireland, V94 T9PX. E-mail: \href{mailto:cillian.mchugh@ul.ie}{\nolinkurl{cillian.mchugh@ul.ie}}
+
+}
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} University of Limerick\\\textsuperscript{2} Mary Immaculate College \textasciitilde{} University of Limerick}
+
+\abstract{
+Six studies etc.
+}
+
+
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+}
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+Across six studies we tested two predictions of a conflict in dual-process explanation of moral dumbfounding, and found mixed support for both. First, we hypothesized that under cognitive load, participants would be less likely to provide reasons, and more likely to present as dumbfounded (or to select ``there is nothing wrong''). Evidence for this prediction was found in Studies 1, 2, 3, and 6 (overall, and for three out of four scenarios individually), while the results of Studies 4, 5 and the \emph{Julie and Mark} dilemma in Study 6 did not support this prediction. However, the mini meta-analyses provided further support for this prediction, as did the combined analyses, which indicated that under cognitive load participants are significantly less likely to provide reasons and significantly more likely to either present as dumbfounded or select ``There is nothing wrong,'' consistent with our predictions.
+
+Second, we hypothesized that responses in the dumbfounding paradigm would be related to need for cognition. The combined analyses provided evidence in support of this hypothesis, with participants scoring higher in need for cognition more likely to provide reasons for their judgments, and participants scoring lower on need for cognition more likely to present as dumbfounded. This relationship was only observed in the combined samples, and for Study 3. This is suggests the sample sizes for each study individually were too small to provide a sufficiently powered test to detect the small effect.
+
+\hypertarget{implications}{%
+\subsection{Implications}\label{implications}}
+
+Overall, the results of the studies described here provide some support for a conflict in dual-processes explanation of moral dumbfounding. Future research should identify and test alternative predictions of this explanation, e.g., testing experimental manipulations that may reduce instances of dumbfounded responding.
+
+We note, however, the inconsistencies across the studies suggests that moral dumbfounding is more complex than classic examples of conflict in dual-processes. Indeed, this greater complexity is evident in the number of available responses in the dumbfounding paradigm, which includes three response options (reasons, dumbfounding, nothing wrong) compared to classic dual-process which typically involve two responses; e.g., base-rate neglect problems involve a single (incorrect) intuitive response and a single (correct) deliberative response.
+
+Interestingly, inconsistencies were observed for each load manipulation, while Study 6 additionally showed variability between the scenarios. It may be possible to attribute this inconsistency to lack of statistical power to detect a small effect. However is also possible that these results provide evidence that the conflict in dual-process explanation tested here is only part of the story, illustrating that moral dumbfounding (as with moral judgment more generally, see McHugh et al., 2021) displays high variability and context dependency. It is also possible that responses in the dumbfounding paradigm involve competing intuitions. For example, participants may have intuitions relating to the nature of moral knowledge, such as \emph{moral judgments should be justifiable by reasons}, that may become salient during the course of the study. This means that, in addition to experiencing a conflict between between habitual and deliberative responding, participants may also experience competing intuitions.
+
+\hypertarget{limitations-and-future-directions}{%
+\subsection{Limitations and Future Directions}\label{limitations-and-future-directions}}
+
+A key limitation with the studies presented here is the inconsistency in results across and within studies. In an attempt to address the inconsistency across Studies 1-5, we conducted a pre-registered, high powered sixth study, involving an alternative manipulation and an alternative participant pool. In general, the results of Study 6 supported our hypothesis, though some inconsistency remained. Thus, while we find a pattern of results that generally supports a conflict in dual-process explanation of moral dumbfounding, more work is required to explain the observed inconsistencies, and to provide a better understanding of the phenomenon of moral dumbfounding.
+
+Regarding the link between need for cognition and dumbfounded responding, we found very weak evidence for this relationship. Furthermore, we only assessed need for cognition in Studies 1-5, and these studies used the \emph{Julie and Mark} scenario only, so it is not clear if the observed relationship generalizes to other scenarios, or is specific to the \emph{Julie and Mark} scenario. Future research should test this, along with investigating other individual difference variables that might predict dumbfounded responding.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+Using three different cognitive load manipulations, we found evidence that cognitive load reduces reason giving in a moral dumbfounding task, leading to greater rates of both dumbfounded responding and selecting ``There is nothing wrong.'' We also found a weak relationship between individual differences in need for cognition and dumbfounded responding. These findings provide some support a conflict in dual-processes explanation of moral dumbfounding, though more research is needed to better understand the phenomenon.
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\hypertarget{ref-mchugh_moral_2021}{}%
+McHugh, C., McGann, M., Igou, E. R., \& Kinsella, E. L. (2021). Moral {Judgment} as {Categorization} ({MJAC}). \emph{Perspectives on Psychological Science}. \url{https://doi.org/10.1177/1745691621990636}
+
+\end{CSLReferences}
+
+
+\end{document}

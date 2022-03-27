@@ -1,0 +1,171 @@
+Variable_name,details,type,description
+participant,participant number,,
+lfdn,unique identifier assigned by questback,,
+external_lfdn,unique identifier assigned by questback,,
+tester,automatically assigned by questback; not of interest,,
+dispcode,automatically assigned by questback; not of interest,,
+lastpage,the last page completed by participant,,
+quality,automatically assigned by questback; not of interest,,
+duration,automatically assigned by questback; not of interest,,
+c_0001,automatically assigned by questback; not of interest,,
+c_0002,automatically assigned by questback; not of interest,,
+consent,did participant consent to taking part (required – could not take part without selecting “Yes”),,
+gender,did participant consent to taking part (required – could not take part without selecting “Yes”),nominal,yes/no
+age,gender of participant,nominal,"""Male""   ""Female"" ""Other"" "
+normQ,norm probe response,,
+Nrm_el,Open-ended elaboration on response to norm probe,,
+v_193,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_194,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_203,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_195,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_196,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_204,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_197,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_198,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_205,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+InJu1,initial judgement,scale,1 = Morally wrong; 4 = Neutral; 7 = Morally right
+v_206,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_207,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_208,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_209,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_210,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_211,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_212,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_213,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_214,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+Int_Rsn,Initial reason for judgement,string,
+hrm_st,was harm mentioned in initial reason,nominal,
+nrm_st,were norms mentioned in initial reason,nominal,
+v_224,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_225,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_226,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_227,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_228,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_229,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_230,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_231,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_232,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+InCf1,initial confidence rating,scale,1 = Extremely unsure; 4 = Neutral; 7 = Extremely confident
+InRem1,response to counter argument; not of interest,,
+InSWr1,do you (still) think it is wrong,nominal,yes/no
+InAR1,do you have a reason,nominal,Yes; I have a reason No; I have no reason Unsure
+InRem2,response to counter argument; not of interest,,
+InSWr2,do you (still) think it is wrong,nominal,yes/no
+InAR2,do you have a reason,nominal,Yes; I have a reason No; I have no reason Unsure
+InRem3,response to counter argument; not of interest,,
+InSWr3,do you (still) think it is wrong,nominal,yes/no
+InAR3,do you have a reason,nominal,Yes; I have a reason No; I have no reason Unsure
+InCS,response to the critical slide (measure of dumbfounding),nominal,"""There is nothing wrong""; ""It's wrong but I can't think of a reason.""; ""It's wrong and I can provide a valid reason."""
+InStR,reason provided after critical slide,string,
+string_coded,coding of post critical slide reasons,nominal,"""unsupported declaration""; ""unsupported declaration + tautological reason""; ""unsupported declaration + statement without reason""; ""tautological reason""; ""statement without reason""; ""alternative suggestion""; ""reason”"
+critical_slide_wrong,did classification of dumbfoundedness change after coding of reason given,nominal,Changed / <NA>
+Dumb_incl_string,rates of dumbfounding when coded string responses are included,nominal,"""There is nothing wrong""; ""It's wrong but I can't think of a reason.""; ""It's wrong and I can provide a valid reason."""
+v_215,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_216,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_217,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_218,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_219,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_220,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_221,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_222,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_223,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+InJu2,revised judgement,scale,1 = Morally wrong; 4 = Neutral; 7 = Morally right
+v_233,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_234,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_235,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_236,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_237,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_238,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_239,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_240,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+v_241,response to dot pattern at specific location (for generating score),nominal,“quoted” “not quoted”
+InChM,“how much did you change your mind?”,scale,1 = Not at all; 4 = neutral; 7 = Extremely
+InCf2,revised confidence rating,scale,1 = Extremely unsure; 4 = Neutral; 7 = Extremely confident
+v_181,how difficult was the memory task?,scale,Extremely difficult Very difficult Difficult neither difficult nor easy Easy Very easy Extremely easy
+Hrm_rel,harm probe 1“any negative impact on their relationship?”,nominal,yes/no
+Hrm_oth,harm probe 2: “any negative consequences personally or for others?”,nominal,yes/no
+hrm_Qs,was harm endorsed following harm probes?,nominal,Harm / no harm
+InIrr,how irritated were you?,scale,1: Not at all 2 3 4: neutral 5 6 7: Extremely Irritated
+InCu,how confused were you?,scale,1: Not at all 2 3 4: neutral 5 6 7: Extremely confused
+InRsn2,how much was your judgement based on reason?,scale,1: Not at all 2 3 4: neutral 5 6 7: Extremely
+InGut,how much was your judgement based on gut feeling,scale,1: Not at all 2 3 4: neutral 5 6 7: Extremely
+pot_hrm,How would you rate the behaviour of two people who engage in an activity that could potentially result in harmful consequences for either of them?,scale,1 = Extremely wrong; 4 = neutral; 7 = Extremely right
+box,do you think boxing is wrong,nominal,yes/no
+rugb,Do you think playing contact team sports (e.g. rugby; ice-hockey; American football) is wrong?,nominal,yes/no
+NFC1,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC2,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC3,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC4,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC5,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC6,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC7,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC8,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC9,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC10,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC11,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC12,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC13,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC14,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC15,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC16,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC17,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC18,need for cognition scale – short form,scale,"see Petty, Cacioppo, & Kao (1984)"
+ethics,have you completed any course in ethics/philosophy?,nominal,yes/no
+ethStR,string response elaborating on previous experience in ethics,string,
+condition,which experimental condition participants were in,nominal,“cog_load” = experimental; “control” = control
+cog_load_test,did participant correctly remember practice dot pattern,logical,
+cog_load_CS,did participant correctly remember dot pattern on critical slide,logical,
+cog_load_CS_num,number of correct dots remembered on critical slide,scale,
+Ju1_bin,initial judgement binned,nominal,wrong; neutral; right
+Ju2_bin,revised judgement binned,nominal,wrong; neutral; right
+wrong1,was behaviour initially rated as wrong,nominal,"""wrong""     ""not wrong"""
+wrong2,was behaviour rated as wrong: revised judgement,nominal,"""wrong""     ""not wrong"""
+NFC3R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC4R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC5R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC7R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC8R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC9R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC12R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC16R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC17R,need for cognition reverse coded item,scale,"see Petty, Cacioppo, & Kao (1984)"
+NFC_tot,total need for cognition score,scale,
+NFC,mean need for cognition score,scale,
+pot_hrm_bin,potential harm question binned,nominal,"""right""   ""wrong""   ""neutral"""
+all_harm,combined responses to the harm questions,nominal,“true” = at least one rated as not wrong; “false” = consistently rated all as wrong
+all_harm_norm,is participant eligible for analysis according to Study 2 criteria?,logical,TRUE / FALSE (TRUE = eligible for analysis)
+nrm_all,combined norm question and norm articulated in string response,nominal,“true” = judgement not attributable to norms; “false” judgement attributable to norms
+Roz_fully_C,is participant “fully convergent” according to Royzman et al criteria?,logical,TRUE / FALSE (TRUE = eligible for analysis)
+j1,valence of first judgement,nominal,"""wrong""     ""not wrong"""
+j2,valence of second judgement,nominal,"""wrong""     ""not wrong"""
+j3,valence of third judgement,nominal,"""wrong""     ""not wrong"""
+j4,valence of fourth judgement,nominal,"""wrong""     ""not wrong"""
+j5,valence of fifth judgement,nominal,"""wrong""     ""not wrong"""
+j6,valence of sixth judgement,nominal,"""wrong""     ""not wrong"""
+ch1,change in valence j1-j2,logical,
+ch2,change in valence j2-j3,logical,
+ch3,change in valence j3-j4,logical,
+ch4,change in valence j4-j5,logical,
+ch5,change in valence j5-j6,logical,
+Rch1,change in reporting of reasons from InAr1 to InAr2,logical,
+Rch2,change in reporting of reasons from InAr2 to InAr3,logical,
+Rs_changed,did reporting of reasons change from InAr1 to InAr3,logical,
+Rs_changed_tot,how many times did reporting of reasons change from InAr1 to InAr3,,
+changed,did judgement change from j1 to j6,logical,
+changed_tot,number of times judgement changed from j1 to j6,scale,
+rs1,reasons provided at j1,nominal,“unstated”
+rs2,reasons provided at j2,nominal,"""reason""    ""unstated""  ""no reason"""
+rs3,reasons provided at j3,nominal,"""reason""    ""unstated""  ""no reason"""
+rs4,reasons provided at j4,nominal,"""reason""    ""unstated""  ""no reason"""
+rs5,reasons provided at j5,nominal,"""reason""    ""unstated""  ""no reason"""
+rs6,reasons provided at j6,nominal,"""reason""    ""unstated""  ""no reason"""
+rs1_bin,InAr1 binned,nominal,“reason”   “no reason”
+rs2_bin,InAr2 binned,nominal,“reason”   “no reason”
+rs3_bin,InAr3 binned,nominal,“reason”   “no reason”
+reason_always,was a reason consistently reported,logical,
+cog_Mch_num,how difficult was did you find the memory task?,scale,
+Dumb_response,coding of post critical slide reasons,nominal,"""unsupported declaration""; ""unsupported declaration + tautological reason""; ""unsupported declaration + statement without reason""; ""tautological reason""; ""statement without reason""; ""alternative suggestion""; ""reason”"
+engaged,did participants engage with memory task?,nominal,"""engaged""     ""not engaged"""
+right_change,recoding of responses to critical slide to indicate whether or not participants changed their mind from initial judgement,nominal,"""reasons"" ""right initially"" ""nothing wrong""   ""right initially"""
+wrong1b,recoding of Ju1_bin to wrong vs not wrong,nominal,“wrong”   “not wrong”
+wrong2b,recoding of Ju2_bin to wrong vs not wrong,nominal,“wrong”   “not wrong”

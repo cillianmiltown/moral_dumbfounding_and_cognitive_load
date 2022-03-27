@@ -1,0 +1,141 @@
+---
+title             : "Influencing Moral Dumbfounding: Cognitive Load Reduces Reason Giving in a Moral Dumbfounding Task"
+shorttitle        : "Cognitive Load and Moral Dumbfounding"
+author: 
+  - name          : "Cillian McHugh"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Mary Immaculate College, South Circular road, Limerick, Ireland"
+    email         : "cillian.mchugh@mic.ul.ie"
+  - name          : "Marek McGann"
+    affiliation   : "2"
+  - name          : "Eric R. Igou"
+    affiliation   : "1"
+  - name          : "Elaine L Kinsella"
+    affiliation   : "1"
+affiliation:
+  - id            : "1"
+    institution   : "University of Limerick"
+  - id            : "2"
+    institution   : "Mary Immaculate College ~ University of Limerick"
+author_note: >
+  All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript. 
+abstract: >
+  Six studies etc.  
+keywords          : "keywords"
+wordcount         : "TBC"
+bibliography: "../resources/bib/My Library.bib"
+cls: "../resources/bib/apa7.cls"
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+toc               : false
+lang              : "en-US"
+documentclass     : "apa7"
+output:
+  papaja::apa6_pdf
+header-includes:
+- \raggedbottom
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+# knitr::opts_chunk$set(eval = TRUE, echo = TRUE)
+#knitr::opts_chunk$set(include = FALSE)
+```
+
+
+```{r load_libraries_cogload}
+rm(list = ls())
+library(citr)
+#install.packages("sjstats")
+library(plyr)
+library(foreign)
+library(car)
+library(desnum)
+library(ggplot2)
+library(extrafont)
+#devtools::install_github("crsh/papaja")
+library(papaja)
+#library("dplyr")
+library("afex")
+library("tibble")
+library(scales)
+#install.packages("metap")
+library(metap)
+library(pwr)
+library(lsr)
+#install.packages("sjstats")
+library(sjstats)
+library(DescTools)
+#inatall.packages("ggstatsplot")
+#library(ggstatsplot)
+library(VGAM)
+library(nnet)
+library(mlogit)
+library(reshape2)
+#install.packages("powerMediation")
+library("powerMediation")
+
+
+#source("load_all_data.R")
+
+
+#devtools::install_github("benmarwick/wordcountaddin")
+#library(wordcountaddin)
+#wordcountaddin::text_stats("cogload_1to5_25Sept19.Rmd")
+getwd()
+```
+
+
+
+```{r child = 'Introduction.Rmd'}
+```
+
+
+```{r child = 'Study_1.Rmd'}
+```
+
+
+```{r child = 'Study_2.Rmd'}
+```
+
+
+```{r child = 'Study_3.Rmd'}
+```
+
+
+```{r child = 'Study_4.Rmd'}
+```
+
+
+```{r child = 'Study_5.Rmd'}
+```
+
+
+```{r child = 'Study_6.Rmd'}
+```
+
+
+```{r child = 'Combined_analyses.Rmd'}
+```
+
+
+\newpage
+
+```{r child = 'Discussion.Rmd'}
+```
+
+# Accessibility Statement
+All data and analysis code are publicly available on this project's OSF page at [https://osf.io/juq4t/?view_only=d365253e233747aab9669f892093c69e](https://osf.io/juq4t/?view_only=d365253e233747aab9669f892093c69e). Materials are also available including the full text of the jsPsych script for Study 6.
+
+\newpage
+
+# References
+

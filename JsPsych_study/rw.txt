@@ -1,0 +1,63 @@
+
+var countdown_blank = {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '',
+              choices: "NO_KEYS",
+              trial_duration: 500,
+            };
+var countdown3 = {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">3</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            };
+var countdown2 = {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">2</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            };
+var countdown1 = {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">1</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            };
+
+ var countdown = {
+        timeline: [countdown_blank,countdown3,countdown2,countdown1]
+    }
+
+
+ var countdown = {
+        timeline: [
+        {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '',
+              choices: "NO_KEYS",
+              trial_duration: 500,
+            },
+            {
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">3</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            }
+            ,{
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">2</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            },{
+              type: jsPsychHtmlKeyboardResponse,
+              stimulus: '<div style="font-size:60px;">1</div>',
+              choices: "NO_KEYS",
+              trial_duration: 600,
+              post_trial_gap: 400,
+            }]
+    }

@@ -1,0 +1,104 @@
+---
+title             : "Understanding Moral Dumbfounding: Cognitive Load Increases the Liklihood of Moral Dumbfounding"
+shorttitle        : "Cognitive Load and Moral Dumbfounding"
+
+author:
+  - name          : "Cillian McHugh"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "University of Limerick, Limerick, Ireland, V94 T9PX"
+    email         : "cillian.mchugh@ul.ie"
+  - name          : "Marek McGann"
+    affiliation   : "2"
+  - name          : "Eric R. Igou"
+    affiliation   : "1"
+  - name          : "Elaine L Kinsella"
+    affiliation   : "1"
+
+
+affiliation:
+  - id            : "1"
+    institution   : "University of Limerick"
+  - id            : "2"
+    institution   : "Mary Immaculate College ~ University of Limerick"
+
+author_note: >
+  All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript.
+
+abstract: >
+  Six studies etc.
+keywords          : "keywords"
+wordcount         : "TBC"
+
+bibliography: "../resources/bib/My Library.bib"
+csl: "../resources/bib/apa6.csl"
+
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+toc               : no
+
+lang              : "en-US"
+documentclass     : "apa7"
+output:
+  papaja::apa6_pdf
+
+---
+
+```{r Discussionsetup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+# knitr::opts_chunk$set(eval = TRUE, echo = TRUE)
+#knitr::opts_chunk$set(include = FALSE)
+```
+
+
+```{r}
+library("papaja")
+#library("wordcountaddin")
+#wordcountaddin::word_count("Introduction.Rmd")
+getwd()
+#devtools::install_github("benmarwick/wordcountaddin", type = "source", dependencies = TRUE)
+```
+# Discussion
+Across six studies we tested two predictions of a conflict in dual-process explanation of moral dumbfounding, and found mixed support for both. First, we hypothesized that under cognitive load, participants would be less likely to provide reasons, and more likely to present as dumbfounded (or to select "there is nothing wrong"). Evidence for this prediction was found in Studies 1, 2, 3, and 6 (overall, and for three out of four scenarios individually), while the results of Studies 4, 5 and the *Julie and Mark* dilemma in Study 6 did not support this prediction. However, the mini meta-analyses provided further support for this prediction, as did the combined analyses, which indicated that under cognitive load participants are significantly less likely to provide reasons and significantly more likely to either present as dumbfounded or select "There is nothing wrong", consistent with our predictions.
+
+Second, we hypothesized that responses in the dumbfounding paradigm would be related to need for cognition. The combined analyses provided evidence in support of this hypothesis, with participants scoring higher in need for cognition more likely to provide reasons for their judgments, and participants scoring lower on need for cognition more likely to present as dumbfounded. This relationship was only observed in the combined samples, and for Study 3. This is suggests the sample sizes for each study individually were too small to provide a sufficiently powered test to detect the small effect.
+
+
+## Implications
+Overall, the results of the studies described here provide some support for a conflict in dual-processes explanation of moral dumbfounding. Future research should identify and test alternative predictions of this explanation, e.g., testing experimental manipulations that may reduce instances of dumbfounded responding.
+
+We note, however, the inconsistencies across the studies suggests that moral dumbfounding is more complex than classic examples of conflict in dual-processes. Indeed, this greater complexity is evident in the number of available responses in the dumbfounding paradigm, which includes three response options (reasons, dumbfounding, nothing wrong) compared to classic dual-process which typically involve two responses; e.g., base-rate neglect problems involve a single (incorrect) intuitive response and a single (correct) deliberative response.
+
+Interestingly, inconsistencies were observed for each load manipulation, while Study 6 additionally showed variability between the scenarios. It may be possible to attribute this inconsistency to lack of statistical power to detect a small effect. However is also possible that these results provide evidence that the conflict in dual-process explanation tested here is only part of the story, illustrating that moral dumbfounding [as with moral judgment more generally, see McHugh et al., -@mchugh_moral_2021] displays high variability and context dependency. It is also possible that responses in the dumbfounding paradigm involve competing intuitions. For example, participants may have intuitions relating to the nature of moral knowledge, such as *moral judgments should be justifiable by reasons*, that may become salient during the course of the study. This means that, in addition to experiencing a conflict between between habitual and deliberative responding, participants may also experience competing intuitions.
+
+## Limitations and Future Directions
+A key limitation with the studies presented here is the inconsistency in results across and within studies. In an attempt to address the inconsistency across Studies 1-5, we conducted a pre-registered, high powered sixth study, involving an alternative manipulation and an alternative participant pool. In general, the results of Study 6 supported our hypothesis, though some inconsistency remained. Thus, while we find a pattern of results that generally supports a conflict in dual-process explanation of moral dumbfounding, more work is required to explain the observed inconsistencies, and to provide a better understanding of the phenomenon of moral dumbfounding.
+
+Regarding the link between need for cognition and dumbfounded responding, we found very weak evidence for this relationship. Furthermore, we only assessed need for cognition in Studies 1-5, and these studies used the *Julie and Mark* scenario only, so it is not clear if the observed relationship generalizes to other scenarios, or is specific to the *Julie and Mark* scenario. Future research should test this, along with investigating other individual difference variables that might predict dumbfounded responding.
+
+# Conclusion
+Using three different cognitive load manipulations, we found evidence that cognitive load reduces reason giving in a moral dumbfounding task, leading to greater rates of both dumbfounded responding and selecting "There is nothing wrong". We also found a weak relationship between individual differences in need for cognition and dumbfounded responding. These findings provide some support a conflict in dual-processes explanation of moral dumbfounding, though more research is needed to better understand the phenomenon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

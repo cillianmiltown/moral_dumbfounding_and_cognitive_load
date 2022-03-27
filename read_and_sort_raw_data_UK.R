@@ -40,7 +40,8 @@ df <- df %>% select(
   ,-browser_version
   ,-platform
   ,-platform_version
-  ,-source_code_version)
+  ,-source_code_version
+  ,-final_comments)
 
 
 df_raw_anon <- df_raw %>% select(
@@ -52,7 +53,8 @@ df_raw_anon <- df_raw %>% select(
   ,-browser_version
   ,-platform
   ,-platform_version
-  ,-source_code_version)
+  ,-source_code_version
+  ,-final_comments)
 
 write.csv(df, "../data/study6/sample_data_UK.csv", row.names = FALSE)
 write.csv(df_raw, "../data/study6/sample_data_raw_UK.csv", row.names = FALSE)
