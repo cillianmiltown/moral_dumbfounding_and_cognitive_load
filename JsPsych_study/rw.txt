@@ -61,3 +61,158 @@ var countdown1 = {
               post_trial_gap: 400,
             }]
     }
+
+
+
+
+
+
+    var cog_load_full_practice = {
+      timeline: [
+          cog_load_task_instructions1,
+          cog_load_task_sample_video,
+          cog_load_task_instructions2,
+          countdown,
+          cog_load_practice_group,
+          cog_load_response0
+        ]
+    }
+
+    var manip_julie_and_mark = {
+        timeline: [
+            scenario_text,
+            countdown,
+            initial_judgement_group,
+            initial_confidence,
+            counter_arguments,
+            countdown,
+            critical_slide_group,
+            revised_judgement_group,
+            revised_confidence,
+      ],
+       timeline_variables: [
+        { scenario: '<p style="max-width: 800px; text-align: left; font-size: 18px">Julie and Mark, who are brother and sister are travelling together in France. They are both on summer vacation from college. One night they are staying alone in a cabin near the beach. They decide that it would be interesting and fun if they tried making love. At very least it would be a new experience for each of them. Julie was already taking birth control pills, but Mark uses a condom too, just to be safe. They both enjoy it, but they decide not to do it again. They keep that night as a special secret between them, which makes them feel even closer to each other.</p>'
+        , scenario_name: 'Incest'
+        , condition: 'cog_load'
+        , InJu1: '<p>How would you rate the behaviour of Julie and Mark?</p>'
+        , conf1: '<p>How confident are you about your judgement?</p>'
+        , ca1:   '<p>Do you agree that any concerns regarding reproductive complications are eased by their using of two forms of contraception?</p>'
+        , ca2:   '<p>And do you accept that they are both consenting adults, and that they both consented and enjoyed it?</p>'
+        , ca3:   '<p>And do you concede that nobody else was affected by their actions?</p>'
+        , CS:    "<p style='font-size:20px;'>Julie and Mark's behaviour did not harm anyone or negatively affect anyone</p><p style='font-size:20px;'>how can there be anything wrong with what they did?</p>"
+        , video1: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+        , video2: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+        , video3: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+        , video4: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+        },
+    ]
+  }
+
+
+
+
+/* Confidence variables */
+
+    var initial_confidence = {
+              type: jsPsychHtmlSliderResponse,
+              stimulus: jsPsych.timelineVariable('conf1'),
+              min: 1,
+              max: 7,
+              start: 4,
+              labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+
+        }
+    var revised_confidence = {
+              type: jsPsychHtmlSliderResponse,
+              stimulus: jsPsych.timelineVariable('conf1'),
+              min: 1,
+              max: 7,
+              start: 4,
+              labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+        }
+
+/* Counter arguments */
+
+    var counter_arguments = {
+        timeline: [
+            /* counter arguments */
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: jsPsych.timelineVariable('ca1'),
+              choices: ['Yes','No'],
+            },
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: "<p>Do you stil think it's wrong?</p>",
+              choices: ['Yes','No'],
+            },
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: "<p>Do you have a reason for your judgement?</p>",
+              choices: ['Yes, I have a reason.','No, I do not have a reason','Unsure'],
+            },
+    /* counter arguments */
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: jsPsych.timelineVariable('ca2'),
+              choices: ['Yes','No'],
+            },
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: "<p>Do you stil think it's wrong?</p>",
+              choices: ['Yes','No'],
+            },
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: "<p>Do you have a reason for your judgement?</p>",
+              choices: ['Yes, I have a reason.','No, I do not have a reason','Unsure'],
+            },
+    /* counter arguments */
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: jsPsych.timelineVariable('ca3'),
+              choices: ['Yes','No'],
+            },
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: "<p>Do you stil think it's wrong?</p>",
+              choices: ['Yes','No'],
+            },
+            {
+              type: jsPsychHtmlButtonResponse,
+              stimulus: "<p>Do you have a reason for your judgement?</p>",
+              choices: ['Yes, I have a reason.','No, I do not have a reason','Unsure'],
+            }
+          ]
+    }
+
+
+
+
+
+
+// select all trials
+var all_data = jsPsych.data.get();
+
+// get csv representation of data and log to console
+console.log(all_data.csv());
+
+function saveData(name, data){
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'write_data.php'); // 'write_data.php' is the path to the php file described above.
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify({filedata: data}));
+}
+
+// call the saveData function after the experiment is over
+initJsPsych({
+   on_finish: function(){ saveData(jsPsych.data.get().csv()); }
+});
+
+
+jsPsych.init({
+  timeline: timeline,
+  on_finish: function() {
+    jsPsych.data.displayData();
+  }
+});
