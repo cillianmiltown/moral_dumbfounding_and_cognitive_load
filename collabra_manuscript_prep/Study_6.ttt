@@ -1,0 +1,34 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:S6tab1dumb}Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load (full sample)}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 458 & 574\\
+ & Dumbfounded & 245 & 172\\
+ & Nothing Wrong & 123 & 114\\
+Expected count & Reasons & 505.59 & 526.41\\
+ & Dumbfounded & 204.3 & 212.7\\
+ & Nothing Wrong & 116.11 & 120.89\\
+Standardised residuals & Reasons & -4.76** & 4.76**\\
+ & Dumbfounded & 4.6** & -4.6**\\
+ & Nothing Wrong & 0.97 & -0.97\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}

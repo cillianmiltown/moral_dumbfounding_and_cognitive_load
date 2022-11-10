@@ -1,0 +1,120 @@
+---
+title             : "Cognitive Load Reduces Reason-Giving in a Moral Dumbfounding Task"
+shorttitle        : "Cognitive Load and Moral Dumbfounding"
+author: 
+  - name          : "Cillian McHugh"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Mary Immaculate College, South Circular road, Limerick, Ireland"
+    email         : "cillian.mchugh@ul.ie"
+  - name          : "Marek McGann"
+    affiliation   : "2"
+  - name          : "Eric R. Igou"
+    affiliation   : "1"
+  - name          : "Elaine L Kinsella"
+    affiliation   : "1"
+affiliation:
+  - id            : "1"
+    institution   : "University of Limerick"
+  - id            : "2"
+    institution   : "Mary Immaculate College ~ University of Limerick"
+author_note: >
+  All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript. 
+abstract: >
+  Moral dumbfounding occurs when people defend a moral judgment, without reasons in support of this judgment. The phenomenon has been influential in moral psychology, however, despite its influence, it remains poorly understood. Based on the notion that cognitive load enhances biases and shortcomings in human judgment when elaboration is beneficial, we hypothesized that under cognitive load, people would be less likely to provide reasons for a judgment and more likely to be dumbfounded. In a pre-registered study (N = 1686) we tested this prediction. Our findings suggest that cognitive load reduces reason-giving, leading to increases in dumbfounding. Our results provide new insights into the phenomenon of moral dumbfounding while also advancing theory in moral psychology.   
+keywords          : "moral dumbfounding, morality, cognitive load, dual-processes"
+wordcount         : "3,747"
+bibliography: "../resources/bib/My Library.bib"
+cls: "../resources/bib/apa7.cls"
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+toc               : false
+lang              : "en-US"
+documentclass     : "apa7"
+output:
+  papaja::apa6_pdf
+header-includes:
+- \raggedbottom
+editor_options: 
+  chunk_output_type: console
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+# knitr::opts_chunk$set(eval = TRUE, echo = TRUE)
+#knitr::opts_chunk$set(include = FALSE)
+```
+
+
+```{r load_libraries_cogload}
+rm(list = ls())
+library(citr)
+#install.packages("sjstats")
+library(plyr)
+library(foreign)
+library(car)
+library(desnum)
+library(ggplot2)
+library(extrafont)
+#devtools::install_github("crsh/papaja")
+library(papaja)
+#library("dplyr")
+library("afex")
+library("tibble")
+library(scales)
+#install.packages("metap")
+library(metap)
+library(pwr)
+library(lsr)
+#install.packages("sjstats")
+library(sjstats)
+library(DescTools)
+#inatall.packages("ggstatsplot")
+#library(ggstatsplot)
+library(VGAM)
+library(nnet)
+library(mlogit)
+library(reshape2)
+#install.packages("powerMediation")
+library("powerMediation")
+
+
+#source("load_all_data.R")
+
+
+#devtools::install_github("benmarwick/wordcountaddin")
+#library(wordcountaddin)
+#wordcountaddin::text_stats("cogload_1to5_25Sept19.Rmd")
+getwd()
+```
+
+
+
+```{r child = 'Introduction.Rmd'}
+```
+
+
+```{r child = 'Main_Study.Rmd'}
+```
+
+
+\newpage
+
+```{r child = 'Discussion.Rmd'}
+```
+
+# Accessibility Statement
+All data and analysis code are publicly available on this project's OSF page at [https://osf.io/juq4t/?view_only=d365253e233747aab9669f892093c69e](https://osf.io/juq4t/?view_only=d365253e233747aab9669f892093c69e). Materials are also available including the full text of the jsPsych script.
+
+\newpage
+
+# References
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\setlength{\parskip}{8pt}

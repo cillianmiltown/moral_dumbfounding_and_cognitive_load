@@ -1,0 +1,104 @@
+---
+title             : "Understanding Moral Dumbfounding: Cognitive Load Increases the Liklihood of Moral Dumbfounding"
+shorttitle        : "Cognitive Load and Moral Dumbfounding"
+
+author:
+  - name          : "Cillian McHugh"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "University of Limerick, Limerick, Ireland, V94 T9PX"
+    email         : "cillian.mchugh@ul.ie"
+  - name          : "Marek McGann"
+    affiliation   : "2"
+  - name          : "Eric R. Igou"
+    affiliation   : "1"
+  - name          : "Elaine L Kinsella"
+    affiliation   : "1"
+
+
+affiliation:
+  - id            : "1"
+    institution   : "University of Limerick"
+  - id            : "2"
+    institution   : "Mary Immaculate College ~ University of Limerick"
+
+author_note: >
+  All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript.
+
+abstract: >
+  Six studies etc.
+keywords          : "keywords"
+wordcount         : "TBC"
+
+bibliography: "../resources/bib/My Library.bib"
+csl: "../resources/bib/apa6.csl"
+
+figsintext        : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+toc               : no
+
+lang              : "en-US"
+documentclass     : "apa7"
+output:
+  papaja::apa6_pdf
+
+---
+
+```{r Discussionsetup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, include = FALSE)
+# knitr::opts_chunk$set(eval = TRUE, echo = TRUE)
+#knitr::opts_chunk$set(include = FALSE)
+```
+
+
+```{r}
+library("papaja")
+#library("wordcountaddin")
+#wordcountaddin::word_count("Introduction.Rmd")
+getwd()
+#devtools::install_github("benmarwick/wordcountaddin", type = "source", dependencies = TRUE)
+```
+# Discussion
+
+The present research aimed to add to the literature on moral judgments by offering new insights into factors that prompt moral dumbfounding. We hypothesized that under cognitive load, participants would be less likely to provide reasons and more likely to present as dumbfounded (or to select nothing-wrong). When participants engaged in a secondary task while completing a dumbfounding task reason-giving was inhibited for three out of four scenarios tested. Overall we find evidence that in situations where the resources available for deliberation are limited (as when cognitive load is high), reason-giving is reduced, and moral dumbfounding is more likely. This key finding is consistent with previous work demonstrating that cognitive load inhibits deliberative responding [@deneys_dual_2006; @evans_rapid_2005].
+
+## Implications, Limitations, and Future Directions
+
+These studies offer new understandings of the phenomenon of moral dumbfounding. While our studies illustrate the complexity of attempting to understand moral judgments, we do demonstrate some reliable patterns that offer support to our core theoretically-informed hypotheses. Furthermore, these studies showcase a methodology for measuring dumbfounding under different empirical conditions, offering a path for future researchers to explore the role of other contextual and individual difference variables in influencing moral dumbfounding.
+
+From a theoretical perspective our findings are consistent with a dual-process explanation of moral dumbfounding, whereby dumbfounding occurs when an intuitive/habitual response is in conflict with a deliberative response [@evans_resolution_2007; again we note that the assumption of dual-processes is not necessarily required, and that this prediction is also consistent with the unimodel, @kruglanski_intuitive_2011; or categorization approaches @mchugh_moral_2022]. In line with existing theorizing on moral judgments [@cushman_action_2013; @mchugh_moral_2022; @railton_moral_2017], we propose that an individual may make an intuitive judgment and that subsequent attempts to identify reasons for this judgment occur through deliberation. If deliberation is unsuccessful and the individual does not revise their judgment, dumbfounding is observed. In support of this explanation, our studies demonstrated that by reducing the cognitive resources available for deliberation, reason-giving was reduced and dumbfounding increased. 
+
+These findings have relevance for society more broadly. Moral considerations inform a range of behaviors and decisions, both at the individual level and at the societal level [@sinnott-armstrong_moral_2010]. It is likely that moral dumbfounding may be a contributing factor to moral disagreement on contentious issues. Our studies provide evidence that dumbfounding may be more prevalent in situations that constrain people’s ability to engage in deliberation. In practice, this suggests that when discussing contentious moral issues, disagreement through dumbfounding may be reduced by ensuring conditions suitable for deliberation (e.g., avoiding emotionally charged, high-pressure environments).
+
+Our results do display some unexplained variability with the *classic* dumbfounding scenario (*Julie and Mark*) showing no change in responding with increased cognitive load (we note that the pilot studies used only this scenario and also showed mixed results). It may be possible to attribute some of this variability to methodological limitations. Classic studies of dual-process conflict are characterized by binary response options [an intuitive response contrasted with a deliberative response; @evans_resolution_2007], whereas our studies included three response options that varied in their relative amount of deliberation. It is also possible that this variability reflects a lack of statistical power do detect small effects for the specific scenario.
+
+However, is also possible that these results provide evidence that the conflict in dual-process explanation tested here is only part of the story, illustrating that moral dumbfounding displays high variability and context dependency [as with moral judgment more generally, see @mchugh_moral_2022]. A further complication is that responses in the dumbfounding paradigm may involve competing intuitions. For example, participants may have intuitions relating to the nature of moral knowledge, such as moral judgments should be justifiable by reasons, that may become salient during the course of the study. This means that, in addition to experiencing a conflict between habitual and deliberative responding, participants may also experience competing intuitions. Future research should unpack the influences of these competing intuitions. 
+
+While the studies presented here were in line with our theoretical predictions, we note that our samples were either student or online participants from Westernized countries, limiting the generalizability of our findings. While emerging research suggests that dumbfounding is observed in certain non-WEIRD populations [@mchugh_just_2021], future research should test if the explanation tested here generalizes beyond Western contexts.
+
+# Conclusion
+Moral dumbfounding occurs when people stubbornly maintain a moral judgment, even without reasons to support their judgments. To date, there are few studies that consider the causes of moral dumbfounding. Here, we test the idea that moral dumbfounding is more likely to occur when an individual is experiencing greater demands on their cognitive system, leaving less cognitive resources available for reasoning in complex moral dilemmas. The findings from the present research show that moral dumbfounding is more likely to occur under cognitive load, at least in some contexts. While these findings add new knowledge to the literature on moral dumbfounding, they also highlight the complexities of moral judgments. Further research is needed to better understand the factors that lead to dumbfounding, and, ultimately, how it might be reduced.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

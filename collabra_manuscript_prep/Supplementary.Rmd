@@ -1,0 +1,120 @@
+---
+title             : "Supplementary Materials: Cognitive Load and Moral Dumbfounding"
+shorttitle        : "Cognitive Load and Moral Dumbfounding"
+author:
+  - name          : "Cillian McHugh"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "University of Limerick, Limerick, Ireland, V94 T9PX"
+    email         : "cillian.mchugh@ul.ie"
+  - name          : "Marek McGann"
+    affiliation   : "2"
+  - name          : "Eric R. Igou"
+    affiliation   : "1"
+  - name          : "Elaine L Kinsella"
+    affiliation   : "1"
+affiliation:
+  - id            : "1"
+    institution   : "University of Limerick"
+  - id            : "2"
+    institution   : "Mary Immaculate College ~ University of Limerick"
+bibliography: "../resources/bib/My Library.bib"
+csl: "../resources/bib/apa6.csl"
+figsintext        : yes
+floatsintext      : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+lineno            : no
+toc               : false
+lang              : "en-US"
+documentclass     : "apa7"
+output:
+  papaja::apa6_pdf:
+    extra_dependencies: ["float"]
+header-includes:
+- \usepackage{float}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+knitr::opts_chunk$set(fig.pos = "!h", out.extra = "")
+```
+
+
+
+```{r child = 'Supplementary_materials.Rmd'}
+```
+
+\newpage
+
+# Pilot Studies
+
+Below we present a series of pilot studies (not pre-registered) in which we tested the feasibility of the paradigm using different cognitive load manipulations across different samples. In Studies S1 and S5 we used a sample of university students and a memory task involving an eight-digit number-letter string. In Studies S2 - S4 we used MTurk samples and a dot-pattern memory task.
+
+The Studies below also provided a preliminary test of a secondary prediction of the dual-process explanation of moral dumbfounding. This second prediction is that responses in the dumbfounding paradigm will vary depending on individual differences. One individual difference variable linked to dual-process approaches to cognition, therefore may be related to susceptibility to dumbfounding is Need for Cognition [@cacioppo_need_1982; @petty_efficient_1984; @petty_dispositional_1996; @forsterlee_examination_1999]. The Need for Cognition Scale (NFC) is a measure of an individual’s tendency "to engage in and enjoy effortful analytic activity" [@forsterlee_examination_1999, p. 471; see also @cacioppo_need_1982], or a tendency to engage in deliberation [@evans_dualprocess_2013]. We hypothesize that people who score high in NFC will be more likely to provide reasons for their judgment. Related to this, people who score low on the NFC are likely to fail to identify reasons for their judgment (or provide a dumbfounded response).
+
+\newpage
+
+```{r child = 'Study_S1.Rmd'}
+```
+
+\newpage
+
+```{r child = 'Study_S2.Rmd'}
+```
+
+\newpage
+
+```{r child = 'Study_S3.Rmd'}
+```
+
+\newpage
+
+```{r child = 'Study_S4.Rmd'}
+```
+
+\newpage
+
+```{r child = 'Study_S5.Rmd'}
+```
+
+\newpage
+
+```{r child = 'collabra_Supplementary_tables.Rmd'}
+```
+
+
+\newpage
+
+&nbsp;
+
+\newpage
+
+&nbsp;
+
+\newpage
+
+&nbsp;
+
+\newpage
+
+&nbsp;
+
+\newpage
+
+&nbsp;
+
+\newpage
+
+&nbsp;
+
+\newpage
+
+
+# References
+
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\setlength{\parskip}{8pt}
