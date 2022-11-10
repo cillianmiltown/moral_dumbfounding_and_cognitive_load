@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.7)  10 NOV 2022 13:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.7)  10 NOV 2022 20:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -873,23 +873,23 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 19
 (/home/cillian/.TinyTeX/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3] [4] [5]
-<../resources/images/attention1a.png, id=208, 472.01344pt x 230.36063pt>
+<../resources/images/attention1a.png, id=207, 472.01344pt x 230.36063pt>
 File: ../resources/images/attention1a.png Graphic file (type png)
 <use ../resources/images/attention1a.png>
 Package pdftex.def Info: ../resources/images/attention1a.png  used on input line 284.
 (pdftex.def)             Requested size: 451.69449pt x 220.44418pt.
-<../resources/images/attention2a.png, id=210, 472.01344pt x 257.46187pt>
+<../resources/images/attention2a.png, id=209, 472.01344pt x 257.46187pt>
 File: ../resources/images/attention2a.png Graphic file (type png)
 <use ../resources/images/attention2a.png>
 Package pdftex.def Info: ../resources/images/attention2a.png  used on input line 290.
 (pdftex.def)             Requested size: 376.40846pt x 205.31369pt.
 [6 <../resources/images/attention1a.png>] [7 <../resources/images/attention2a.png>] [8] [9] [10]
-<Supplementary_files/figure-latex/S1S1fig2criticalcondition-1.pdf, id=243, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/S1S1fig2criticalcondition-1.pdf, id=242, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/S1S1fig2criticalcondition-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S1S1fig2criticalcondition-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S1S1fig2criticalcondition-1.pdf  used on input line 345.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<Supplementary_files/figure-latex/S1ggplotlogit1-1.pdf, id=244, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/S1ggplotlogit1-1.pdf, id=243, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/S1ggplotlogit1-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S1ggplotlogit1-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S1ggplotlogit1-1.pdf  used on input line 349.
@@ -904,7 +904,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [15]
-<Supplementary_files/figure-latex/S2dotpattern-1.pdf, id=293, 433.62pt x 144.54pt>
+<Supplementary_files/figure-latex/S2dotpattern-1.pdf, id=292, 433.62pt x 144.54pt>
 File: Supplementary_files/figure-latex/S2dotpattern-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S2dotpattern-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S2dotpattern-1.pdf  used on input line 473.
@@ -913,12 +913,12 @@ Package pdftex.def Info: Supplementary_files/figure-latex/S2dotpattern-1.pdf  us
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [16] [17 <./Supplementary_files/figure-latex/S2dotpattern-1.pdf>]
-<Supplementary_files/figure-latex/S2figboth-1.pdf, id=316, 469.755pt x 216.81pt>
+<Supplementary_files/figure-latex/S2figboth-1.pdf, id=315, 469.755pt x 216.81pt>
 File: Supplementary_files/figure-latex/S2figboth-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S2figboth-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S2figboth-1.pdf  used on input line 538.
 (pdftex.def)             Requested size: 469.75386pt x 216.80946pt.
-<Supplementary_files/figure-latex/S2ggplotlogit2-1.pdf, id=317, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/S2ggplotlogit2-1.pdf, id=316, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/S2ggplotlogit2-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S2ggplotlogit2-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S2ggplotlogit2-1.pdf  used on input line 542.
@@ -933,12 +933,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1635) has occurred while \output is active []
 
 [21] [22] [23]
-<Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1.pdf, id=367, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1.pdf, id=366, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1.pdf  used on input line 614.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf, id=368, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf, id=367, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf  used on input line 618.
@@ -947,7 +947,7 @@ Package pdftex.def Info: Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf  
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [24 <./Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1.pdf>] [25 <./Supplementary_files/figure-latex/S3ggplotlogit3-1.pdf>] [26] [27] [28]
-<Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1.pdf, id=414, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1.pdf, id=413, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1.pdf  used on input line 742.
@@ -955,7 +955,7 @@ Package pdftex.def Info: Supplementary_files/figure-latex/ch5S4fig2criticalcondi
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Supplementary_files/figure-latex/ggplotlogit4-1.pdf, id=415, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/ggplotlogit4-1.pdf, id=414, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/ggplotlogit4-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/ggplotlogit4-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/ggplotlogit4-1.pdf  used on input line 746.
@@ -970,12 +970,12 @@ Underfull \vbox (badness 5119) has occurred while \output is active []
 Underfull \vbox (badness 1509) has occurred while \output is active []
 
 [31 <./Supplementary_files/figure-latex/ggplotlogit4-1.pdf>] [32] [33] [34]
-<Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1.pdf, id=474, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1.pdf, id=473, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1.pdf  used on input line 870.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<Supplementary_files/figure-latex/ggplotlogit5-1.pdf, id=475, 469.755pt x 325.215pt>
+<Supplementary_files/figure-latex/ggplotlogit5-1.pdf, id=474, 469.755pt x 325.215pt>
 File: Supplementary_files/figure-latex/ggplotlogit5-1.pdf Graphic file (type pdf)
 <use Supplementary_files/figure-latex/ggplotlogit5-1.pdf>
 Package pdftex.def Info: Supplementary_files/figure-latex/ggplotlogit5-1.pdf  used on input line 874.
@@ -1000,16 +1000,16 @@ Package rerunfilecheck Info: File `Supplementary.out' has not changed.
 Here is how much of TeX's memory you used:
  26514 strings out of 476931
  499960 string characters out of 5825158
- 840228 words of memory out of 5000000
+ 839864 words of memory out of 5000000
  47026 multiletter control sequences out of 15000+600000
  511365 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,12n,103p,1289b,575s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/home/cillian/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/home/cillian/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/home/cillian/.TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}</home/cillian/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></home/cillian/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></home/cillian/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></home/cillian/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb></home/cillian/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb></home/cillian/.TinyTeX/texmf-dist/fonts/type1/public/lm/lmri12.pfb>
-Output written on Supplementary.pdf (50 pages, 393428 bytes).
+Output written on Supplementary.pdf (50 pages, 392565 bytes).
 PDF statistics:
- 680 PDF objects out of 1000 (max. 8388607)
- 583 compressed objects within 6 object streams
+ 679 PDF objects out of 1000 (max. 8388607)
+ 582 compressed objects within 6 object streams
  203 named destinations out of 1000 (max. 500000)
  398 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,22 +2,22 @@
 title             : "Cognitive Load Reduces Reason-Giving in a Moral Dumbfounding Task"
 shorttitle        : "Cognitive Load and Moral Dumbfounding"
 author: 
-  - name          : "Cillian McHugh"
+  - name          : "Blinded"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "Mary Immaculate College, South Circular road, Limerick, Ireland"
-    email         : "cillian.mchugh@ul.ie"
-  - name          : "Marek McGann"
+    address       : "Blinded"
+    email         : "Blinded"
+  - name          : "Blinded"
     affiliation   : "2"
-  - name          : "Eric R. Igou"
+  - name          : "Blinded"
     affiliation   : "1"
-  - name          : "Elaine L Kinsella"
+  - name          : "Blinded"
     affiliation   : "1"
 affiliation:
   - id            : "1"
-    institution   : "University of Limerick"
+    institution   : "Blinded"
   - id            : "2"
-    institution   : "Mary Immaculate College ~ University of Limerick"
+    institution   : "Blinded"
 author_note: >
   All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript. 
 abstract: >
@@ -35,7 +35,8 @@ toc               : false
 lang              : "en-US"
 documentclass     : "apa7"
 output:
-  papaja::apa6_pdf
+  papaja::apa6_pdf:
+       keep_tex: true
 header-includes:
 - \raggedbottom
 editor_options: 
@@ -91,6 +92,10 @@ library("powerMediation")
 #library(wordcountaddin)
 #wordcountaddin::text_stats("cogload_1to5_25Sept19.Rmd")
 getwd()
+
+
+#papaja::render_appendix("appendix.Rmd")
+
 ```
 
 
@@ -108,13 +113,81 @@ getwd()
 ```{r child = 'Discussion.Rmd'}
 ```
 
-# Accessibility Statement
-All data and analysis code are publicly available on this project's OSF page at [https://osf.io/juq4t/?view_only=d365253e233747aab9669f892093c69e](https://osf.io/juq4t/?view_only=d365253e233747aab9669f892093c69e). Materials are also available including the full text of the jsPsych script.
-
 \newpage
+
+
+\setlength{\parindent}{0.0in}
+\setlength{\leftskip}{0.0in}
+\setlength{\parskip}{8pt}
+
+
+# Contributions
+
+Contributed to Conception and design: CMH, MMG, ERI, ELK
+
+Contributed to acquisition of data: CMH
+
+Contributed to analysis and interpretation of data: CMH, MMG, ERI, ELK
+
+Drafted and/or revised the article: CMH, MMG, ERI, ELK
+
+Approved the submitted version for publication: CMH, MMG, ERI, ELK
+
+# Funding Information
+
+The Study reported here was funded by University of Limerick, Education and Health Sciences seed funding. Study S5 was funded by Mary Immaculate College seed funding. 
+
+# Data Accessibility Statement
+All data and analysis code are publicly available on this project's OSF page at [https://osf.io/fcd5r/?view_only=9fb6e506e53340c189b98453bb2b6eaf](https://osf.io/fcd5r/?view_only=9fb6e506e53340c189b98453bb2b6eaf). Materials are also available including the full text of the jsPsych script.
+
+# Figure Titles
+
+## Main Manuscript
+
+Figure 1: Hypothesized relationship between deliberation and responses in the dumbfounding paradigm
+
+Figure 2: Responses to critical slide depending on cognitive load
+
+Figure 3: Responses to critical slide and for the experimental group and the control group for each scenario
+
+## Supplementary Materials
+
+Figure 1: Screenshot of Attention Check
+
+Figure 2: Screenshot of Attention Check
+
+Figure 3: Study S1: Responses to critical slide and for the experimental group (*N* = 33) and the control group (*N* = 33)
+
+Figure 4: Study S1: Probability of selecting each response to the critical slide depending on Need for Cognition
+
+Figure 5: Sample dot patterns - more simple for the control group (a) and higher complexity for the experimental condition (b)
+
+Figure 6: Study S2: Responses to critical slide for (left) the experimental group (*N* = 51) vs the control group (*N* = 49); and (right) depending on engagement (*N* = 56) or non-engagement (*N* = 44) with the memory task
+
+Figure 7: Study S2: Probability of selecting each response to the critical slide depending on Need for Cognition
+
+Figure 8: Study S3: Responses to critical slide for the cognitive load group (*N* = 68) and the control group (*N* = 61)
+
+Figure 9: Study S3: Probability of selecting each response to the critical slide depending on Need for Cognition
+
+Figure 10: Study S4: Responses to critical slide for the cognitive load group (*N* = 64) and the control group (*N* = 61)
+
+Figure 11: Study S4: Probability of selecting each response to the critical slide depending on Need for Cognition
+
+Figure 12: Study S5: Responses to critical slide and for the experimental group (*N* = 98) and the control group (*N* = 106)
+
+Figure 13: Study S5: Probability of selecting each response to the critical slide depending on Need for Cognition
+
+
+
+
+
+
 
 # References
 
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
 \setlength{\parskip}{8pt}
+
+
