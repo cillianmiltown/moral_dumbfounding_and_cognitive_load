@@ -1,0 +1,1281 @@
+
+
+timeline = []
+
+// generate a random subject ID with 15 characters
+var subject_id = jsPsych.randomization.randomID(15);
+
+// pick a random condition for the subject at the start of the experiment
+// var condition_assignment = jsPsych.randomization.sampleWithoutReplacement(['conditionA', 'conditionB', 'conditionC'], 1)[0];
+
+// record the condition assignment in the jsPsych data
+// this adds a property called 'subject' and a property called 'condition' to every trial
+jsPsych.data.addProperties({
+subject: subject_id,
+// condition: condition_assignment
+});
+
+/* define some variables */
+
+var countdown = {
+        timeline: [
+            {
+            type: 'html-keyboard-response',
+            stimulus: '',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: 500
+            },
+            {
+            type: 'html-keyboard-response',
+            stimulus: '<div style="font-size:60px;">3</div>',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: 600,
+            post_trial_gap: 400
+            },
+            {
+            type: 'html-keyboard-response',
+            stimulus: '<div style="font-size:60px;">2</div>',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: 600,
+            post_trial_gap: 400
+            },
+            {
+            type: 'html-keyboard-response',
+            stimulus: '<div style="font-size:60px;">1</div>',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: 600,
+            post_trial_gap: 400
+            },
+        ]
+    }
+
+var blank = {
+    type: 'html-keyboard-response',
+    stimulus: '',
+    choices: jsPsych.NO_KEYS,
+    trial_duration: 500}
+
+
+/* information sheet, consent form, and debriefing form */
+
+var information_sheet = {
+        type:'external-html',
+        url: "information_sheet.html",
+        force_refresh: true,
+        cont_btn: "start"
+}
+var debriefing = {
+        type:'external-html',
+        url: "debriefing_form.html",
+        cont_btn: "finish"
+    }
+var return_to_prolific = {
+        type: 'html-keyboard-response',
+        stimulus: '<p>Thank you for completing this Study</p>'+
+        '<p><a href="https://app.prolific.co/submissions/complete?cc=987185E7">Click here to return to Prolific and complete the survey</a></p>',
+        choices: jsPsych.NO_KEYS
+    }
+var check_consent = function(elem) {
+        if (document.getElementById('consent_checkbox').checked) {
+        return true;
+        }
+        else {
+    alert("If you wish to participate, you must check the box next to the statement 'I agree to participate in this study.'");
+        return false;
+        }
+        return false;
+    };
+    var consent = {
+        type:'external-html',
+        url: "consent_form.html",
+        cont_btn: "start",
+        check_fn: check_consent
+    };
+
+var no_response = {
+        timeline: [
+            {
+            type: 'html-keyboard-response',
+            stimulus: '',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: 500
+            },
+            {
+            type: 'html-keyboard-response',
+            stimulus: '<p>Oops! Your time has run out. Please try again.</p>',
+            choices: jsPsych.NO_KEYS,
+            trial_duration: 2000
+            },
+        ]
+    }
+
+/* attention check */
+
+/* age and gender */
+
+
+var gender_q1 = {
+type: 'html-button-response',
+stimulus: ['<p>Please select your gender:</p>'],
+choices: ["Female","Male","Non-Binary","Other","Prefer not to say"],
+on_finish: function(data){
+                        var response = JSON.parse(data.button_pressed);
+                        var reactiontime = JSON.parse(data.rt);
+                        jsPsych.data.addProperties({gender: response, gender_rt: reactiontime});}
+
+}
+
+var gender = {
+    timeline: [gender_q1,
+    {
+        timeline: [
+        /* reasons */
+                    {
+                    type: 'survey-text',
+                    questions: [{prompt: "If Other please specify:",
+                        required: true,}],
+                    on_finish: function(data){
+                        var responses = JSON.parse(data.responses);
+                        var code = responses.Q0
+                        jsPsych.data.addProperties({gender_other: code});
+                    }
+                    }
+                ],
+                conditional_function: function()
+                {var data = jsPsych.data.get().last(1).values()[0];
+                if(data.button_pressed == "3"){return true;}
+                else{return false;}}
+    },
+                ]
+}
+
+var age_q = {
+    type: 'survey-text',
+    questions: [
+    {prompt: "Please Provide your Age in numerals?",
+    required: true, placeholder: "e.g., 35", columns: 50, name: 'age_q'},
+    ],
+    on_finish: function(data){
+                        //var response = document.getElementById("survey-text").age
+                        // var response = JSON.parse(data.age)
+                        var age = JSON.parse(jsPsych.data.get().select('responses').values).age_q;
+                    //     var gender = JSON.parse(jsPsych.data.get().select('responses').values).gender;
+                    // var response2 = JSON.parse(response.gender);
+                        // var reactiontime = JSON.parse(data.rt)
+                        jsPsych.data.addProperties({age});
+                        }
+};
+
+
+var previous_exp = {
+  type: 'survey-text',
+  questions: [{prompt: "Have you encountered this moral scenario before?<br>(if yes please elaborate)",
+  required: true,
+  },],
+  on_finish: function(data){
+    var responses = JSON.parse(data.responses);
+    var code = responses.Q0
+    jsPsych.data.addProperties({previous_experience: code});
+    }
+}
+
+var anything_else = {
+                    type: 'survey-text',
+                    questions: [{prompt: "Do you have anything else you would like to add?",
+                    required: false,
+                    },],
+                    on_finish: function(data){
+                        var responses = JSON.parse(data.responses);
+                        var code = responses.Q0
+                        jsPsych.data.addProperties({final_comments: code});
+            }}
+
+var demographics = {timeline:[age_q,gender]}
+
+// var age = {
+//    type = ''
+    //}
+
+var attention_check1 = {
+    type: 'html-button-response',
+    stimulus: ['<img src="img/attention1.png"><br>'+
+                '<p>Please select a word that describes how you are currently feeling:'],
+    choices: ["Happy",
+              "Satisfied",
+              "Enthusiastic",
+              "Sad",
+              "Anxious",
+              "Self-Conscious",
+              "Grumpy",
+              "Thankful",
+              "none of the above"],
+    on_finish: function(data){
+        var response = JSON.parse(data.button_pressed);
+        var reactiontime = JSON.parse(data.rt)
+        jsPsych.data.addProperties({attention_check1: response, attention_check1_rt: reactiontime});}
+}
+
+
+var attention_check2 = {
+    type: 'html-button-response',
+    stimulus: ['<img src="img/attention2.png"><br>'],
+    choices: ['Baseball', 'Soccer', 'Basketball','Bowling','Swimming'],
+    on_finish: function(data){
+        var response = JSON.parse(data.button_pressed);
+        var reactiontime = JSON.parse(data.rt)
+        jsPsych.data.addProperties({attention_check2: response, attention_check2_rt: reactiontime});}
+};
+/* Cognitive Load variables */
+var cog_load_task_instructions1 = {
+    type: 'html-button-response',
+    stimulus: [
+        '<ul><p style="text-align: left"><b>Attention task - Instructions</b></p>'+
+        '<li><p style="text-align: left">Part of this study will involve completing an attention / memory task at the same time as answering a question.</p></li>'+
+        '<li><p style="text-align: left">Some question pages include a video displaying a stream of numbers scrolling, displayed directly above the question text.</p></li>'+
+        '<li><p style="text-align: left">You will be asked to count how many times a particular number appears in this video, while answering the question at the same time.<br>(You may find it useful to tap your finger each time you see the number)</p></li>'+
+        '<li><p style="text-align: left">These question pages will expire when you answer the question or after 20 seconds (whichever is sooner). You will only have three attempts to answer the question.</p></li>'+
+        '<li><p style="text-align: left">On the page immediately following this attention task, <b>you will be asked to report</b> how many times the target number appeared.<br>(accuracy of responses will be determined by combining responses data with reaction time data)</p></li>'+
+        '<li><p style="text-align: left">Click "Continue" to proceed to an example of what these attention task pages will look like.</p></li></ul>'],
+    choices: ['Continue']
+}
+
+var cog_load_task_sample_video = {
+    type: 'html-button-response',
+    stimulus: ["<p><b>Example</b></p><br><video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"+
+               '<p>[Question text will go here. Click any response to continue]'],
+    choices: ["Response 1",
+              "Response 2",
+              "Response 3"],
+    response_ends_trial: true,
+    trial_duration: 20000,
+    post_trial_gap: 400
+}
+
+var cog_load_task_instructions2 = {
+    type: 'html-button-response',
+    stimulus: [
+        '<p style="text-align: left">The next page contains a practice trial</p>'+
+        '<p style="text-align: left">On the next page you will be presented with a <i>number scroll</i> video, along with a question.</p>'+
+        '<br><p style="text-align: left; font-size:20px;">Please count how many times you see the number:<br></p>'+
+        '<p style="font-size:40px;"><b>eight: 8</b></p>'],
+    choices: ['Continue']
+    }
+var cog_load_practice1 =  {
+    type: 'html-button-response',
+    stimulus: ["<p><b>Example</b></p><video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"+
+               '<p>Do you find multi-tasking difficult?</p>'],
+    choices: ["No, I'm great at multi-tasking!",
+              "Yes! I hate multi-tasking.",
+              "Multi-tasking is okay."],
+    response_ends_trial: true,
+    trial_duration: 20000,
+    on_finish: function(data){
+        var response = JSON.parse(data.button_pressed);
+        var reactiontime = JSON.parse(data.rt)
+        jsPsych.data.addProperties({cog_practice: response, CS_rt: reactiontime, cog_practice1: 1, cog_practice2: null, cog_practice3: null});}
+}
+
+var cog_load_practice2 =  {
+    type: 'html-button-response',
+    stimulus: ["<p><b>Example</b></p><video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"+
+               '<p>Do you find multi-tasking difficult?</p>'],
+    choices: ["No, I'm great at multi-tasking!",
+              "Yes! I hate multi-tasking.",
+              "It's okay."],
+    response_ends_trial: true,
+    trial_duration: 20000,
+    on_finish: function(data){
+        var response = JSON.parse(data.button_pressed);
+        var reactiontime = JSON.parse(data.rt)
+        jsPsych.data.addProperties({cog_practice: response, CS_rt: reactiontime, cog_practice1: null, cog_practice2: 1, cog_practice3: null});}
+}
+var cog_load_practice3 =  {
+    type: 'html-button-response',
+    stimulus: ["<p><b>Example</b></p><video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"+
+               '<p>Do you find multi-tasking difficult?</p>'],
+    choices: ["No, I'm great at multi-tasking!",
+              "Yes! I hate multi-tasking.",
+              "It's okay."],
+    response_ends_trial: true,
+    on_finish: function(data){
+        var response = JSON.parse(data.button_pressed);
+        var reactiontime = JSON.parse(data.rt)
+        jsPsych.data.addProperties({cog_practice: response, CS_rt: reactiontime, cog_practice1: null, cog_practice2: null, cog_practice3: 1});}
+}
+
+var cog_load_practice_group = {
+    timeline: [
+
+    /* critical slide */
+        cog_load_practice1,
+    /* conditional_function for reasons */
+
+        {
+            timeline: [
+        /* loop */
+                no_response,
+                countdown,
+                cog_load_practice2
+                ],
+            conditional_function: function(){
+                var data = jsPsych.data.get().last(1).values()[0];
+                if(data.button_pressed == null){return true;}
+                else{return false;}}
+        },
+        {
+           timeline: [
+        /* loop */
+                no_response,
+                countdown,
+                cog_load_practice3
+                ],
+            conditional_function: function(){
+                var data = jsPsych.data.get().last(1).values()[0];
+                if(data.button_pressed == null){return true;}
+                else{return false;}}
+        },
+        {
+            timeline: [
+        /* reasons */
+
+            ]
+        },
+        ]
+}
+
+var cog_load_instructions0 = {
+    type: 'html-button-response',
+    stimulus: [
+    '<p style="text-align: left">The next page contains a <b>question</b> and an <b>attention task</b> (<i>number scroll</i> video)</p>'+
+    '<br><p style="text-align: left; font-size:20px;">While answering the question, please count how many times you see the number below:<br></p>'+
+    '<p style="font-size:40px;"><b>zero: 0</b></p>'+
+    '<p>(The next page will expire within 20 seconds)</br>(You will have 3 attempts at this question)</p>'],
+    choices: ['Continue']
+}
+var cog_load_instructions3 = {
+    type: 'html-button-response',
+    stimulus: [
+    '<p style="text-align: left">The next page contains a <b>question</b> and an <b>attention task</b> (<i>number scroll</i> video)</p>'+
+    '<br><p style="text-align: left; font-size:20px;">While answering the question, please count how many times you see the number below:<br></p>'+
+    '<p style="font-size:40px;"><b>three: 3</b></p>'+
+    '<p>(The next page will expire within 20 seconds)</br>(You will have 3 attempts at this question)</p>'],
+    choices: ['Continue']
+}
+var cog_load_instructions5 = {
+    type: 'html-button-response',
+    stimulus: [
+    '<p style="text-align: left">The next page contains a <b>question</b> and an <b>attention task</b> (<i>number scroll</i> video)</p>'+
+    '<br><p style="text-align: left; font-size:20px;">While answering the question, please count how many times you see the number below:<br></p>'+
+    '<p style="font-size:40px;"><b>five: 5</b></p>'+
+    '<p>(The next page will expire within 20 seconds)</br>(You will have 3 attempts at this question)</p>'],
+    choices: ['Continue']
+}
+var cog_load_instructions8 = {
+    type: 'html-button-response',
+    stimulus: [
+    '<p style="text-align: left">The next page contains a <b>question</b> and an <b>attention task</b> (<i>number scroll</i> video)</p>'+
+    '<br><p style="text-align: left; font-size:20px;">While answering the question, please count how many times you see the number below:<br></p>'+
+    '<p style="font-size:40px;"><b>eight: 8</b></p>'+
+    '<p>(The next page will expire within 20 seconds)</br>(You will have 3 attempts at this question)</p>'],
+    choices: ['Continue']
+}
+var cog_load_instructions7 = {
+    type: 'html-button-response',
+    stimulus: [
+    '<p style="text-align: left">The next page contains a <b>question</b> and an <b>attention task</b> (<i>number scroll</i> video)</p>'+
+    '<br><p style="text-align: left; font-size:20px;">While answering the question, please count how many times you see the number below:<br></p>'+
+    '<p style="font-size:40px;"><b>seven: 7</b></p>'+
+    '<p>(The next page will expire within 20 seconds)</br>(You will have 3 attempts at this question)</p>'],
+    choices: ['Continue']
+}
+
+var cog_load_response0 = {
+                type: 'survey-text',
+                questions: [{prompt: "Please indicate below how many times you saw the number zero: 0",
+                    required: true,
+                },],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({cog_load_response0: code});
+        }
+}
+var cog_load_response3 = {
+                type: 'survey-text',
+                questions: [{prompt: "Please indicate below how many times you saw the number three: 3",
+                    required: true,
+                },],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({cog_load_response0: code});
+        }
+}
+var cog_load_response5 = {
+                type: 'survey-text',
+                questions: [{prompt: "Please indicate below how many times you saw the number five: 5",
+                    required: true,
+                },],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({cog_load_response5: code});
+        }
+}
+var cog_load_response8 = {
+                type: 'survey-text',
+                questions: [{prompt: "Please indicate below how many times you saw the number eight: 8",
+                    required: true,
+                },],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({cog_load_response8: code});
+        }
+}
+var cog_load_response7 = {
+                type: 'survey-text',
+                questions: [{prompt: "Please indicate below how many times you saw the number seven: 7",
+                    required: true,
+                },],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({cog_load_response7: code});
+        }
+}
+
+/* scenario text and condition variable */
+var scenario_instructions = {
+        type: 'html-button-response',
+        stimulus: [
+        '<p>You will shortly be presented with a scenario. Following this you will be asked a series of questions</p>'+
+        '<p>'
+            ],
+        choices: ['Continue']
+}
+var scenario_text = {
+        type: 'html-button-response',
+        stimulus: jsPsych.timelineVariable('scenario'),
+        choices: ['Continue'],
+        on_finish: function(data){
+            var test_variable = jsPsych.timelineVariable('scenario_name', true);
+            var test_condition = jsPsych.timelineVariable('condition', true);
+            jsPsych.data.addProperties({scenario: test_variable,test_condition: test_condition});
+            }
+}
+
+/* Critical Slide variables */
+var critical_slide_1_manip =  {
+        type: 'html-button-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video3', true);
+            var html2 = jsPsych.timelineVariable('CS', true);
+            return html1 + html2;},
+        choices: ["There is nothing wrong",
+                  "It's wrong but I cannot explain why",
+                  "It's wrong and I can provide a valid reason"],
+        response_ends_trial: true,
+        trial_duration: 20000,
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({CS: response, CS_rt: reactiontime, CS_trial1: 1, CS_trial2: null, CS_trial3: null});}
+}
+
+var critical_slide_2_manip =  {
+        type: 'html-button-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video3', true);
+            var html2 = jsPsych.timelineVariable('CS', true);
+            return html1 + html2;},
+        choices: ["There is nothing wrong",
+                  "It's wrong but I cannot explain why",
+                  "It's wrong and I can provide a valid reason"],
+        response_ends_trial: true,
+        trial_duration: 20000,
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({CS: response, CS_rt: reactiontime, CS_trial1: null, CS_trial2: 1, CS_trial3: null});}
+}
+
+var critical_slide_3_manip =  {
+        type: 'html-button-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video3', true);
+            var html2 = jsPsych.timelineVariable('CS', true);
+            return html1 + html2;},
+        choices: ["There is nothing wrong",
+                  "It's wrong but I cannot explain why",
+                  "It's wrong and I can provide a valid reason"],
+        response_ends_trial: true,
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({CS: response, CS_rt: reactiontime, CS_trial1: null, CS_trial2: null, CS_trial3: 1});}
+}
+
+var critical_slide_group = {
+    timeline: [
+
+    /* critical slide */
+        critical_slide_1_manip,
+    /* conditional_function for reasons */
+
+        {
+            timeline: [
+    /* loop */
+                no_response,
+                countdown,
+                critical_slide_2_manip
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.button_pressed == null){return true;}
+            else{return false;}}
+        },
+        {
+            timeline: [
+    /* loop */
+                no_response,
+                countdown,
+                critical_slide_3_manip
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.button_pressed == null){return true;}
+            else{return false;}}
+        },
+        {
+            timeline: [
+    /* reasons */
+                {
+                type: 'survey-text',
+                questions: [{prompt: "Please provide your reason below:",
+                    required: true,}],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({reason: code});
+        }
+                }
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.button_pressed == "2"){return true;}
+            else{return false;}}
+        },
+    ]
+}
+
+var critical_slide_control =  {
+  timeline: [
+   {
+       type: 'html-button-response',
+       stimulus: jsPsych.timelineVariable('CS'),
+           choices: ["There is nothing wrong",
+                   "It's wrong but I cannot explain why",
+                   "It's wrong and I can provide a valid reason"],
+           response_ends_trial: true,
+           on_finish: function(data){
+                   var response = JSON.parse(data.button_pressed);
+                   var reactiontime = JSON.parse(data.rt)
+                   jsPsych.data.addProperties({CS: response, CS_rt: reactiontime, CS_trial1: 1, CS_trial2: null, CS_trial3: null});}
+        },
+        {
+            timeline: [
+    /* reasons */
+                {
+                type: 'survey-text',
+                questions: [{prompt: "Please provide your reason below:",
+                    required: true,}],
+                on_finish: function(data){
+                    var responses = JSON.parse(data.responses);
+                    var code = responses.Q0
+                    jsPsych.data.addProperties({reason: code});
+        }
+                }
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.button_pressed == "2"){return true;}
+            else{return false;}}
+        },]
+}
+
+/* Initial judgement variables */
+var initial_judgement_1_manip =  {
+        type: 'html-slider-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video1', true);
+            var html2 = jsPsych.timelineVariable('InJu1', true);
+            return html1 + html2;},
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1</br>Morally Wrong','2','3','4<br>Neutral','5','6', '7</br>Morally Right'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu1: response, InJu1_rt: reactiontime, InJu1_trial1: 1, InJu1_trial2: null, InJu1_trial3: null});
+        },
+        require_movement: true,
+        response_ends_trial: true,
+        trial_duration: 20000,
+        }
+var initial_judgement_2_manip =  {
+        type: 'html-slider-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video1', true);
+            var html2 = jsPsych.timelineVariable('InJu1', true);
+            return html1 + html2;},
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu1: response, InJu1_rt: reactiontime, InJu1_trial1: null, InJu1_trial2: 1, InJu1_trial3: null});
+            },
+            require_movement: true,
+            response_ends_trial: true,
+            trial_duration: 20000,
+}
+var initial_judgement_3_manip =  {
+        type: 'html-slider-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video1', true);
+            var html2 = jsPsych.timelineVariable('InJu1', true);
+            return html1 + html2;},
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu1: response, InJu1_rt: reactiontime, InJu1_trial1: null, InJu1_trial2: null, InJu1_trial3: 1});
+            },
+            require_movement: true,
+            trial_duration: 20000,
+            }
+
+var initial_judgement_group = {
+    timeline: [
+        initial_judgement_1_manip,
+/* conditional_function for non response */
+
+        {
+            timeline: [
+    /* loop */
+                no_response,
+                countdown,
+                initial_judgement_2_manip
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.response == null){return true;}
+            else{return false;}}
+        },
+        {
+            timeline: [
+    /* loop */
+                no_response,
+                countdown,
+                initial_judgement_3_manip
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.response == null){return true;}
+            else{return false;}}
+        },
+
+    ]
+};
+
+var initial_judgement_control =  {
+        type: 'html-slider-response',
+        stimulus: jsPsych.timelineVariable('InJu1'),
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1</br>Morally Wrong','2','3','4<br>Neutral','5','6', '7</br>Morally Right'],
+        slider_html: ['<class="jspsych-slider" style = background: #000000;'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu1: response, InJu1_rt: reactiontime, InJu1_trial1: 1, InJu1_trial2: null, InJu1_trial3: null});
+            },
+            require_movement: true,
+            response_ends_trial: true,
+            }
+
+/* Revised judgement variables */
+var revised_judgement_1_manip =  {
+        type: 'html-slider-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video2', true);
+            var html2 = jsPsych.timelineVariable('InJu1', true);
+            return html1 + html2;},
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu2: response, InJu2_rt: reactiontime, InJu2_trial1: 1, InJu2_trial2: null, InJu2_trial3: null});
+            },
+            require_movement: true,
+            response_ends_trial: true,
+            trial_duration: 20000,
+            }
+var revised_judgement_2_manip =  {
+       type: 'html-slider-response',
+       stimulus: function(){
+           var html1 = jsPsych.timelineVariable('video2', true);
+           var html2 = jsPsych.timelineVariable('InJu1', true);
+           return html1 + html2;},
+       min: 1,
+       max: 7,
+       start: 4,
+       labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+       on_finish: function(data){
+           var response = JSON.parse(data.response);
+           var reactiontime = JSON.parse(data.rt)
+           jsPsych.data.addProperties({InJu2: response, InJu2_rt: reactiontime, InJu2_trial1: null, InJu2_trial2: 1, InJu2_trial3: null});
+            },
+            require_movement: true,
+            response_ends_trial: true,
+            trial_duration: 20000,
+}
+var revised_judgement_3_manip =  {
+        type: 'html-slider-response',
+        stimulus: function(){
+            var html1 = jsPsych.timelineVariable('video2', true);
+            var html2 = jsPsych.timelineVariable('InJu1', true);
+            return html1 + html2;},
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu2: response, InJu2_rt: reactiontime, InJu2_trial1: null, InJu2_trial2: null, InJu2_trial3: 1});
+            },
+            require_movement: true,
+            trial_duration: 20000,
+}
+
+var revised_judgement_group = {
+    timeline: [
+        revised_judgement_1_manip,
+/* conditional_function for non response */
+        {
+            timeline: [
+    /* loop */
+                no_response,
+                countdown,
+                revised_judgement_3_manip
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.response == null){return true;}
+            else{return false;}}
+        },
+        {
+            timeline: [
+    /* loop */
+                no_response,
+                countdown,
+                revised_judgement_3_manip
+            ],
+            conditional_function: function()
+            {var data = jsPsych.data.get().last(1).values()[0];
+            if(data.response == null){return true;}
+            else{return false;}}
+        },
+
+    ]
+};
+
+var revised_judgement_control =  {
+        type: 'html-slider-response',
+        stimulus: jsPsych.timelineVariable('InJu1'),
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Morally Wrong','2','3','4<br>Neutral','5','6', '7<br>Morally Right'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            var reactiontime = JSON.parse(data.rt)
+            jsPsych.data.addProperties({InJu2: response, InJu2_rt: reactiontime, InJu2_trial1: 1, InJu2_trial2: null, InJu2_trial3: null});
+            },
+            require_movement: true,
+            response_ends_trial: true,
+            }
+
+/* Confidence variables */
+
+var initial_confidence = {
+        type: 'html-slider-response',
+        stimulus: jsPsych.timelineVariable('conf1'),
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Not at all Confident','2','3','4','5','6', '7<br>Extremely Confident'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            jsPsych.data.addProperties({conf1: response});
+            },
+        require_movement: true
+}
+var revised_confidence = {
+        type: 'html-slider-response',
+        stimulus: jsPsych.timelineVariable('conf1'),
+        min: 1,
+        max: 7,
+        start: 4,
+        labels: ['1<br>Not at all Confident','2','3','4','5','6', '7<br>Extremely Confident'],
+        on_finish: function(data){
+            var response = JSON.parse(data.response);
+            jsPsych.data.addProperties({conf2: response});
+            },
+        require_movement: true,
+}
+
+/* Counter arguments */
+
+var counter_arguments = {
+    timeline: [
+        /* counter arguments */
+        {
+        type: 'html-button-response',
+        stimulus: jsPsych.timelineVariable('ca1'),
+        choices: ['Yes','No'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({ca1: response});
+        }
+        },
+        {
+        type: 'html-button-response',
+        stimulus: "<p>Do you think it's wrong?</p>",
+        choices: ['Yes','No'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({sw1: response});
+        }
+        },
+        {
+        type: 'html-button-response',
+        stimulus: "<p>Do you have a reason for your judgement?</p>",
+        choices: ['Yes, I have a reason.','No, I do not have a reason','Unsure'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({rsn1: response});
+        }
+        },
+/* counter arguments */
+        {
+        type: 'html-button-response',
+        stimulus: jsPsych.timelineVariable('ca2'),
+        choices: ['Yes','No'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({ca2: response});
+        }
+        },
+        {
+        type: 'html-button-response',
+        stimulus: "<p>Do you think it's wrong?</p>",
+        choices: ['Yes','No'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({sw2: response});
+        }
+        },
+        {
+        type: 'html-button-response',
+        stimulus: "<p>Do you have a reason for your judgement?</p>",
+        choices: ['Yes, I have a reason.','No, I do not have a reason','Unsure'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({rsn2: response});
+        }
+        },
+/* counter arguments */
+        {
+        type: 'html-button-response',
+        stimulus: jsPsych.timelineVariable('ca3'),
+        choices: ['Yes','No'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({ca3: response});
+        }
+        },
+        {
+        type: 'html-button-response',
+        stimulus: "<p>Do you think it's wrong?</p>",
+        choices: ['Yes','No'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({sw3: response});
+        }
+        },
+        {
+        type: 'html-button-response',
+        stimulus: "<p>Do you have a reason for your judgement?</p>",
+        choices: ['Yes, I have a reason.','No, I do not have a reason','Unsure'],
+        on_finish: function(data){
+            var response = JSON.parse(data.button_pressed);
+            jsPsych.data.addProperties({rsn3: response});
+        }
+        }
+    ]
+}
+
+
+
+
+/*
+###############################################################################
+###############################################################################
+
+End creating variables
+
+Implement variables into survey protocol
+
+###############################################################################
+###############################################################################
+*/
+
+
+var cog_load_full_practice = {
+timeline: [
+    cog_load_task_instructions1,
+    cog_load_task_sample_video,
+    /*cog_load_response6,*/
+    cog_load_task_instructions2,
+    countdown,
+    cog_load_practice_group,
+    cog_load_response8
+    ]
+}
+
+/* cognitive load scenarios */
+var manip_julie_and_mark = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        cog_load_instructions0,
+        countdown,
+        initial_judgement_group,
+        cog_load_response0,
+        initial_confidence,
+        counter_arguments,
+        cog_load_instructions3,
+        countdown,
+        critical_slide_group,
+        cog_load_response3,
+        cog_load_instructions5,
+        countdown,
+        revised_judgement_group,
+        cog_load_response5,
+        revised_confidence,
+        ],
+    timeline_variables: [
+      { scenario: '<p style="max-width: 800px; text-align: left; font-size: 18px">Julie and Mark, who are brother and sister are travelling together in France. They are both on summer vacation from college. One night they are staying alone in a cabin near the beach. They decide that it would be interesting and fun if they tried making love. At very least it would be a new experience for each of them. Julie was already taking birth control pills, but Mark uses a condom too, just to be safe. They both enjoy it, but they decide not to do it again. They keep that night as a special secret between them, which makes them feel even closer to each other.</p>'
+      , scenario_name: 'Incest'
+      , condition: 'cog_load'
+      , InJu1: '<p>How would you rate the behaviour of Julie and Mark?</p><p>(1 = Morally Wrong; and 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   '<p>Do you agree that any concerns regarding reproductive complications are eased by their using of two forms of contraception?</p>'
+      , ca2:   '<p>And do you accept that they are both consenting adults, and that they both consented and enjoyed it?</p>'
+      , ca3:   '<p>And do you concede that nobody else was affected by their actions?</p>'
+      , CS:    "<p style='font-size:20px;'>Julie and Mark's behaviour did not harm anyone or negatively affect anyone.</p><p style='font-size:20px;'>How can there be anything wrong with what they did?</p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+var manip_jennifer = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        cog_load_instructions0,
+        countdown,
+        initial_judgement_group,
+        cog_load_response0,
+        initial_confidence,
+        counter_arguments,
+        cog_load_instructions3,
+        countdown,
+        critical_slide_group,
+        cog_load_response3,
+        cog_load_instructions5,
+        countdown,
+        revised_judgement_group,
+        cog_load_response5,
+        revised_confidence,
+    ],
+    timeline_variables: [
+      { scenario: '<p style="max-width: 800px; text-align: left; font-size: 18px">Jennifer works in a medical school pathology lab as a research assistant. The lab prepares human cadavers that are used to teach medical students about anatomy. The cadavers come from people who had donated their body to science for research. One night Jennifer is leaving the lab when she sees a body that is going to be discarded the next day. Jennifer was a vegetarian, for moral reasons. She thought it was wrong to kill animals for food. But then, when she saw a body about to be cremated, she thought it was irrational to waste perfectly edible meat. So she cut off a piece of flesh, and took it home and cooked it. The person had died recently of a heart attack, and she cooked the meat thoroughly, so there was no risk of disease.</p>'
+      , scenario_name: 'Jennifer'
+      , condition: 'cog_load'
+      , InJu1: '<p>How would you rate the behaviour of Jennifer?</p><p>(1 = Morally Wrong; 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   '<p>The body had been donated for research, it was to be discarded the next day. You must agree then that it had obviously fulfilled its purpose?</p>'
+      , ca2:   '<p>Do you accept that the body was already dead?</p>'
+      , ca3:   '<p>And do you accept that there was no risk of disease?</p>'
+      , CS:    "<p style='font-size:20px;'>Jennifer's actions did not harm anyone, or negatively affect anyone. </p><p style='font-size:20px;'>How can there be anything wrong with what they did?</p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+var manip_trolley = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        cog_load_instructions0,
+        countdown,
+        initial_judgement_group,
+        cog_load_response0,
+        initial_confidence,
+        counter_arguments,
+        cog_load_instructions3,
+        countdown,
+        critical_slide_group,
+        cog_load_response3,
+        cog_load_instructions5,
+        countdown,
+        revised_judgement_group,
+        cog_load_response5,
+        revised_confidence,
+    ],
+    timeline_variables: [
+      { scenario: "<p style='max-width: 800px; text-align: left; font-size: 18px'>A Trolley is hurtling down a track towards five people. It will kill them all on impact. Paul is on a bridge under which it will pass. He can stop it by putting something very heavy in front of it. As it happens, there is a very fat man next to him. Paul's only way to stop the trolley is to push him over the bridge and onto the track, killing him to save five. Paul decides to push the man.</p>"
+      , scenario_name: 'Trolley'
+      , condition: 'cog_load'
+      , InJu1: '<p>How would you rate the actions of Paul?</p><p>(1 = Morally Wrong; and 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   "<p>Do you accept that five people would have died if Paul didn't push the man?</p>"
+      , ca2:   '<p>And this man is the only way available to stop the trolley? (Paul does not weigh enough)</p>'
+      , ca3:   '<p>Do you agree that in stopping the trolley Paul saved the lives of five people?</p>'
+      , CS:    "<p style='font-size:20px;'>Paul's actions saved the lives of five people!</p><p style='font-size:20px;'>How can saving lives be wrong? </p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+var manip_heinz = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        cog_load_instructions0,
+        countdown,
+        initial_judgement_group,
+        cog_load_response0,
+        initial_confidence,
+        counter_arguments,
+        cog_load_instructions3,
+        countdown,
+        critical_slide_group,
+        cog_load_response3,
+        cog_load_instructions5,
+        countdown,
+        revised_judgement_group,
+        cog_load_response5,
+        revised_confidence,
+    ],
+    timeline_variables: [
+      { scenario: "<p style='max-width: 800px; text-align: left; font-size: 18px'>In Europe, a woman was near death from a very bad disease, a special kind of cancer. There was one drug that the doctors thought might save her. It was a form of radium for which a Druggist was charging ten times what the drug cost him to make. The sick woman's husband, Heinz, went to everyone he knew to borrow the money, but he could only get together about half of what it cost. He told the Druggist that his wife was dying, and asked him to sell it cheaper or let him pay later. But the Druggist said, 'No, I discovered the drug and I'm going to make money from it.' So, Heinz got desperate and broke into the man's store to steal the drug for his wife. The Druggist had Heinz arrested and charge.</p>"
+      , scenario_name: 'Heinz'
+      , condition: 'cog_load'
+      , InJu1: '<p>How would you rate the actions of the Druggist?</p><p>(1 = Morally Wrong; and 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   "<p>Do you agree that the druggist has to make a living?</p>"
+      , ca2:   '<p>And do you accept that Heinz broke into the druggist’s store?</p>'
+      , ca3:   '<p>And do you accept that he stole from him?</p>'
+      , CS:    "<p style='font-size:20px;'>The druggist was only protecting his livelihood.</p><p style='font-size:20px;'>How can that be wrong? </p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+
+/* control scenarios */
+
+var control_julie_and_mark = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        initial_judgement_control,
+        initial_confidence,
+        counter_arguments,
+        critical_slide_control,
+        revised_judgement_control,
+        revised_confidence,
+    ],
+    timeline_variables: [
+      { scenario: '<p style="max-width: 800px; text-align: left; font-size: 18px">Julie and Mark, who are brother and sister are travelling together in France. They are both on summer vacation from college. One night they are staying alone in a cabin near the beach. They decide that it would be interesting and fun if they tried making love. At very least it would be a new experience for each of them. Julie was already taking birth control pills, but Mark uses a condom too, just to be safe. They both enjoy it, but they decide not to do it again. They keep that night as a special secret between them, which makes them feel even closer to each other.</p>'
+      , scenario_name: 'Incest'
+      , condition: 'control'
+      , InJu1: '<p>How would you rate the behaviour of Julie and Mark?</p><p>(1 = Morally Wrong; and 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   '<p>Do you agree that any concerns regarding reproductive complications are eased by their using of two forms of contraception?</p>'
+      , ca2:   '<p>And do you accept that they are both consenting adults, and that they both consented and enjoyed it?</p>'
+      , ca3:   '<p>And do you concede that nobody else was affected by their actions?</p>'
+      , CS:    "<p style='font-size:20px;'>Julie and Mark's behaviour did not harm anyone or negatively affect anyone.</p><p style='font-size:20px;'>How can there be anything wrong with what they did?</p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+var control_jennifer = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        initial_judgement_control,
+        initial_confidence,
+        counter_arguments,
+        critical_slide_control,
+        revised_judgement_control,
+        revised_confidence,
+    ],
+    timeline_variables: [
+      { scenario: '<p style="max-width: 800px; text-align: left; font-size: 18px">Jennifer works in a medical school pathology lab as a research assistant. The lab prepares human cadavers that are used to teach medical students about anatomy. The cadavers come from people who had donated their body to science for research. One night Jennifer is leaving the lab when she sees a body that is going to be discarded the next day. Jennifer was a vegetarian, for moral reasons. She thought it was wrong to kill animals for food. But then, when she saw a body about to be cremated, she thought it was irrational to waste perfectly edible meat. So she cut off a piece of flesh, and took it home and cooked it. The person had died recently of a heart attack, and she cooked the meat thoroughly, so there was no risk of disease.</p>'
+      , scenario_name: 'Jennifer'
+      , condition: 'control'
+      , InJu1: '<p>How would you rate the behaviour of Jennifer?</p><p>(1 = Morally Wrong; 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   '<p>The body had been donated for research, it was to be discarded the next day. You must agree then that it had obviously fulfilled its purpose?</p>'
+      , ca2:   '<p>Do you accept that the body was already dead?</p>'
+      , ca3:   '<p>And do you accept that there was no risk of disease?</p>'
+      , CS:    "<p style='font-size:20px;'>Jennifer's actions did not harm anyone, or negatively affect anyone. </p><p style='font-size:20px;'>How can there be anything wrong with what they did?</p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+var control_trolley = {
+    timeline: [
+        scenario_instructions,
+        scenario_text,
+        initial_judgement_control,
+        initial_confidence,
+        counter_arguments,
+        critical_slide_control,
+        revised_judgement_control,
+        revised_confidence,
+    ],
+    timeline_variables: [
+      { scenario: "<p style='max-width: 800px; text-align: left; font-size: 18px'>A Trolley is hurtling down a track towards five people. It will kill them all on impact. Paul is on a bridge under which it will pass. He can stop it by putting something very heavy in front of it. As it happens, there is a very fat man next to him. Paul's only way to stop the trolley is to push him over the bridge and onto the track, killing him to save five. Paul decides to push the man.</p>"
+      , scenario_name: 'Trolley'
+      , condition: 'control'
+      , InJu1: '<p>How would you rate the actions of Paul?</p><p>(1 = Morally Wrong; and 7 = Morally Right)</p>'
+      , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+      , ca1:   "<p>Do you accept that five people would have died if Paul didn't push the man?</p>"
+      , ca2:   '<p>And this man is the only way available to stop the trolley? (Paul does not weigh enough)</p>'
+      , ca3:   '<p>Do you agree that in stopping the trolley Paul saved the lives of five people?</p>'
+      , CS:    "<p style='font-size:20px;'>Paul's actions saved the lives of five people!</p><p style='font-size:20px;'>How can saving lives be wrong? </p>"
+      , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+      , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+      , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+      , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+      },
+    ]
+}
+
+
+var control_heinz = {
+        timeline: [
+            scenario_instructions,
+            scenario_text,
+            initial_judgement_control,
+            initial_confidence,
+            counter_arguments,
+            critical_slide_control,
+            revised_judgement_control,
+            revised_confidence,
+    ],
+    timeline_variables: [
+        { scenario: "<p style='max-width: 800px; text-align: left; font-size: 18px'>In Europe, a woman was near death from a very bad disease, a special kind of cancer. There was one drug that the doctors thought might save her. It was a form of radium for which a Druggist was charging ten times what the drug cost him to make. The sick woman's husband, Heinz, went to everyone he knew to borrow the money, but he could only get together about half of what it cost. He told the Druggist that his wife was dying, and asked him to sell it cheaper or let him pay later. But the Druggist said, 'No, I discovered the drug and I'm going to make money from it.' So, Heinz got desperate and broke into the man's store to steal the drug for his wife. The Druggist had Heinz arrested and charge.</p>"
+        , scenario_name: 'Heinz'
+        , condition: 'control'
+        , InJu1: '<p>How would you rate the actions of the Druggist?</p><p>(1 = Morally Wrong; and 7 = Morally Right)</p>'
+        , conf1: '<p>How confident are you about your judgement?</p><p>(1 = Not at all Confident; 7 = Extremely Confident)</p>'
+        , ca1:   "<p>Do you agree that the druggist has to make a living?</p>"
+        , ca2:   '<p>And do you accept that Heinz broke into the druggist’s store?</p>'
+        , ca3:   '<p>And do you accept that he stole from him?</p>'
+        , CS:    "<p style='font-size:20px;'>The druggist was only protecting his livelihood.</p><p style='font-size:20px;'>How can that be wrong? </p>"
+        , video1: "<video autoplay muted><source src='video/num_scroll_test8.mp4' type='video/mp4'></video><br>"
+        , video2: "<video autoplay muted><source src='video/num_scroll_test9.mp4' type='video/mp4'></video><br>"
+        , video3: "<video autoplay muted><source src='video/num_scroll_test10.mp4' type='video/mp4'></video><br>"
+        , video4: "<video autoplay muted><source src='video/num_scroll_test7.mp4' type='video/mp4'></video><br>"
+        },
+    ]
+}
+
+
+
+
+/* set up scenario groups for randomization */
+var manip_scenarios =  [manip_julie_and_mark];
+var manip_scenarios_shuffle = jsPsych.randomization.shuffle(manip_scenarios);
+var cog_practice_with_blanks = {timeline: [cog_load_full_practice, blank, attention_check1, blank]}
+var manip_sc = manip_scenarios_shuffle[0]
+var manip = {
+        timeline:
+        [cog_practice_with_blanks, manip_sc]}
+
+var control_scenarios =  [control_jennifer];
+var control_scenarios_shuffle = jsPsych.randomization.shuffle(control_scenarios);
+var control_sc = control_scenarios_shuffle[0]
+var control = {
+        timeline:
+        [blank, attention_check1, blank, control_sc]}
+
+var both_trials = [manip, control]
+var trial_shuffle = jsPsych.randomization.shuffle(both_trials);
+var trial = manip
+
+timeline.push(information_sheet, consent, demographics,attention_check2, trial, previous_exp, anything_else, debriefing, return_to_prolific)
+
+/* timeline.push(scenarios_shuffle[0]) */
+
+var video = [
+        'video/num_scroll_test7.mp4',
+        'video/num_scroll_test8.mp4',
+        'video/num_scroll_test9.mp4',
+        'video/num_scroll_test10.mp4',
+    ];
+
+    /* start the experiment */
+jsPsych.init({
+    timeline: timeline,
+    preload_video: video,
+    show_preload_progress_bar: false
+    });

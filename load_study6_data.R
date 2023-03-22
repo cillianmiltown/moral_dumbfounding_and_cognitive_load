@@ -40,6 +40,9 @@ library(tidyverse)
 source("~/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data_US.R")
 source("~/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data_UK.R")
 
+# source("C:/Users/cillian.mchugh/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data_US.R")
+# source("C:/Users/cillian.mchugh/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data_UK.R")
+
 # read the data file
 
 df_six_US <- read_csv("../data/study6/sample_data.csv")
