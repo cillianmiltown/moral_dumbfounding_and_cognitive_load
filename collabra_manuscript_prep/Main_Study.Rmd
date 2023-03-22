@@ -1,47 +1,64 @@
 ---
-title             : "Study"
-shorttitle        : "Cognitive Load and Moral Dumbfounding"
-author:
-  - name          : "Blinded"
+title             : "The title"
+shorttitle        : "Title"
+author: 
+  - name          : "First Author"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "Blinded"
-    email         : "Blinded"
-  - name          : "Blinded"
-    affiliation   : "2"
-  - name          : "Blinded"
-    affiliation   : "1"
-  - name          : "Blinded"
-    affiliation   : "1"
+    address       : "Postal address"
+    email         : "my@email.com"
+    role:         # Contributorship roles (e.g., CRediT, https://casrai.org/credit/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : "Ernst-August Doelle"
+    affiliation   : "1,2"
+    role:
+      - "Writing - Review & Editing"
+      - "Supervision"
 affiliation:
   - id            : "1"
-    institution   : "Blinded"
+    institution   : "Wilhelm-Wundt-University"
   - id            : "2"
-    institution   : "Blinded"
-author_note: >
-  All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript.
-abstract: >
-  Six studies etc.
+    institution   : "Konstanz Business School"
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+  Enter author note here.
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  
+  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
+  
+  One sentence clearly stating the **general problem** being addressed by  this particular study.
+  
+  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
+  
+  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
+  
+  One or two sentences to put the results into a more **general context**.
+  
+  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  
+  
+  <!-- https://tinyurl.com/ybremelq -->
 keywords          : "keywords"
-wordcount         : "TBC"
+wordcount         : "X"
 bibliography: "../resources/bib/My Library.bib"
-csl: "../resources/bib/apa6.csl"
-figsintext        : no
+cls: "../resources/bib/apa7.cls"
 floatsintext      : no
-figurelist        : yes
-tablelist         : yes
+linenumbers       : yes
+draft             : no
+mask              : no
+figurelist        : no
+tablelist         : no
 footnotelist      : no
-lineno            : no
-toc               : false
-lang              : "en-US"
-documentclass     : "apa7"
-output:
-  papaja::apa6_pdf
-header-includes:
-- \raggedbottom
+classoption       : "man"
+output            : papaja::apa6_pdf
 editor_options: 
   chunk_output_type: console
 ---
+
+
 
 
 
@@ -84,6 +101,7 @@ library(mlogit)
 library(reshape2)
 #install.packages("powerMediation")
 library("powerMediation")
+library(TOSTER)
 
 
 #source("load_all_data.R")
@@ -92,6 +110,7 @@ library("powerMediation")
 #library(wordcountaddin)
 #wordcountaddin::text_stats("cogload_1to5_25Sept19.Rmd")
 getwd()
+#setwd("collabra_manuscript_prep")
 ```
 
 
@@ -114,7 +133,7 @@ large <- powerMediation::SSizeLogisticCon(.2,(9), .05, .8)
 #source("~/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/read_and_sort_raw_data.R")
 #source("~/Dropbox/College/research/Research_general/cog_load/moral_dumbfounding_and_cognitive_load/load_study6_data.R")
 rm(list = ls())
-
+#load("loaded_data/six.RData")
 load("../loaded_data/six.RData")
 study_6$age <- as.numeric(study_6$age)
 df3 <- study_6
@@ -457,6 +476,192 @@ pw <- pwr.chisq.test(w=w,N=length(df3$InCS),df=(3-1),sig.level = .05)
 A chi-squared test for independence revealed a significant association between experimental condition and response to the critical slide, $\chi$^2^(`r c$parameter`, *N* = `r length(df3$Ju1_bin)`) = `r round(c$statistic, digits=3)`, *p* `r paste(p_report(c$p.value))`, *V* = `r w`, the observed power was `r paste(round(pw$power,digits=3))`.  As predicted, under cognitive load fewer participants (`r sum(df4$InCS=="It's wrong and I can provide a valid reason.",na.rm=T)`; `r sum(df4$InCS=="It's wrong and I can provide a valid reason.",na.rm=T)/length(df4$gender)*100`%) provided reasons than in the control condition (`r sum(df5$InCS=="It's wrong and I can provide a valid reason.",na.rm=T)`; `r sum(df5$InCS=="It's wrong and I can provide a valid reason.",na.rm=T)/length(df5$gender)*100`%), and more participants (`r sum(df4$InCS=="It's wrong but I can't think of a reason.",na.rm=T)`; `r sum(df4$InCS=="It's wrong but I can't think of a reason.",na.rm=T)/length(df4$gender)*100`%) selected "It's wrong but I can't think of a reason." than in the control group (`r sum(df5$InCS=="It's wrong but I can't think of a reason.",na.rm=T)`; `r sum(df5$InCS=="It's wrong but I can't think of a reason.",na.rm=T)/length(df5$gender)*100`%).  The responses to the critical slide for the experimental group (*N* = `r sum(df3$condition=="cog_load")`) and the control group (*N* = `r sum(df3$condition=="control")`) are displayed in Figure\ \@ref(fig:S6ch5S6fig1criticalconditionb).  The observed counts, expected counts and standardised residuals are displayed in Table\ \@ref(tab:S6tab1dumb).  
 
 
+
+```{r}
+
+load("../loaded_data/study6_with_cog_load_performance.RData")
+
+df6 <- study6_with_cog_load_performance
+x <- df6
+
+cog_load <- x[which(x$condition=="cog_load"),]
+
+x <- cog_load
+
+x$correct <- x$CS_cog_load_correct*1
+
+x <- 
+  x %>% mutate(
+    correct = dplyr::recode(
+      correct
+      , "1" = "Correct"
+      , "0" = "Incorrect"))
+
+df6 <- x
+c <- chisq.test(table(df6$InCS,df6$correct))
+w <- sqrt(c[]$statistic/length(df6$gender))
+pw <- pwr.chisq.test(w=w,N=length(df6$InCS),df=(3-1),sig.level = .05)
+
+```
+
+The setup of the jsPsych script ensured we collected response time data for the critical slide as well as the corresponding responses for the cognitive load task (e.g., “how many times did you see the number 3?”). Combining these items allowed us to develop a measure of participants’ performance on the secondary task for the critical slide (we also have this information for the revised judgment, however, a typo in the jsPsych script meant we cannot develop this measure for the initial judgment; we did not record reaction time for the practice task).
+
+For the critical slide, `r sum(x$CS_cog_load_correct)` participants (`r round((sum(x$CS_cog_load_correct)/length(x$gender))*100,digits=2)`%) responded correctly to the secondary task (while for the revised judgment only `r sum(x$inju2_cog_load_correct,na.rm=T)` participants [`r round((sum(x$inju2_cog_load_correct,na.rm=T)/length(x$gender))*100,digits=2)`%] responded correctly to the secondary task). There was no significant difference in responses to the critical slide between participants who provided an accurate response and those who provided an inaccurate response to the secondary task, $\chi$^2^(`r c$parameter`, *N* = `r length(df3$Ju1_bin)`) = `r round(c$statistic, digits=3)`, *p* `r paste(p_report(c$p.value))`, *V* = `r w`, the observed power was `r paste(round(pw$power,digits=3))`, see Table 24 in the supplementary materials.
+
+```{r}
+
+
+d <- .1017
+library(TOSTER)
+TOSTER::powerTOSTpaired(.05,.8, low_eqbound_dz = -d, high_eqbound_dz = d)
+
+
+
+equivalence_means_test <- function(k1,k2,d){
+  TOSTtwo(m1=mean(k1), m2=mean(k2),
+          sd1=sd(k1), sd2=sd(k2),
+          n1=length(k1), n2=length(k2),
+          low_eqbound_d=-d, high_eqbound_d=d, alpha = 0.05)
+}
+
+
+x <- cog_load
+
+x$reason_given <- dplyr::recode(x$InCS,
+                                "There is nothing wrong."=0
+                                ,"It's wrong but I can't think of a reason."=0
+                                ,"It's wrong and I can provide a valid reason."=1
+)
+
+#x <- x[which(x$scenario=="Incest"),]
+
+g1 <- x$reason_given[which(x$CS_cog_load_correct==TRUE)]
+g2 <- x$reason_given[which(x$CS_cog_load_correct==FALSE)]
+
+
+
+equivalence_means_test(g1,g2,d)
+
+
+eq <- equivalence_means_test(g1,g2,d)
+t <- t.test(g1,g2)
+
+```
+
+
+We additionally conducted an equivalence test to investigate if rates of reason giving varied depending on performance in the cognitive load task. We recoded responses to the critical slide as 1 = *reason given*, 0 = *reason not given*. Our sub sample in the experimental group contained a total of *n* = 826 participants and with this sample we can detect equivalence at the level of *d* = .1017 with 80% power. The equivalence test was non-significant, *t*(`r round(eq$TOST_df)`) = `r round(eq$TOST_t1,digits = 2)`, *p* `r paste(p_report(eq$TOST_p1))` given equivalence bounds of `r round(eq$low_eqbound, digits = 3)` and `r round(eq$high_eqbound, digits = 3)` (on a raw scale) and an alpha of 0.05. The null hypothesis test was non-significant, *t*(`r round(t$parameter)`) = `r round(t$statistic,digits = 2)`, *p* `r paste(p_report(t$p.value))`, given an alpha of 0.05. Thus while we did not find a significant effect for task performance, we cannot conclude that task performance had no effect on reason-giving/response to the critical slide.
+
+
+
+```{r}
+
+# 
+# 
+# df3 <- study_6_clean
+# 
+# 
+# glm(InCS~InJu1, data=x, family = 'binomial')
+# 
+# df3$InCS <- relevel(df3$InCS, ref = 2)
+# 
+# glm_model<-lme4::glmer(InCS ~ condition*scenario + (1 | scenario),
+#                   data = x
+#                   #reflevel = "It's wrong and I can provide a valid reason."
+#                   ,family=binomial)
+# 
+# glm_model
+# summary(glm_model)
+# 
+# 
+# 
+df3 <- study6_with_cog_load_performance
+x <- df3
+
+x$CS_cog_load_correct3 <- as.character(x$CS_cog_load_correct)
+
+z <- x[which(is.na(x$CS_cog_load_correct)),]
+y <- x[which(is.na(x$CS_cog_load_correct)==FALSE),]
+
+z$CS_cog_load_correct3 <- rep("control")
+
+y <- 
+  y %>% mutate(
+    CS_cog_load_correct3 = dplyr::recode(
+      CS_cog_load_correct3
+      , "TRUE" = "Correct"
+      , "FALSE" = "Incorrect"))
+
+x <- rbind(z,y)
+
+
+
+x$reason_given <- dplyr::recode(x$InCS,
+                                "There is nothing wrong."=0
+                                ,"It's wrong but I can't think of a reason."=0
+                                ,"It's wrong and I can provide a valid reason."=1
+)
+
+
+
+
+df3 <- x
+
+summary(lm(reason_given~CS_cog_load_correct3,x))
+
+apa_results <- apa_print(summary(lm(reason_given~CS_cog_load_correct3,x)))
+
+apa_results$full_result$modelfit
+apa_results$full_result$CS_cog_load_correct3Correct
+apa_results$full_result$CS_cog_load_correct3Incorrect
+
+DF <- x
+
+class(DF$CS_cog_load_correct3)
+DF$CS_cog_load_correct3 <- as.factor(DF$CS_cog_load_correct3)
+DF <- within(DF, CS_cog_load_correct3 <- relevel(CS_cog_load_correct3, ref = 2))
+
+
+
+apa_results2 <- apa_print(summary(lm(reason_given~CS_cog_load_correct3,DF)))
+
+apa_results2$full_result$CS_cog_load_correct3Incorrect
+
+```
+
+We conducted a follow-up regression analysis to attempt to disentangle the effect of the cognitive load condition vs performance on the cognitive load task, on reason-giving. As expected the overall model significantly predicted reason-giving `r apa_results$full_result$modelfit`. Participants in the control condition were significantly more likely to give reasons than participants who provided the correct response `r apa_results$full_result$CS_cog_load_correct3Correct`, and participants who provided an incorrect response `r apa_results$full_result$CS_cog_load_correct3Incorrect`. There was no significant relationship between rates of reason-giving and whether participants provided a correct or an incorrect response `r apa_results2$full_result$CS_cog_load_correct3Incorrect`
+
+```{r}
+
+x <- study6_with_cog_load_performance
+
+x$CS_cog_load_correct3 <- as.character(x$CS_cog_load_correct)
+
+z <- x[which(is.na(x$CS_cog_load_correct)),]
+y <- x[which(is.na(x$CS_cog_load_correct)==FALSE),]
+
+z$CS_cog_load_correct3 <- rep("control")
+
+y <- 
+  y %>% mutate(
+    CS_cog_load_correct3 = dplyr::recode(
+      CS_cog_load_correct3
+      , "TRUE" = "Correct"
+      , "FALSE" = "Incorrect"))
+
+x <- rbind(z,y)
+
+table(x$CS_cog_load_correct3,x$InCS)
+c7 <- chisq.test(table(x$CS_cog_load_correct3,x$InCS))
+
+c7$residuals
+```
+
+
+```{r}
+x <- df3
+```
+
+
 ```{r}
 
 test <- as.data.frame.matrix((table(df3$InCS,df3$condition)))
@@ -569,11 +774,45 @@ test <- ab_graph()
 rm(y)
 ```
 
+```{r}
 
-```{r S6ch5S6fig1criticalconditionb, fig.cap="Responses to critical slide depending on cognitive load", include=TRUE}
 
-#g <- 
-ggplot(test, aes(x=reorder(InCS), y=perc, fill=factor(condition,labels=c("Cognitive load","Control")))) +
+se_fun <- function(a,b){
+  k <- length(a$gender)
+  n <- length(b$gender)
+  
+  pbar <- k/n
+  a$pbar <- pbar
+  a$se = sqrt(pbar * (1 - pbar)/n)
+  a}
+# https://www.r-tutor.com/elementary-statistics/interval-estimation/interval-estimate-population-proportion
+
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
+
+
+test1 <- dplyr::left_join(test,y1, by = c("condition","InCS") )
+
+```
+
+
+```{r}
+g <- 
+ggplot(test1, aes(x=reorder(InCS), y=perc, fill=factor(condition,labels=c("Cognitive load","Control")))) +
   scale_y_continuous(limits = c(-.03,1),
                      labels = percent_format()
   )+ 
@@ -581,19 +820,22 @@ ggplot(test, aes(x=reorder(InCS), y=perc, fill=factor(condition,labels=c("Cognit
            color="black",
            size=.2
   )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), size=.2, width=.2,
+               position=position_dodge(.9), color="black" #"#5a5a5a"
+                 )+
   geom_text(#family = "Times",
-            size=4.2,
+            size=6.2,
             aes( label = scales::percent(perc, accuracy = 1),
                  y= perc ),
             stat= "identity",
-            vjust = -.5,
+            vjust = -1.3,
             position = position_dodge(.9),
             fontface='plain'
             )+
   geom_text(#family = "Times", 
-            size=4.2,
+            size=6.2,
             aes(label = format(Freq),
-                y= -3*(..count../100)/(..count..)),
+                y= -2.7*(..count../100)/(..count..)),
             stat= "count",
             position = position_dodge(0.9),
             #vjust = -.05,
@@ -611,29 +853,44 @@ ggplot(test, aes(x=reorder(InCS), y=perc, fill=factor(condition,labels=c("Cognit
         strip.background  = element_blank(),
         panel.grid = element_blank(),
         plot.title=element_text(#family="Times",
-                                size=12
+                                size=18
                                 ),
         legend.text=element_text(#family="Times",
-                                 size=8
+                                 size=18
                                  ),
         legend.title=element_text(#family="Times",
-                                    size=10
+                                    size=20
                                  ),
         axis.text=element_text(#family="Times",
                                  colour = "black",
-                                 size=8
+                                 size=20
                                  ),
         axis.ticks.x = element_blank(),
         axis.title=element_text(#family="Times",
-                                  size=12
+                                  size=24
                                   ),
         strip.text=element_text(#family = "Times",
-                                  size = 12
+                                  size = 40
                                   ),
         #strip.background = element_rect(fill = "white"),
         legend.position="right")
 
+g
 
+ggsave("plots/overall.png", g, width = 12, height = 9, units = "in", dpi = 300)
+
+ggsave("plots/overall.jpeg", g, width = 12, height = 9, units = "in", dpi = 300)
+
+```
+
+
+![Responses to critical slide depending on cognitive load](plots/overall.png){ width=600 margin=auto }
+
+```{r S6ch5S6fig1criticalconditionb, fig.cap="Responses to critical slide depending on cognitive load", include=FALSE}
+
+
+
+suppressWarnings(print(g))
 
 
 
@@ -716,38 +973,116 @@ apa_table(
 df3 <- study_6_clean
 df3 <- df3[which(df3$scenario=="Incest"),]
 c1 <- chisq.test(table(df3$InCS,df3$condition))
-w1 <- sqrt(c[]$statistic/length(df3$gender))
-pw1 <- pwr.chisq.test(w=w,N=length(df3$InCS),df=(3-1),sig.level = .05)
+w1 <- sqrt(c1[]$statistic/length(df3$gender))
+pw1 <- pwr.chisq.test(w=w1,N=length(df3$InCS),df=(3-1),sig.level = .05)
+jm_n <- length(df3$Ju1_bin)
 
 
 df3 <- study_6_clean
 df3 <- df3[which(df3$scenario=="Jennifer"),]
 c2 <- chisq.test(table(df3$InCS,df3$condition))
-w2 <- sqrt(c[]$statistic/length(df3$gender))
-pw2 <- pwr.chisq.test(w=w,N=length(df3$InCS),df=(3-1),sig.level = .05)
-
+w2 <- sqrt(c2[]$statistic/length(df3$gender))
+pw2 <- pwr.chisq.test(w=w2,N=length(df3$InCS),df=(3-1),sig.level = .05)
+c_n <- length(df3$Ju1_bin)
 
 df3 <- study_6_clean
 df3 <- df3[which(df3$scenario=="Trolley"),]
 c3 <- chisq.test(table(df3$InCS,df3$condition))
-w3 <- sqrt(c[]$statistic/length(df3$gender))
-pw3 <- pwr.chisq.test(w=w,N=length(df3$InCS),df=(3-1),sig.level = .05)
+w3 <- sqrt(c3[]$statistic/length(df3$gender))
+pw3 <- pwr.chisq.test(w=w3,N=length(df3$InCS),df=(3-1),sig.level = .05)
+t_n <- length(df3$Ju1_bin)
 
 df3 <- study_6_clean
 df3 <- df3[which(df3$scenario=="Heinz"),]
 c4 <- chisq.test(table(df3$InCS,df3$condition))
-w4 <- sqrt(c[]$statistic/length(df3$gender))
-pw4 <- pwr.chisq.test(w=w,N=length(df3$InCS),df=(3-1),sig.level = .05)
+w4 <- sqrt(c4[]$statistic/length(df3$gender))
+pw4 <- pwr.chisq.test(w=w4,N=length(df3$InCS),df=(3-1),sig.level = .05)
+h_n <- length(df3$Ju1_bin)
 
 ```
 
 \newpage
 
-This pattern was observed for all scenarios individually with the exception of *Julie and Mark*, which showed no association between experimental condition and cognitive load,  $\chi$^2^(`r c1$parameter`, *N* = `r length(df3$Ju1_bin)`) = `r round(c1$statistic, digits=3)`, *p* `r paste(p_report(c1$p.value))`, *V* = `r w1`, power = `r paste(round(pw1$power,digits=3))`. The association was significant for *Jennifer*  $\chi$^2^(`r c2$parameter`, *N* = `r length(df3$Ju1_bin)`) = `r round(c2$statistic, digits=3)`, *p* `r paste(p_report(c2$p.value))`, *V* = `r w2`, power = `r paste(round(pw2$power,digits=3))`, *Trolley*  $\chi$^2^(`r c3$parameter`, *N* = `r length(df3$Ju1_bin)`) = `r round(c3$statistic, digits=3)`, *p* `r paste(p_report(c3$p.value))`, *V* = `r w3`, power = `r paste(round(pw3$power,digits=3))`, and Heinz,  $\chi$^2^(`r c4$parameter`, *N* = `r length(df3$Ju1_bin)`) = `r round(c4$statistic, digits=3)`, *p* `r paste(p_report(c4$p.value))`, *V* = `r w4`, power = `r paste(round(pw4$power,digits=3))`, see Figure\ \@ref(fig:S6ch5S6fig2criticalconditionb). Supplementary Tables 20-23 show the direction of the effect for each scenario. Under cognitive load, fewer participants provided reasons and more participants provided a dumbfounded response for *Jennifer*, *Trolley*, and *Heinz*
+
+This pattern was observed for all scenarios individually with the exception of *Julie and Mark*, which showed no association between experimental condition and cognitive load,  $\chi$^2^(`r c1$parameter`, *N* = `r jm_n`) = `r round(c1$statistic, digits=3)`, *p* `r paste(p_report(c1$p.value))`, *V* = `r w1`, power = `r paste(round(pw1$power,digits=3))`. The association was significant for *Jennifer*  $\chi$^2^(`r c2$parameter`, *N* = `r c_n`) = `r round(c2$statistic, digits=3)`, *p* `r paste(p_report(c2$p.value))`, *V* = `r w2`, power = `r paste(round(pw2$power,digits=3))`, *Trolley*  $\chi$^2^(`r c3$parameter`, *N* = `r t_n`) = `r round(c3$statistic, digits=3)`, *p* `r paste(p_report(c3$p.value))`, *V* = `r w3`, power = `r paste(round(pw3$power,digits=3))`, and Heinz,  $\chi$^2^(`r c4$parameter`, *N* = `r h_n`) = `r round(c4$statistic, digits=3)`, *p* `r paste(p_report(c4$p.value))`, *V* = `r w4`, power = `r paste(round(pw4$power,digits=3))`, see Figure\ \@ref(fig:S6ch5S6fig2criticalconditionb). Supplementary Tables 20-23 show the direction of the effect for each scenario. Under cognitive load, fewer participants provided reasons and more participants provided a dumbfounded response for *Jennifer*, *Trolley*, and *Heinz*
+
+
+
+```{r}
+
+df3 <- study_6_clean
+x <- df3
+x <- x[which(x$condition=="control"),]
+
+table(x$InCS,x$scenario)
+c <- chisq.test(table(x$InCS,x$scenario))
+c$residuals
+```
+
+
+```{r}
+
+d <- .2025
+#d <- .2
+
+d <- .204
+TOSTER::powerTOSTpaired(.05,.8, low_eqbound_dz = -d, high_eqbound_dz = d)
+
+
+
+equivalence_means_test <- function(k1,k2,d){
+  TOSTtwo(m1=mean(k1), m2=mean(k2),
+          sd1=sd(k1), sd2=sd(k2),
+          n1=length(k1), n2=length(k2),
+          low_eqbound_d=-d, high_eqbound_d=d, alpha = 0.05)
+}
+
+
+df3 <- study_6_clean
+x <- df3
+
+x$reason_given <- dplyr::recode(x$InCS,
+                                "There is nothing wrong."=0
+                                ,"It's wrong but I can't think of a reason."=0
+                                ,"It's wrong and I can provide a valid reason."=1
+)
+
+x <- x[which(x$scenario=="Incest"),]
+
+g1 <- x$reason_given[which(x$condition=="cog_load")]
+g2 <- x$reason_given[which(x$condition=="control")]
+
+d
+
+equivalence_means_test(g1,g2,d)
+
+
+table(x$reason_given,x$condition)
+chisq.test(table(x$reason_given,x$condition))
+
+eq <- equivalence_means_test(g1,g2,d)
+t <- t.test(g1,g2)
+
+```
+
+Given the null result for *Julie and Mark*, we conducted an exploratory follow-up (not-preregistered) equivalence test, to investigate if our results provided evidence for the absence of an effect for cognitive load. Our key dependent variable was reason-giving, operationalized by participants response to the critical slide. As such, our equivalence test focused specifically on reason-giving, we recoded responses to the critical slide as 1 = *reason given*, 0 = *reason not given*. Our sub sample who responded to the *Julie and Mark* scenario contained a total of *n* = 412 participants. With this sample we can detect equivalence at the level of *d* = .204 with 80% power.
+
+The equivalence test was non-significant, *t*(`r round(eq$TOST_df)`) = `r round(eq$TOST_t1,digits = 2)`, *p* `r paste(p_report(eq$TOST_p1))` given equivalence bounds of `r round(eq$low_eqbound, digits = 3)` and `r round(eq$high_eqbound, digits = 3)` (on a raw scale) and an alpha of 0.05. The null hypothesis test was non-significant, *t*(`r round(t$parameter)`) = `r round(t$statistic,digits = 2)`, *p* `r paste(p_report(t$p.value))`, given an alpha of 0.05. We did not find equivalence at the level of *d* = .204, neither did we find a significant effect.
 
 
 ```{r}
 #suppressWarnings(print(g))
+```
+
+```{r}
+se_fun <- function(a,b){
+  k <- length(a$gender)
+  n <- length(b$gender)
+  
+  pbar <- k/n
+  a$pbar <- pbar
+  a$se = sqrt(pbar * (1 - pbar)/n)
+  a}
 ```
 
 
@@ -852,7 +1187,25 @@ df3 <- df3[which(df3$InCS!="null"),]
 df3 <- df3[which(df3$scenario=="Incest"),]
 test1 <- ab_graph()
 test1$scenario <- rep("Julie and Mark",length(test1$InCS))
-incest <- test1
+x <- df3
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
+test2 <- dplyr::left_join(test1,y1, by = c("condition","InCS") )
+incest <- test2
 
 df3 <- study_6_clean
 df3 <- df3[which(is.na(df3$InCS)==FALSE),]
@@ -860,7 +1213,25 @@ df3 <- df3[which(df3$InCS!="null"),]
 df3 <- df3[which(df3$scenario=="Jennifer"),]
 test1 <- ab_graph()
 test1$scenario <- rep("Jennifer",length(test1$InCS))
-cannibal <- test1
+x <- df3
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
+test2 <- dplyr::left_join(test1,y1, by = c("condition","InCS") )
+cannibal <- test2
 
 df3 <- study_6_clean
 df3 <- df3[which(is.na(df3$InCS)==FALSE),]
@@ -868,7 +1239,25 @@ df3 <- df3[which(df3$InCS!="null"),]
 df3 <- df3[which(df3$scenario=="Trolley"),]
 test1 <- ab_graph()
 test1$scenario <- rep("Trolley",length(test1$InCS))
-trolley <- test1
+x <- df3
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
+test2 <- dplyr::left_join(test1,y1, by = c("condition","InCS") )
+trolley <- test2
 
 df3 <- study_6_clean
 df3 <- df3[which(is.na(df3$InCS)==FALSE),]
@@ -876,7 +1265,25 @@ df3 <- df3[which(df3$InCS!="null"),]
 df3 <- df3[which(df3$scenario=="Heinz"),]
 test1 <- ab_graph()
 test1$scenario <- rep("Heinz",length(test1$InCS))
-heinz <- test1
+x <- df3
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
+test2 <- dplyr::left_join(test1,y1, by = c("condition","InCS") )
+heinz <- test2
 
 df3 <- study_6_clean
 df3 <- df3[which(is.na(df3$InCS)==FALSE),]
@@ -889,12 +1296,9 @@ rm(y)
 ```
 
 
+```{r}
 
-
-```{r S6ch5S6fig2criticalconditionb, fig.cap="Responses to critical slide and for the experimental group and the control group for each scenario", include=TRUE}
-
-#g <- 
-ggplot(test, aes(x=InCS, y=perc, fill=factor(condition
+g <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition
                                              ,labels=c("Cognitive load","Control")
                                              ))) +
   facet_wrap(~scenario,scales='free')+
@@ -906,27 +1310,30 @@ ggplot(test, aes(x=InCS, y=perc, fill=factor(condition
            size=.2
   )+
   geom_text(#family = "Times",
-            size=2.5,
+            size=4.5,
             aes( label = scales::percent(perc,accuracy = 1),
                  y= perc-.005
                  #, color=factor(scenario)
                  ),
             stat= "identity",
-            vjust = -.5,
+            vjust = -1.3,
             position = position_dodge(.9),
             fontface='plain'
             )+
   geom_text(#family = "Times", 
-            size=2.5,
+            size=4.5,
             aes(label = format(Freq),
-                y= -4.5*(..count../100)/(..count..)
+                y= -3.8*(..count../100)/(..count..)
                 #, color=factor(scenario)
                 ),
             stat= "count",
             position = position_dodge(0.9),
             #vjust = -.05,
             fontface='plain'
-            ) +
+            )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), size=.1, width=.2,
+               position=position_dodge(.9), color="black" #"#5a5a5a"
+                 )+
   xlab("Response to Critical Slide") +
   ylab("Percentage of participants selecting each response")+
   scale_x_discrete(labels=c("Reasons", "Dumbfounded","Nothing Wrong")) +
@@ -949,36 +1356,43 @@ ggplot(test, aes(x=InCS, y=perc, fill=factor(condition
         strip.background  = element_blank(),
         panel.grid = element_blank(),
         plot.title=element_text(#family="Times",
-                                size=8
+                                size=16
                                 ),
         legend.text=element_text(#family="Times",
-                                 size=6
+                                 size=12
                                  ),
         legend.title=element_text(#family="Times",
-                                    size=8
+                                    size=14
                                     ),
         axis.text=element_text(#family="Times",
                                colour = "black",
-                               size=6
+                               size=10
                                ),
         axis.ticks.x = element_blank(),
         axis.title=element_text(#family="Times",
-                                size=8
+                                size=14
                                 ),
         strip.text=element_text(#family = "Times",
-                                  size = 8
+                                  size = 18
+                                  ,face='bold'
                                   ),
         #  strip.background = element_rect(fill = "white"),
         legend.position="right")
 
 
+g
 
+ggsave("plots/all_scenarios.png", g, width = 12, height = 9, units = "in", dpi = 300)
 
+ggsave("plots/all_scenarios.jpeg", g, width = 12, height = 9, units = "in", dpi = 300)
 
 ```
 
-```{r}
-#suppressWarnings(print(g))
+![Responses to critical slide and for the experimental group and the control group for each scenario](plots/all_scenarios.png){ width=600 margin=auto }
+
+```{r S6ch5S6fig2criticalconditionb, fig.cap="Responses to critical slide and for the experimental group and the control group for each scenario", include=FALSE}
+
+suppressWarnings(print(g))
 ```
 
 ```{r}
@@ -1048,8 +1462,35 @@ A chi-squared test for independence revealed a significant association between s
 # 
 # 
 # 
+df3 <- study6_with_cog_load_performance
+x <- df3
+
+x$CS_cog_load_correct3 <- as.character(x$CS_cog_load_correct)
+
+z <- x[which(is.na(x$CS_cog_load_correct)),]
+y <- x[which(is.na(x$CS_cog_load_correct)==FALSE),]
+
+z$CS_cog_load_correct3 <- rep("control")
+
+y <- 
+  y %>% mutate(
+    CS_cog_load_correct3 = dplyr::recode(
+      CS_cog_load_correct3
+      , "TRUE" = "Correct"
+      , "FALSE" = "Incorrect"))
+
+x <- rbind(z,y)
+
+df3 <- x
+
+
 df3a <- mlogit.data(df3, choice = "InCS", shape = "wide")
-InCSModel<-mlogit(InCS ~ 1 | condition+scenario,
+InCSModel<-mlogit(InCS ~ 1 | 
+                    condition+
+                     scenario
+                   #+
+                   #CS_cog_load_correct3
+                  ,
                   data = df3a,
                   reflevel = "It's wrong and I can provide a valid reason."
                   )

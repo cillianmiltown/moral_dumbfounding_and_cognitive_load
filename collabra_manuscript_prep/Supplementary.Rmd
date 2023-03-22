@@ -2,33 +2,33 @@
 title             : "Supplementary Materials: Cognitive Load and Moral Dumbfounding"
 shorttitle        : "Cognitive Load and Moral Dumbfounding"
 author:
-  - name          : "Blinded"
+  - name          : "Cillian McHugh"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "Blinded"
-    email         : "Blinded"
-  - name          : "Blinded"
+    address       : "Department of Psychology, University of Limerick"
+    email         : "cillian.mchugh@ul.ie"
+  - name          : "Marek McGann"
     affiliation   : "2"
-  - name          : "Blinded"
+  - name          : "Eric R. Igou"
     affiliation   : "1"
-  - name          : "Blinded"
+  - name          : "Elaine L. Kinsella"
     affiliation   : "1"
 affiliation:
   - id            : "1"
-    institution   : "Blinded"
+    institution   : "Department of Psychology, University of Limerick"
   - id            : "2"
-    institution   : "Blinded"
+    institution   : "Department of Psychology, Mary Immaculate College, University of Limerick"
+keywords          : "keywords"
+wordcount         : "X"
 bibliography: "../resources/bib/My Library.bib"
-csl: "../resources/bib/apa6.csl"
-figsintext        : yes
 floatsintext      : yes
+linenumbers       : yes
+draft             : no
+mask              : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-lineno            : no
-toc               : false
-lang              : "en-US"
-documentclass     : "apa7"
+classoption       : "man"
 output:
   papaja::apa6_pdf:
     extra_dependencies: ["float"]

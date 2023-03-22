@@ -1543,6 +1543,7 @@ apa_table(
 
 
 ```{r tabS6checkingchanges6, include=FALSE}
+df3 <- study_6_clean
 chisq.test(table(df3$InCS,df3$condition),correct = TRUE)
 ```
 
@@ -3656,5 +3657,81 @@ apa_table(
 )
 
 ```
+
+
+
+
+```{r}
+
+source("../set_up_manipulation_check.R")
+
+x <- test1
+
+cog_load <- x[which(x$condition=="cog_load"),]
+
+x <- cog_load
+
+x$correct <- x$CS_cog_load_correct*1
+
+x <- 
+  x %>% mutate(
+    correct = dplyr::recode(
+      correct
+      , "1" = "Correct"
+      , "0" = "Incorrect"))
+
+df3 <- x
+test <- as.data.frame.matrix((table(df3$InCS,df3$correct)))
+
+`rownames<-`(test, c("nothing wrong","no reason","reasons"))
+test <- as.matrix((test))
+test1 <- cbind(test[,1],test[,2])
+test2 <- `colnames<-`(test1, c("Correct","Incorrect"))
+
+tb_count_perc <- function(x){
+  tc <- table(x$InCS,x$correct)
+  cbind(tc[,1],paste0(round(tc[,1]/sum(x$correct=="Correct")*100),"%"),
+        tc[,2],paste0(round(tc[,2]/sum(x$correct=="Incorrect")*100),"%"))
+  }
+  
+
+test <- tb_count_perc(df3)
+test <- as.data.frame(test)
+colnames(test) <- c("N","\\%","N","\\%")
+  
+makespanners <- function(){
+  cog_load <- c(2,3)
+  control <- c(4,5)
+  spans <- list(cog_load,control)
+  names(spans) <- c("Correct","Incorrect")
+  spans
+}
+
+#test <- tb_count_perc(df3)
+#tb_count_perc(df3a)
+
+
+
+```
+
+
+
+```{r tabS6EngagementAndDumbfounding,results = 'asis', include=TRUE}
+
+
+apa_table(
+   test
+   , align = c("l", "c", "c", "c", "c")
+   , caption = "Study 6 – Response to the critical slide depending on performance in cognitive load task"
+   #, added_stub_head = "Response to critical slide"
+   , col_spanners = makespanners()
+   #, note = "* = sig. at \\emph{p} < .05; ** = sig. at \\emph{p} < .001"
+   , escape = FALSE
+   
+)
+
+```
+
+
 
 

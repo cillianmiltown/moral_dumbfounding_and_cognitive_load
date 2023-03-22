@@ -18,25 +18,22 @@ affiliation:
     institution   : "Blinded"
   - id            : "2"
     institution   : "Blinded"
-author_note: >
+author_note: |
   n/a
-abstract: >
+abstract: |
   n/a
 keywords          : "keywords"
-wordcount         : "TBC"
+wordcount         : "X"
 bibliography: "../resources/bib/My Library.bib"
-csl: "../resources/bib/apa6.csl"
-figsintext        : yes
 floatsintext      : no
-figurelist        : yes
-tablelist         : yes
+linenumbers       : yes
+draft             : no
+mask              : no
+figurelist        : no
+tablelist         : no
 footnotelist      : no
-lineno            : no
-toc               : false
-lang              : "en-US"
-documentclass     : "apa7"
-output:
-  papaja::apa6_pdf
+classoption       : "man"
+output            : papaja::apa6_pdf
 header-includes:
 - \raggedbottom
 editor_options: 
@@ -245,7 +242,7 @@ rm(y)
 ```
 
 
-```{r figS1fig2criticalcondition, fig.cap="Study 1: Responses to critical slide and for the experimental group (*N* = 33) and the control group (*N* = 33)", include=FALSE}
+```{r figS1fig2criticalcondition, fig.cap="Study 1: Responses to critical slide and for the experimental group (*N* = 33) and the control group (*N* = 33); (error bars represent standard error of the proportion)", include=FALSE}
 
 
 

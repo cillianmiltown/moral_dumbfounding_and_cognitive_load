@@ -3,12 +3,11 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  american,
-  man,floatsintext]{apa7}
+  man,floatsintext]{apa6}
+\usepackage{amsmath,amssymb}
 \usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+\usepackage{iftex}
+\ifPDFTeX
   \usepackage[T1]{fontenc}
   \usepackage[utf8]{inputenc}
   \usepackage{textcomp} % provide euro and other symbols
@@ -34,16 +33,7 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  pdftitle={Supplementary Materials: Cognitive Load and Moral Dumbfounding},
-  pdfauthor={Blinded1, Blinded2, Blinded1, \& Blinded1},
-  pdflang={en-US},
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
-\usepackage{graphicx,grffile}
+\usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
 \def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
@@ -69,6 +59,38 @@
   \let\oldsubparagraph\subparagraph
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+\ifLuaTeX
+\usepackage[bidi=basic]{babel}
+\else
+\usepackage[bidi=default]{babel}
+\fi
+\babelprovide[main,import]{english}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
 % Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -133,18 +155,28 @@
     {}{\InnerPatchFailed}%
   }
 {}{\PatchFailed}
+\keywords{keywords\newline\indent Word count: X}
+\usepackage{lineno}
+
+\linenumbers
 \usepackage{csquotes}
 \usepackage{float}
-\ifxetex
-  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
-  \usepackage{polyglossia}
-  \setmainlanguage[variant=american]{english}
-\else
-  \usepackage[shorthands=off,main=american]{babel}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Supplementary Materials: Cognitive Load and Moral Dumbfounding},
+  pdfauthor={Cillian McHugh1, Marek McGann2, Eric R. Igou1, \& Elaine L. Kinsella1},
+  pdflang={en-EN},
+  pdfkeywords={keywords},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
 
 \title{Supplementary Materials: Cognitive Load and Moral Dumbfounding}
-\author{Blinded\textsuperscript{1}, Blinded\textsuperscript{2}, Blinded\textsuperscript{1}, \& Blinded\textsuperscript{1}}
+\author{Cillian McHugh\textsuperscript{1}, Marek McGann\textsuperscript{2}, Eric R. Igou\textsuperscript{1}, \& Elaine L. Kinsella\textsuperscript{1}}
 \date{}
 
 
@@ -152,11 +184,11 @@
 
 \authornote{
 
-Correspondence concerning this article should be addressed to Blinded, Blinded. E-mail: Blinded
+Correspondence concerning this article should be addressed to Cillian McHugh, Department of Psychology, University of Limerick. E-mail: \href{mailto:cillian.mchugh@ul.ie}{\nolinkurl{cillian.mchugh@ul.ie}}
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Blinded\\\textsuperscript{2} Blinded}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Department of Psychology, University of Limerick\\\textsuperscript{2} Department of Psychology, Mary Immaculate College, University of Limerick}
 
 \begin{document}
 \maketitle
@@ -185,7 +217,7 @@ A Trolley is hurtling down a track towards five people. It will kill them all on
 \hypertarget{heinz}{%
 \subsubsection{Heinz}\label{heinz}}
 
-In Europe, a woman was near death from a very bad disease, a special kind of cancer. There was one drug that the doctors thought might save her. It was a form of radium for which a Druggist was charging ten times what the drug cost him to make. The sick woman's husband, Heinz, went to everyone he knew to borrow the money, but he could only get together about half of what it cost. He told the Druggist that his wife was dying, and asked him to sell it cheaper or let him pay later. But the Druggist said, \enquote{No, I discovered the drug and I'm going to make money from it.} So, Heinz got desperate and broke into the man's store to steal the drug for his wife. The Druggist had Heinz arrested and charge.
+In Europe, a woman was near death from a very bad disease, a special kind of cancer. There was one drug that the doctors thought might save her. It was a form of radium for which a Druggist was charging ten times what the drug cost him to make. The sick woman's husband, Heinz, went to everyone he knew to borrow the money, but he could only get together about half of what it cost. He told the Druggist that his wife was dying, and asked him to sell it cheaper or let him pay later. But the Druggist said, `No, I discovered the drug and I'm going to make money from it.' So, Heinz got desperate and broke into the man's store to steal the drug for his wife. The Druggist had Heinz arrested and charge.
 
 \hypertarget{measures}{%
 \subsection{Measures}\label{measures}}
@@ -304,7 +336,7 @@ In Europe, a woman was near death from a very bad disease, a special kind of can
 
 Below we present a series of pilot studies (not pre-registered) in which we tested the feasibility of the paradigm using different cognitive load manipulations across different samples. In Studies S1 and S5 we used a sample of university students and a memory task involving an eight-digit number-letter string. In Studies S2 - S4 we used MTurk samples and a dot-pattern memory task.
 
-The Studies below also provided a preliminary test of a secondary prediction of the dual-process explanation of moral dumbfounding. This second prediction is that responses in the dumbfounding paradigm will vary depending on individual differences. One individual difference variable linked to dual-process approaches to cognition, therefore may be related to susceptibility to dumbfounding is Need for Cognition (Cacioppo \& Petty, 1982; Forsterlee \& Ho, 1999; Petty, Cacioppo, \& Kao, 1984; Petty, Feinstein, Blair, \& Jarvis, 1996). The Need for Cognition Scale (NFC) is a measure of an individual's tendency \enquote{to engage in and enjoy effortful analytic activity} (Forsterlee \& Ho, 1999, p. 471; see also Cacioppo \& Petty, 1982), or a tendency to engage in deliberation (Evans \& Stanovich, 2013). We hypothesize that people who score high in NFC will be more likely to provide reasons for their judgment. Related to this, people who score low on the NFC are likely to fail to identify reasons for their judgment (or provide a dumbfounded response).
+The Studies below also provided a preliminary test of a secondary prediction of the dual-process explanation of moral dumbfounding. This second prediction is that responses in the dumbfounding paradigm will vary depending on individual differences. One individual difference variable linked to dual-process approaches to cognition, therefore may be related to susceptibility to dumbfounding is Need for Cognition (Cacioppo \& Petty, 1982; Forsterlee \& Ho, 1999; Petty, Cacioppo, \& Kao, 1984; Petty, Feinstein, Blair, \& Jarvis, 1996). The Need for Cognition Scale (NFC) is a measure of an individual's tendency ``to engage in and enjoy effortful analytic activity'' (Forsterlee \& Ho, 1999, p. 471; see also Cacioppo \& Petty, 1982), or a tendency to engage in deliberation (Evans \& Stanovich, 2013). We hypothesize that people who score high in NFC will be more likely to provide reasons for their judgment. Related to this, people who score low on the NFC are likely to fail to identify reasons for their judgment (or provide a dumbfounded response).
 
 \newpage
 
@@ -328,21 +360,21 @@ A total sample of 66 participants (55 female, 11 male; \emph{M}\textsubscript{ag
 
 Data were collected using an online questionnaire. Data collection took place in a designated computer laboratory in MIC. The experimenter remained in the laboratory for the duration of the study. Participants were first presented with an information sheet and consent form. The main study proceeded when participants had signed the consent form.
 
-Participants in the experimental condition were presented with an eight digit number/letter string and asked to memorise the sequence. After 30 seconds, the experiment progressed to the next slide. Participants had the option to click \enquote{ok} and progress to the next slide after 15 seconds.
+Participants in the experimental condition were presented with an eight digit number/letter string and asked to memorise the sequence. After 30 seconds, the experiment progressed to the next slide. Participants had the option to click ``ok'' and progress to the next slide after 15 seconds.
 
-Participants were then presented with the \enquote{Julie and Mark} (\emph{Incest}) vignette (Haidt, Björklund, \& Murphy, 2000). Participants rated on a 7-point Likert scale how right or wrong the behaviour of Julie and Mark was (where, 1 = \emph{Morally wrong}; 4 = \emph{neutral}; 7 = \emph{Morally right}), and were given an opportunity to provide reasons for their judgement. Following this, participants were presented with a series of counter-arguments, which refuted commonly used justifications for rating the behaviour as \enquote{wrong}.
+Participants were then presented with the ``Julie and Mark'' (\emph{Incest}) vignette (Haidt, Björklund, \& Murphy, 2000). Participants rated on a 7-point Likert scale how right or wrong the behaviour of Julie and Mark was (where, 1 = \emph{Morally wrong}; 4 = \emph{neutral}; 7 = \emph{Morally right}), and were given an opportunity to provide reasons for their judgement. Following this, participants were presented with a series of counter-arguments, which refuted commonly used justifications for rating the behaviour as ``wrong''.
 
-Dumbfounding was measured using the critical slide (McHugh et al., 2017). This contained a statement defending the behaviour and a question as to how the behaviour could be wrong (\enquote{Julie and Mark's behaviour did not harm anyone, how can there be anything wrong with what they did?}). There were three possible answer options: (a) \enquote{There is nothing wrong}; (b) an admission of not having reasons (\enquote{It's wrong but I can't think of a reason}); and finally a judgement with accompanying justification (c) \enquote{It's wrong and I can provide a valid reason}. The order of these response options was randomised. Participants who selected (c) were prompted to type a reason. The selecting of option (b), the admission of not having reasons, was taken to be a dumbfounded response. We note that this measure provides a conservative measure of dumbfounded responding (see McHugh et al., 2017 for discussion).
+Dumbfounding was measured using the critical slide (McHugh et al., 2017). This contained a statement defending the behaviour and a question as to how the behaviour could be wrong (``Julie and Mark's behaviour did not harm anyone, how can there be anything wrong with what they did?''). There were three possible answer options: (a) ``There is nothing wrong''; (b) an admission of not having reasons (``It's wrong but I can't think of a reason''); and finally a judgement with accompanying justification (c) ``It's wrong and I can provide a valid reason''. The order of these response options was randomised. Participants who selected (c) were prompted to type a reason. The selecting of option (b), the admission of not having reasons, was taken to be a dumbfounded response. We note that this measure provides a conservative measure of dumbfounded responding (see McHugh et al., 2017 for discussion).
 
 Following the critical slide, participants in the experimental condition were required to reproduce the eight digit number-letter string sequence presented previously. Following this a post-discussion questionnaire in which participants rated their response to the scenario across various dimensions (Haidt et al., 2000).
 
-Need for Cognition was measured using the short form of the Need for Cognition scale (Cacioppo \& Petty, 1982; Petty et al., 1984). This is an 18 item scale containing questions relating to motivation to engage in thinking (e.g., \enquote{I would prefer complex to simple problems}). Responses were recorded on a -4 to +4 Likert-type scale, where -4 = \emph{very strong disagreement} and +4 = \emph{very strong agreement}.
+Need for Cognition was measured using the short form of the Need for Cognition scale (Cacioppo \& Petty, 1982; Petty et al., 1984). This is an 18 item scale containing questions relating to motivation to engage in thinking (e.g., ``I would prefer complex to simple problems''). Responses were recorded on a -4 to +4 Likert-type scale, where -4 = \emph{very strong disagreement} and +4 = \emph{very strong agreement}.
 
 \hypertarget{study-s1-results}{%
 \subsection{Study S1: Results}\label{study-s1-results}}
 
 \begin{figure}[!h]
-\includegraphics{Supplementary_files/figure-latex/S1S1fig2criticalcondition-1} \caption{Study S1: Responses to critical slide and for the experimental group (*N* = 33) and the control group (*N* = 33)}\label{fig:S1S1fig2criticalcondition}
+\includegraphics{Supplementary_files/figure-latex/S1S1fig2criticalcondition-1} \caption{Study S1: Responses to critical slide and for the experimental group (N = 33) and the control group (N = 33); (error bars represent standard error of the proportion)}\label{fig:S1S1fig2criticalcondition}
 \end{figure}
 
 \begin{figure}[!h]
@@ -353,7 +385,7 @@ Need for Cognition was measured using the short form of the Need for Cognition s
 
 \newpage
 
-Forty six participants (69.70\%) rated the behavior of Julie and Mark as wrong initially, and forty one participants (62.12\%) rated the behavior as wrong at the end of the task. Initial ratings (\emph{M} = 2.38, \emph{SD} = 1.87) were significantly more severe than revised ratings (\emph{M} = 2.82, \emph{SD} = 1.91), \emph{t}(65) = -3.03, \emph{p} = .004; \emph{d} = 0.37. Inspection of the binned judgments revealed that twelve participants changed the valence of their judgments, and all but one of these involved included a \enquote{neutral} response for either the initial judgment or revised judgment Table~\ref{tab:tabS1change}.
+Forty six participants (69.70\%) rated the behavior of Julie and Mark as wrong initially, and forty one participants (62.12\%) rated the behavior as wrong at the end of the task. Initial ratings (\emph{M} = 2.38, \emph{SD} = 1.87) were significantly more severe than revised ratings (\emph{M} = 2.82, \emph{SD} = 1.91), \emph{t}(65) = -3.03, \emph{p} = .004; \emph{d} = 0.37. Inspection of the binned judgments revealed that twelve participants changed the valence of their judgments, and all but one of these involved included a ``neutral'' response for either the initial judgment or revised judgment Table~\ref{tab:tabS1change}.
 
 \begin{table}[tbp]
 
@@ -378,7 +410,7 @@ wrong & right & 1\\
 
 \end{table}
 
-Participants who selected the admission of not having reasons on the critical slide were identified as dumbfounded. Thirteen participants (19.70\%) selected \enquote{It's wrong but I can't think of a reason}. Thirty three participants (50\%) selected \enquote{It's wrong and I can provide a valid reason}; and twenty participants (30.30\%) selected \enquote{There is nothing wrong}.
+Participants who selected the admission of not having reasons on the critical slide were identified as dumbfounded. Thirteen participants (19.70\%) selected ``It's wrong but I can't think of a reason''. Thirty three participants (50\%) selected ``It's wrong and I can provide a valid reason''; and twenty participants (30.30\%) selected ``There is nothing wrong''.
 
 \begin{table}[tbp]
 
@@ -406,7 +438,7 @@ There is nothing wrong. & 15 & 45\% & 5 & 15\%\\
 
 Regarding the cognitive load manipulation, nine participants (27.27\%) successfully remembered the sequence of numbers and letters in full, and five participants (15.15\%) indicated they found the memory task easy. Of these, four participants both found the task easy and got the answer right. All participants correctly remembered at least two digits, indicating at least some level of engagement with the cognitive load manipulation. There were no differences in initial judgement, \emph{t}(63.90) = 1.26, \emph{p} = .214; \emph{d} = 0.31, or revised judgment, \emph{t}(63.99) = 1.16, \emph{p} = .250; \emph{d} = 0.29, depending on cognitive load.
 
-To test our main hypotheses we conducted a chi-squared test for independence which revealed a significant association between experimental condition and response to the critical slide, \(\chi\)\textsuperscript{2}(2, \emph{N} = 66) = 7.53, \emph{p} = .023, \emph{V} = 0.34, the observed power was 0.69. Under cognitive load fewer participants (12; 36.36\%) provided reasons than in the control condition (21; 63.64\%). Similarly, under cognitive load more participants (15; 45.45\%) selected \enquote{There is nothing wrong} than in the control group (5; 15.15\%). The responses to the critical slide for the experimental group (\emph{N} = 33) and the control group (\emph{N} = 33) are displayed in Figure~\ref{fig:S1S1fig2criticalcondition} and Table~\ref{tab:tabS1tab1dumb1all}. The observed counts, expected counts and standardised residuals are displayed in Table~\ref{tab:S1tab1dumb}.
+To test our main hypotheses we conducted a chi-squared test for independence which revealed a significant association between experimental condition and response to the critical slide, \(\chi\)\textsuperscript{2}(2, \emph{N} = 66) = 7.53, \emph{p} = .023, \emph{V} = 0.34, the observed power was 0.69. Under cognitive load fewer participants (12; 36.36\%) provided reasons than in the control condition (21; 63.64\%). Similarly, under cognitive load more participants (15; 45.45\%) selected ``There is nothing wrong'' than in the control group (5; 15.15\%). The responses to the critical slide for the experimental group (\emph{N} = 33) and the control group (\emph{N} = 33) are displayed in Figure~\ref{fig:S1S1fig2criticalcondition} and Table~\ref{tab:tabS1tab1dumb1all}. The observed counts, expected counts and standardised residuals are displayed in Table~\ref{tab:S1tab1dumb}.
 
 \begin{table}[tbp]
 
@@ -503,7 +535,7 @@ wrong & right & 1\\
 
 \end{table}
 
-Participants who selected the admission of not having reasons on the critical slide were identified as dumbfounded. Twenty six participants (26\%) selected \enquote{It's wrong but I can't think of a reason}. Fifty participants (50\%) selected \enquote{It's wrong and I can provide a valid reason}; and twenty four participants (24\%) selected \enquote{There is nothing wrong}.
+Participants who selected the admission of not having reasons on the critical slide were identified as dumbfounded. Twenty six participants (26\%) selected ``It's wrong but I can't think of a reason''. Fifty participants (50\%) selected ``It's wrong and I can provide a valid reason''; and twenty four participants (24\%) selected ``There is nothing wrong''.
 
 A chi-squared test for independence revealed no association between experimental condition and response to the critical slide, \(\chi\)\textsuperscript{2}(6, \emph{N} = 100) = 1.36, \emph{p} = .968, \emph{V} = 0.09, the observed power was 0.11. The responses to the critical slide for the experimental group (\emph{N} = 51) and the control group (\emph{N} = 49) are displayed in Figure~\ref{fig:S2figboth} and Table~\ref{tab:tabS2tab1dumb1all}.
 
@@ -535,7 +567,7 @@ Engagement & Reasons & 23 & 41\% & 27 & 61\%\\
 \end{table}
 
 \begin{figure}[!h]
-\includegraphics{Supplementary_files/figure-latex/S2figboth-1} \caption{Study S2: Responses to critical slide for (left) the experimental group (*N* = 51) vs the control group (*N* = 49); and (right) depending on engagement (*N* = 56) or non-engagement (*N* = 44) with the memory task}\label{fig:S2figboth}
+\includegraphics{Supplementary_files/figure-latex/S2figboth-1} \caption{Study S2: Responses to critical slide for (left) the experimental group (N = 51) vs the control group (N = 49); and (right) depending on engagement (N = 56) or non-engagement (N = 44) with the memory task (error bars represent standard error of the proportion)}\label{fig:S2figboth}
 \end{figure}
 
 \begin{figure}[!h]
@@ -611,7 +643,7 @@ A score of 7 or higher on the memory task that accompanied the critical slide wa
 \subsection{Study S3: Results}\label{study-s3-results}}
 
 \begin{figure}[!h]
-\includegraphics{Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1} \caption{Study S3: Responses to critical slide for the cognitive load group (*N* = 68) and the control group (*N* = 61)}\label{fig:S3ch5S3fig2criticalcondition}
+\includegraphics{Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1} \caption{Study S3: Responses to critical slide for the cognitive load group (N = 68) and the control group (N = 61); (error bars represent standard error of the proportion)}\label{fig:S3ch5S3fig2criticalcondition}
 \end{figure}
 
 \begin{figure}[!h]
@@ -645,7 +677,7 @@ wrong & right & 2\\
 
 \end{table}
 
-Turning to responses to the critical slide, twenty two participants (17.32\%) selected \enquote{It's wrong but I can't think of a reason}. Seventy six participants (59.84\%) selected \enquote{It's wrong and I can provide a valid reason}; and twenty nine participants (22.83\%) selected \enquote{There is nothing wrong}.
+Turning to responses to the critical slide, twenty two participants (17.32\%) selected ``It's wrong but I can't think of a reason''. Seventy six participants (59.84\%) selected ``It's wrong and I can provide a valid reason''; and twenty nine participants (22.83\%) selected ``There is nothing wrong''.
 
 \begin{table}[tbp]
 
@@ -739,7 +771,7 @@ Study S4 was the same as Study S3 with one change, the inclusion of a manipulati
 \subsection{Study S4: Results}\label{study-s4-results}}
 
 \begin{figure}[!h]
-\includegraphics{Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1} \caption{Study S4: Responses to critical slide for the cognitive load group (*N* = 64) and the control group (*N* = 61)}\label{fig:ch5S4fig2criticalcondition}
+\includegraphics{Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1} \caption{Study S4: Responses to critical slide for the cognitive load group (N = 64) and the control group (N = 61); (error bars represent standard error of the proportion)}\label{fig:ch5S4fig2criticalcondition}
 \end{figure}
 
 \begin{figure}[!h]
@@ -831,7 +863,7 @@ Standardised residuals & Reasons & -1.13 & 1.13\\
 
 \end{table}
 
-On the critical slide, twenty participants (16.13\%) selected \enquote{It's wrong but I can't think of a reason}. Seventy three participants (58.87\%) selected \enquote{It's wrong and I can provide a valid reason}; and thirty one participants (25\%) selected \enquote{There is nothing wrong}.
+On the critical slide, twenty participants (16.13\%) selected ``It's wrong but I can't think of a reason''. Seventy three participants (58.87\%) selected ``It's wrong and I can provide a valid reason''; and thirty one participants (25\%) selected ``There is nothing wrong''.
 
 A chi-squared test for independence revealed no significant association between experimental condition and response to the critical slide, \(\chi\)\textsuperscript{2}(2, \emph{N} = 124) = 1.89, \emph{p} = .388, \emph{V} = 0.12, the observed power was 0.22. The responses to the critical slide for the experimental group (\emph{N} = 63) and the control group (\emph{N} = 61) are displayed in Figure~\ref{fig:ch5S4fig2criticalcondition} and Table~\ref{tab:tabS4tab1dumb1all}. The observed counts, expected counts and standardised residuals are displayed in Table~\ref{tab:S4tab1dumb}.
 
@@ -859,15 +891,15 @@ A total sample of 204 participants (144 female, 59 male; \emph{M}\textsubscript{
 
 Data were collected using an online questionnaire. Data collection took place in a designated computer laboratory in MIC. The experimenter remained in the laboratory for the duration of the study. Participants were first presented with an information sheet and consent form.
 
-There were two sections of the online survey: the moral judgement task, and the Need for Cognition scale. The order of presentation of these was randomised. At the beginning of the moral judgement task, participants in the experimental condition were presented with an eight digit number/letter string and asked to memorise the sequence. After 30 seconds, the experiment progressed to the next slide. Participants had the option to click \enquote{ok} and progress to the next slide after 15 seconds.
+There were two sections of the online survey: the moral judgement task, and the Need for Cognition scale. The order of presentation of these was randomised. At the beginning of the moral judgement task, participants in the experimental condition were presented with an eight digit number/letter string and asked to memorise the sequence. After 30 seconds, the experiment progressed to the next slide. Participants had the option to click ``ok'' and progress to the next slide after 15 seconds.
 
-Participants were then presented with the \enquote{Julie and Mark} (\emph{Incest}) vignette (Haidt et al., 2000). Participants rated how right or wrong the behaviour of Julie and Mark was, and were given an opportunity to provide reasons for their judgement. Following this, participants were presented with a series of counter-arguments, which refuted commonly used justifications for rating the behaviour as \enquote{wrong}. Dumbfounding was measured using the critical slide. Following the revised judgement participants were required to reproduce the number/letter string.
+Participants were then presented with the ``Julie and Mark'' (\emph{Incest}) vignette (Haidt et al., 2000). Participants rated how right or wrong the behaviour of Julie and Mark was, and were given an opportunity to provide reasons for their judgement. Following this, participants were presented with a series of counter-arguments, which refuted commonly used justifications for rating the behaviour as ``wrong''. Dumbfounding was measured using the critical slide. Following the revised judgement participants were required to reproduce the number/letter string.
 
 \hypertarget{study-s5-results}{%
 \subsection{Study S5: Results}\label{study-s5-results}}
 
 \begin{figure}[!h]
-\includegraphics{Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1} \caption{Study S5: Responses to critical slide and for the experimental group (*N* = 98) and the control group (*N* = 106)}\label{fig:ch5S5fig2criticalcondition}
+\includegraphics{Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1} \caption{Study S5: Responses to critical slide and for the experimental group (N = 98) and the control group (N = 106); (error bars represent standard error of the proportion)}\label{fig:ch5S5fig2criticalcondition}
 \end{figure}
 
 \begin{figure}[!h]
@@ -957,7 +989,7 @@ Standardised residuals & Reasons & -1.75 & 1.75\\
 
 \end{table}
 
-Next we examined responses to the critical slide. Forty five participants (22.06\%) selected \enquote{It's wrong but I can't think of a reason}. one hundred Nineteen participants (58.33\%) selected \enquote{It's wrong and I can provide a valid reason}; and forty participants (19.61\%) selected \enquote{There is nothing wrong}.
+Next we examined responses to the critical slide. Forty five participants (22.06\%) selected ``It's wrong but I can't think of a reason''. one hundred Nineteen participants (58.33\%) selected ``It's wrong and I can provide a valid reason''; and forty participants (19.61\%) selected ``There is nothing wrong''.
 
 Initial check of responses to the memory task revealed that 42 participants (42.86\%) successfully remembered the sequence of numbers and letters. Responses to the manipulation check question revealed that 22 participants (22.45\%) found the memory task easy. Of these, 20 participants both found the task easy and got the answer right. All participants correctly remembered at least two digits suggesting engagement with the manipulation.
 
@@ -1059,9 +1091,9 @@ Heinz & neutral & right & 2\\
 \cmidrule(r){2-3} \cmidrule(r){4-5}
  & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
 \midrule
-It's wrong and I can provide a valid reason. & 113 & 56\% & 143 & 67\%\\
-It's wrong but I can't think of a reason. & 55 & 27\% & 36 & 17\%\\
-There is nothing wrong. & 35 & 17\% & 36 & 17\%\\
+It's wrong and I can provide a valid reason. & 458 & 55\% & 574 & 67\%\\
+It's wrong but I can't think of a reason. & 245 & 30\% & 172 & 20\%\\
+There is nothing wrong. & 123 & 15\% & 114 & 13\%\\
 \bottomrule
 \end{tabular}
 
@@ -1235,6 +1267,30 @@ Standardised residuals & Reasons & -2.27* & 2.27*\\
 
 \end{table}
 
+\begin{table}[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6EngagementAndDumbfounding}Study 6 – Response to the critical slide depending on performance in cognitive load task}
+
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Correct} & \multicolumn{2}{c}{Incorrect} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5}
+ & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+It's wrong and I can provide a valid reason. & 203 & 53\% & 255 & 58\%\\
+It's wrong but I can't think of a reason. & 127 & 33\% & 118 & 27\%\\
+There is nothing wrong. & 53 & 14\% & 70 & 16\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table}
+
 \newpage
 
 ~
@@ -1269,35 +1325,38 @@ Standardised residuals & Reasons & -2.27* & 2.27*\\
 \setlength{\parskip}{8pt}
 
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-amazonwebservicesinc._amazon_2016}{}%
-Amazon Web Services Inc. (2016). Amazon Mechanical Turk.
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-amazonwebservicesinc._amazon_2016}{}}%
+Amazon Web Services Inc. (2016). \emph{Amazon {Mechanical Turk}}.
 
-\leavevmode\hypertarget{ref-cacioppo_need_1982}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-cacioppo_need_1982}{}}%
 Cacioppo, J. T., \& Petty, R. E. (1982). The need for cognition. \emph{Journal of Personality and Social Psychology}, \emph{42}(1), 116--131. \url{https://doi.org/10.1037/0022-3514.42.1.116}
 
-\leavevmode\hypertarget{ref-deneys_when_2007}{}%
-De Neys, W., \& Schaeken, W. (2007). When people are more logical under cognitive load: Dual task impact on scalar implicature. \emph{Experimental Psychology}, \emph{54}(2), 128--133. \url{https://doi.org/10.1027/1618-3169.54.2.128}
+\leavevmode\vadjust pre{\hypertarget{ref-deneys_when_2007}{}}%
+De Neys, W., \& Schaeken, W. (2007). When people are more logical under cognitive load: {Dual} task impact on scalar implicature. \emph{Experimental Psychology}, \emph{54}(2), 128--133. \url{https://doi.org/10.1027/1618-3169.54.2.128}
 
-\leavevmode\hypertarget{ref-evans_dualprocess_2013}{}%
-Evans, J. S. B. T., \& Stanovich, K. E. (2013). Dual-Process Theories of Higher Cognition: Advancing the Debate. \emph{Perspectives on Psychological Science}, \emph{8}(3), 223--241. \url{https://doi.org/10.1177/1745691612460685}
+\leavevmode\vadjust pre{\hypertarget{ref-evans_dualprocess_2013}{}}%
+Evans, J. St. B. T., \& Stanovich, K. E. (2013). Dual-{Process Theories} of {Higher Cognition}: {Advancing} the {Debate}. \emph{Perspectives on Psychological Science}, \emph{8}(3), 223--241. \url{https://doi.org/10.1177/1745691612460685}
 
-\leavevmode\hypertarget{ref-forsterlee_examination_1999}{}%
-Forsterlee, R., \& Ho, R. (1999). An Examination of the Short form of the Need for Cognition Scale Applied in an Australian Sample. \emph{Educational and Psychological Measurement}, \emph{59}(3), 471--480. \url{https://doi.org/10.1177/00131649921969983}
+\leavevmode\vadjust pre{\hypertarget{ref-forsterlee_examination_1999}{}}%
+Forsterlee, R., \& Ho, R. (1999). An {Examination} of the {Short} form of the {Need} for {Cognition Scale Applied} in an {Australian Sample}. \emph{Educational and Psychological Measurement}, \emph{59}(3), 471--480. \url{https://doi.org/10.1177/00131649921969983}
 
-\leavevmode\hypertarget{ref-haidt_moral_2000}{}%
-Haidt, J., Björklund, F., \& Murphy, S. (2000). Moral dumbfounding: When intuition finds no reason. \emph{Unpublished Manuscript, University of Virginia}.
+\leavevmode\vadjust pre{\hypertarget{ref-haidt_moral_2000}{}}%
+Haidt, J., Björklund, F., \& Murphy, S. (2000). Moral dumbfounding: {When} intuition finds no reason. \emph{Unpublished Manuscript, University of Virginia}.
 
-\leavevmode\hypertarget{ref-just_capacity_1992}{}%
-Just, M. A., \& Carpenter, P. A. (1992). A capacity theory of comprehension: Individual differences in working memory. \emph{Psychological Review}, \emph{99}(1), 122--149. \url{https://doi.org/10.1037/0033-295X.99.1.122}
+\leavevmode\vadjust pre{\hypertarget{ref-just_capacity_1992}{}}%
+Just, M. A., \& Carpenter, P. A. (1992). A capacity theory of comprehension: {Individual} differences in working memory. \emph{Psychological Review}, \emph{99}(1), 122--149. \url{https://doi.org/10.1037/0033-295X.99.1.122}
 
-\leavevmode\hypertarget{ref-mchugh_searching_2017a}{}%
-McHugh, C., McGann, M., Igou, E. R., \& Kinsella, E. L. (2017). Searching for Moral Dumbfounding: Identifying Measurable Indicators of Moral Dumbfounding. \emph{Collabra: Psychology}, \emph{3}(1), 1--24. \url{https://doi.org/10.1525/collabra.79}
+\leavevmode\vadjust pre{\hypertarget{ref-mchugh_searching_2017a}{}}%
+McHugh, C., McGann, M., Igou, E. R., \& Kinsella, E. L. (2017). Searching for {Moral Dumbfounding}: {Identifying Measurable Indicators} of {Moral Dumbfounding}. \emph{Collabra: Psychology}, \emph{3}(1), 1--24. \url{https://doi.org/10.1525/collabra.79}
 
-\leavevmode\hypertarget{ref-petty_efficient_1984}{}%
+\leavevmode\vadjust pre{\hypertarget{ref-petty_efficient_1984}{}}%
 Petty, R. E., Cacioppo, J. T., \& Kao, C. F. (1984). The efficient assessment of need for cognition. \emph{Journal of Personality Assessment}, \emph{48}(3), 306--307.
 
-\leavevmode\hypertarget{ref-petty_dispositional_1996}{}%
-Petty, R. E., Feinstein, J. A., Blair, W., \& Jarvis, G. (1996). Dispositional differences in cognitive motivation: The life and times of individuals varying in need for cognition. \emph{Psych. Bull}, 197--253.
+\leavevmode\vadjust pre{\hypertarget{ref-petty_dispositional_1996}{}}%
+Petty, R. E., Feinstein, J. A., Blair, W., \& Jarvis, G. (1996). Dispositional differences in cognitive motivation: {The} life and times of individuals varying in need for cognition. \emph{Psych. Bull}, 197--253.
+
+\end{CSLReferences}
 
 
 \end{document}

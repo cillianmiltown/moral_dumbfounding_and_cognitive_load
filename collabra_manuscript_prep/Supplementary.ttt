@@ -1,0 +1,686 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS1change}Study S1 – Changes in Jugment}
+
+\begin{tabular}{ccc}
+\toprule
+Initial Judgment & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+neutral & right & 1\\
+neutral & wrong & 3\\
+wrong & neutral & 7\\
+wrong & right & 1\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS1tab1dumb1all}Study S1 – Response to the critical slide depending on cognitive load}
+
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5}
+ & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+It's wrong and I can provide a valid reason. & 12 & 36\% & 21 & 64\%\\
+It's wrong but I can't think of a reason. & 6 & 18\% & 7 & 21\%\\
+There is nothing wrong. & 15 & 45\% & 5 & 15\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:S1tab1dumb}Study S1 – Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 12 & 21\\
+ & Dumbfounded & 6 & 7\\
+ & Nothing Wrong & 15 & 5\\
+Expected count & Reasons & 16.5 & 16.5\\
+ & Dumbfounded & 6.5 & 6.5\\
+ & Nothing Wrong & 10 & 10\\
+Standardised residuals & Reasons & -2.22* & 2.22*\\
+ & Dumbfounded & -0.31 & 0.31\\
+ & Nothing Wrong & 2.68* & -2.68*\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS2change}Study S2 – Changes in Jugment}
+
+\begin{tabular}{ccc}
+\toprule
+Initial Judgment & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+neutral & right & 2\\
+right & neutral & 1\\
+wrong & neutral & 6\\
+wrong & right & 1\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS2tab1dumb1all}Study S2 – Response to the critical slide depending on cognitive load/engagement}
+
+\begin{tabular}{llcccc}
+\toprule
+ &  & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){3-4} \cmidrule(r){5-6}
+Measure & \multicolumn{1}{c}{Response} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+Manipulation Only & Reasons & 25 & 49\% & 25 & 51\%\\
+ & Dumbfounded & 15 & 29\% & 11 & 22\%\\
+ & Nothing Wrong & 11 & 22\% & 13 & 27\%\\
+Engagement & Reasons & 23 & 41\% & 27 & 61\%\\
+ & Dumbfounded & 20 & 36\% & 6 & 14\%\\
+ & Nothing Wrong & 13 & 23\% & 11 & 25\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:S2S2tab1dumb}Study S2 – Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Engaged} & \multicolumn{1}{c}{Not Engaged}\\
+\midrule
+Observed count & Reasons & 23 & 27\\
+ & Dumbfounded & 20 & 6\\
+ & Nothing Wrong & 13 & 11\\
+Expected count & Reasons & 28 & 22\\
+ & Dumbfounded & 14.56 & 11.44\\
+ & Nothing Wrong & 13.44 & 10.56\\
+Standardised residuals & Reasons & -2.01* & 2.01*\\
+ & Dumbfounded & 2.5* & -2.5*\\
+ & Nothing Wrong & -0.21 & 0.21\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS3change}Study S3 – Changes in Jugment}
+
+\begin{tabular}{ccc}
+\toprule
+Initial Judgment & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+neutral & right & 2\\
+neutral & wrong & 2\\
+right & neutral & 4\\
+right & wrong & 1\\
+wrong & neutral & 2\\
+wrong & right & 2\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS3tab1dumb1all}Study S3 – Response to the critical slide depending on cognitive load/engagement}
+
+\begin{tabular}{llccc}
+\toprule
+ & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5}
+ & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+It's wrong and I can provide a valid reason. & 36 & 54\% & 40 & 67\%\\
+It's wrong but I can't think of a reason. & 17 & 25\% & 5 & 8\%\\
+There is nothing wrong. & 14 & 21\% & 15 & 25\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:S3S3tab1dumb}Study S3 – Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 36 & 40\\
+ & Dumbfounded & 17 & 5\\
+ & Nothing Wrong & 14 & 15\\
+Expected count & Reasons & 40.09 & 35.91\\
+ & Dumbfounded & 11.61 & 10.39\\
+ & Nothing Wrong & 15.3 & 13.7\\
+Standardised residuals & Reasons & -1.48 & 1.48\\
+ & Dumbfounded & 2.53* & -2.53*\\
+ & Nothing Wrong & -0.55 & 0.55\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS4change}Study S4 – Changes in Jugment}
+
+\begin{tabular}{ccc}
+\toprule
+Initial Judgment & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+neutral & right & 4\\
+right & neutral & 1\\
+right & wrong & 1\\
+wrong & neutral & 6\\
+wrong & right & 1\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS4tab1dumb1all}Study S4 – Response to the critical slide depending on cognitive load/engagement}
+
+\begin{tabular}{llccc}
+\toprule
+ & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5}
+ & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+It's wrong and I can provide a valid reason. & 34 & 54\% & 39 & 64\%\\
+It's wrong but I can't think of a reason. & 10 & 16\% & 10 & 16\%\\
+There is nothing wrong. & 19 & 30\% & 12 & 20\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:S4tab1dumb}Study S4 – Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 34.00 & 39.00\\
+ & Dumbfounded & 10.00 & 10.00\\
+ & Nothing Wrong & 19.00 & 12.00\\
+Expected count & Reasons & 37.09 & 35.91\\
+ & Dumbfounded & 10.16 & 9.84\\
+ & Nothing Wrong & 15.75 & 15.25\\
+Standardised residuals & Reasons & -1.13 & 1.13\\
+ & Dumbfounded & -0.08 & 0.08\\
+ & Nothing Wrong & 1.35 & -1.35\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS5change}Study S5 – Changes in Jugment}
+
+\begin{tabular}{ccc}
+\toprule
+Initial Judgment & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+neutral & right & 1\\
+right & neutral & 2\\
+right & wrong & 1\\
+wrong & neutral & 6\\
+wrong & right & 1\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS5tab1dumb1all}Study S5 – Response to the critical slide depending on cognitive load/engagement}
+
+\begin{tabular}{llccc}
+\toprule
+ & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5}
+ & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+It's wrong and I can provide a valid reason. & 51 & 52\% & 68 & 64\%\\
+It's wrong but I can't think of a reason. & 25 & 26\% & 20 & 19\%\\
+There is nothing wrong. & 22 & 22\% & 18 & 17\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:S5tab1dumb}Study S5 – Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 51.00 & 68.00\\
+ & Dumbfounded & 25.00 & 20.00\\
+ & Nothing Wrong & 22.00 & 18.00\\
+Expected count & Reasons & 57.17 & 61.83\\
+ & Dumbfounded & 21.62 & 23.38\\
+ & Nothing Wrong & 19.22 & 20.78\\
+Standardised residuals & Reasons & -1.75 & 1.75\\
+ & Dumbfounded & 1.14 & -1.14\\
+ & Nothing Wrong & 0.98 & -0.98\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6change}Changes in Jugment (full sample)}
+
+\begin{tabular}{ccc}
+\toprule
+Initial Judgment & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+neutral & right & 8\\
+neutral & wrong & 19\\
+right & neutral & 10\\
+right & wrong & 61\\
+wrong & neutral & 29\\
+wrong & right & 73\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6changeeachscenario}Changes in Jugment for each Scenario}
+
+\begin{tabular}{lccc}
+\toprule
+Scenario & \multicolumn{1}{c}{Initial Judgment} & \multicolumn{1}{c}{Revised Judgment} & \multicolumn{1}{c}{Total Changed}\\
+\midrule
+Julie and Mark & neutral & right & 1\\
+ & neutral & wrong & 4\\
+ & right & wrong & 6\\
+ & wrong & neutral & 9\\
+ & wrong & right & 8\\
+Jennifer & neutral & right & 1\\
+ & neutral & wrong & 3\\
+ & right & neutral & 2\\
+ & right & wrong & 10\\
+ & wrong & neutral & 2\\
+ & wrong & right & 11\\
+Trolley & neutral & right & 4\\
+ & neutral & wrong & 7\\
+ & right & neutral & 4\\
+ & right & wrong & 18\\
+ & wrong & neutral & 14\\
+ & wrong & right & 26\\
+Heinz & neutral & right & 2\\
+ & neutral & wrong & 5\\
+ & right & neutral & 4\\
+ & right & wrong & 27\\
+ & wrong & neutral & 4\\
+ & wrong & right & 28\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6tab1dumb1all}Response to the critical slide depending on cognitive load (full sample)}
+
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){2-3} \cmidrule(r){4-5}
+ & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+It's wrong and I can provide a valid reason. & 113 & 56\% & 143 & 67\%\\
+It's wrong but I can't think of a reason. & 55 & 27\% & 36 & 17\%\\
+There is nothing wrong. & 35 & 17\% & 36 & 17\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6tab1dumb1allIncest}Response to the critical slide depending on cognitive load, for each scenario}
+
+\begin{tabular}{llcccc}
+\toprule
+ &  & \multicolumn{2}{c}{Cognitive Load} & \multicolumn{2}{c}{Control} \\
+\cmidrule(r){3-4} \cmidrule(r){5-6}
+Scenario & \multicolumn{1}{c}{Response} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{\%}\\
+\midrule
+Julie and Mark & Reasons & 106 & 54\% & 123 & 57\%\\
+ & Dumbfounded & 51 & 26\% & 51 & 24\%\\
+ & Nothing Wrong & 40 & 20\% & 41 & 19\%\\
+Jennifer & Reasons & 142 & 65\% & 173 & 81\%\\
+ & Dumbfounded & 67 & 31\% & 30 & 14\%\\
+ & Nothing Wrong & 9 & 4\% & 11 & 5\%\\
+Trolley & Reasons & 97 & 47\% & 135 & 62\%\\
+ & Dumbfounded & 72 & 35\% & 55 & 25\%\\
+ & Nothing Wrong & 39 & 19\% & 26 & 12\%\\
+Heinz & Reasons & 113 & 56\% & 143 & 67\%\\
+ & Dumbfounded & 55 & 27\% & 36 & 17\%\\
+ & Nothing Wrong & 35 & 17\% & 36 & 17\%\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6tab1dumbIncest}Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load (Julie and Mark)}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 106 & 123\\
+ & Dumbfounded & 51 & 51\\
+ & Nothing Wrong & 40 & 41\\
+Expected count & Reasons & 109.5 & 119.5\\
+ & Dumbfounded & 48.77 & 53.23\\
+ & Nothing Wrong & 38.73 & 42.27\\
+Standardised residuals & Reasons & -0.69 & 0.69\\
+ & Dumbfounded & 0.51 & -0.51\\
+ & Nothing Wrong & 0.32 & -0.32\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6tab1dumbJennifer}Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load (Jennifer)}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 142 & 173\\
+ & Dumbfounded & 67 & 30\\
+ & Nothing Wrong & 9 & 11\\
+Expected count & Reasons & 158.96 & 156.04\\
+ & Dumbfounded & 48.95 & 48.05\\
+ & Nothing Wrong & 10.09 & 9.91\\
+Standardised residuals & Reasons & -3.67** & 3.67**\\
+ & Dumbfounded & 4.16** & -4.16**\\
+ & Nothing Wrong & -0.5 & 0.5\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6tab1dumbTrolley}Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load (Trolley)}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 97 & 135\\
+ & Dumbfounded & 72 & 55\\
+ & Nothing Wrong & 39 & 26\\
+Expected count & Reasons & 113.81 & 118.19\\
+ & Dumbfounded & 62.3 & 64.7\\
+ & Nothing Wrong & 31.89 & 33.11\\
+Standardised residuals & Reasons & -3.28* & 3.28*\\
+ & Dumbfounded & 2.06* & -2.06*\\
+ & Nothing Wrong & 1.92 & -1.92\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:tabS6tab1dumbHeinz}Observed counts, expected counts, and standardised residuals for each response to the critical slide depending on cognitive load (Heinz)}
+
+\begin{tabular}{llcc}
+\toprule
+ & \multicolumn{1}{c}{} & \multicolumn{1}{c}{Cognitive Load} & \multicolumn{1}{c}{Control}\\
+\midrule
+Observed count & Reasons & 113 & 143\\
+ & Dumbfounded & 55 & 36\\
+ & Nothing Wrong & 35 & 36\\
+Expected count & Reasons & 124.33 & 131.67\\
+ & Dumbfounded & 44.19 & 46.81\\
+ & Nothing Wrong & 34.48 & 36.52\\
+Standardised residuals & Reasons & -2.27* & 2.27*\\
+ & Dumbfounded & 2.56* & -2.56*\\
+ & Nothing Wrong & 0.14 & -0.14\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} * = sig. at \emph{p} < .05; ** = sig. at \emph{p} < .001}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}

@@ -1,39 +1,38 @@
 ---
 title             : "Cognitive Load Reduces Reason-Giving in a Moral Dumbfounding Task"
 shorttitle        : "Cognitive Load and Moral Dumbfounding"
-author: 
-  - name          : "Blinded"
+author:
+  - name          : "Cillian McHugh"
     affiliation   : "1"
     corresponding : yes    # Define only one corresponding author
-    address       : "Blinded"
-    email         : "Blinded"
-  - name          : "Blinded"
+    address       : "Department of Psychology, University of Limerick"
+    email         : "cillian.mchugh@ul.ie"
+  - name          : "Marek McGann"
     affiliation   : "2"
-  - name          : "Blinded"
+  - name          : "Eric R. Igou"
     affiliation   : "1"
-  - name          : "Blinded"
+  - name          : "Elaine L. Kinsella"
     affiliation   : "1"
 affiliation:
   - id            : "1"
-    institution   : "Blinded"
+    institution   : "Department of Psychology, University of Limerick"
   - id            : "2"
-    institution   : "Blinded"
+    institution   : "Department of Psychology, Mary Immaculate College, University of Limerick"
 author_note: >
   All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript. 
 abstract: >
   Moral dumbfounding occurs when people defend a moral judgment, without reasons in support of this judgment. The phenomenon has been influential in moral psychology, however, despite its influence, it remains poorly understood. Based on the notion that cognitive load enhances biases and shortcomings in human judgment when elaboration is beneficial, we hypothesized that under cognitive load, people would be less likely to provide reasons for a judgment and more likely to be dumbfounded. In a pre-registered study (N = 1686) we tested this prediction. Our findings suggest that cognitive load reduces reason-giving, leading to increases in dumbfounding. Our results provide new insights into the phenomenon of moral dumbfounding while also advancing theory in moral psychology.   
 keywords          : "moral dumbfounding, morality, cognitive load, dual-processes"
-wordcount         : "3,747"
+wordcount         : "5,201"
 bibliography: "../resources/bib/My Library.bib"
-cls: "../resources/bib/apa7.cls"
-figsintext        : yes
+floatsintext      : yes
+linenumbers       : yes
+draft             : no
+mask              : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-lineno            : no
-toc               : false
-lang              : "en-US"
-documentclass     : "apa7"
+classoption       : "man"
 output:
   papaja::apa6_pdf:
        keep_tex: true

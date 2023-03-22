@@ -180,11 +180,46 @@ test <- ab_graph()
 ```
 
 
-```{r ch5S4fig2criticalcondition, fig.cap="Study S4: Responses to critical slide for the cognitive load group (*N* = 64) and the control group (*N* = 61)", include=TRUE}
+```{r}
+
+x <- df3
 
 
+se_fun <- function(a,b){
+  k <- length(a$gender)
+  n <- length(b$gender)
+  
+  pbar <- k/n
+  a$pbar <- pbar
+  a$se = sqrt(pbar * (1 - pbar)/n)
+  a}
+# https://www.r-tutor.com/elementary-statistics/interval-estimation/interval-estimate-population-proportion
 
-ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive load","Control")))) +
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
+
+
+test1 <- dplyr::left_join(test,y1, by = c("condition","InCS") )
+
+```
+
+```{r}
+
+g <- ggplot(test1, aes(x=reorder(InCS), y=perc, fill=factor(condition,labels=c("Cognitive load","Control")))) +
   scale_y_continuous(limits = c(-.03,1),
                      labels = percent_format()
   )+ 
@@ -192,19 +227,24 @@ ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive load"
            color="black",
            size=.2
   )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), size=.2, width=.2,
+               position=position_dodge(.9), color=#"black" #
+                 "#5a5a5a"
+                 )+
   geom_text(#family = "Times",
-            size=4.2,
+            size=3,
             aes( label = scales::percent(perc, accuracy = 1),
                  y= perc ),
             stat= "identity",
             vjust = -.5,
+            hjust = +1.1,
             position = position_dodge(.9),
             fontface='plain'
             )+
-  geom_text(#family = "Times",
-            size=4.2,
+  geom_text(#family = "Times", 
+            size=3.5,
             aes(label = format(Freq),
-                y= -3*(..count../100)/(..count..)),
+                y= -2.5*(..count../100)/(..count..)),
             stat= "count",
             position = position_dodge(0.9),
             #vjust = -.05,
@@ -227,22 +267,22 @@ ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive load"
         legend.text=element_text(#family="Times",
                                  size=8
                                  ),
-          legend.title=element_text(#family="Times",
+        legend.title=element_text(#family="Times",
                                     size=10
-                                    ),
-          axis.text=element_text(#family="Times",
+                                 ),
+        axis.text=element_text(#family="Times",
                                  colour = "black",
                                  size=8
                                  ),
-          axis.ticks.x = element_blank(),
-          axis.title=element_text(#family="Times",
+        axis.ticks.x = element_blank(),
+        axis.title=element_text(#family="Times",
                                   size=12
                                   ),
-          strip.text=element_text(#family = "Times",
+        strip.text=element_text(#family = "Times",
                                   size = 12
                                   ),
-         # strip.background = element_rect(fill = "white"),
-          legend.position="right")
+        #strip.background = element_rect(fill = "white"),
+        legend.position="right")
 
 
 
@@ -263,6 +303,12 @@ ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive load"
 # rm(g)
 
 
+```
+
+
+```{r ch5S4fig2criticalcondition, fig.cap="Study S4: Responses to critical slide for the cognitive load group (N = 64) and the control group (N = 61); (error bars represent standard error of the proportion)", include=TRUE}
+
+suppressWarnings(print(g))
 
 ```
 
@@ -303,24 +349,24 @@ ggplot(logit_plot,
   #scale_color_discrete(name="Response to \nCritical Slide", labels=c("Dumbfounded","Nothing Wrong","Reasons"))+
   scale_linetype_discrete(name="Response to \nCritical Slide", labels=c("Dumbfounded","Nothing Wrong","Reasons"))+
   theme_bw() +
-  theme(plot.title=element_text(family="Times",
+  theme(plot.title=element_text(#family="Times",
                                 size=12
   ),
-  legend.text=element_text(family="Times",
+  legend.text=element_text(#family="Times",
                            size=8
   ),
-  legend.title=element_text(family="Times",
+  legend.title=element_text(#family="Times",
                             size=10
   ),
-  axis.text=element_text(family="Times",
+  axis.text=element_text(#family="Times",
                          colour = "black",
                          size=8
   ),
   axis.ticks.x = element_blank(),
-  axis.title=element_text(family="Times",
+  axis.title=element_text(#family="Times",
                           size=12
   ),
-  strip.text=element_text(family = "Times",
+  strip.text=element_text(#family = "Times",
                           size = 12
   ),
   strip.background = element_rect(fill = "white"),

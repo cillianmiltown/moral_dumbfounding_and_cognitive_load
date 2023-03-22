@@ -18,9 +18,9 @@ affiliation:
     institution   : "Blinded"
   - id            : "2"
     institution   : "Blinded"
-author_note: >
+author_note: |
   All procedures performed in studies involving human participants were approved by institutional research ethics committee and conducted in accordance with the Code of Professional Ethics of the Psychological Society of Ireland, and with the 1964 Helsinki declaration and its later amendments or comparable ethical standards. Informed consent was obtained from all individual participants included in the study. The authors declare that there are no potential conflicts of interest with respect to the research, authorship, and/or publication of this article. All authors consented to the submission of this manuscript.
-abstract: >
+abstract: |
   Six studies etc.
 keywords          : "keywords"
 wordcount         : "TBC"
@@ -134,8 +134,8 @@ Data were collected using an online questionnaire. Materials were largely the sa
 
 Participants were presented with a 3 x 3 grid containing a dot pattern. This image disappeared after one second. Participants then answered a question relating to the moral judgement task. Following this, participants were asked to reproduce the dot-pattern. All participants took part in the memory task, and cognitive load was manipulated by varying the complexity of the patterns presented [@deneys_when_2007]. The control group were presented with simple patterns, containing three dots in a line, while the experimental group were presented with more complex dot patterns containing 4 dots, see Figure\ \@ref(fig:S2dotpattern).
 
+```{r}
 
-```{r S2dotpattern,fig.cap="Sample dot patterns - more simple for the control group (a) and higher complexity for the experimental condition (b)",include=TRUE,fig.height=2, fig.width=6}
 
 x <- c(10,20,30,30)
 y <- c(10,30,10,20)
@@ -162,7 +162,7 @@ z2$diff <- rep("a",length=length(z2$x))
 z3 <- rbind(z,z2)
 #z3
 #rm(g)
-ggplot(z3, aes(x=x,y=y)) +
+g <- ggplot(z3, aes(x=x,y=y)) +
  geom_point(size=8) +
  xlab(NULL) + ylab(NULL) + 
  scale_x_continuous(breaks = c(10,20),
@@ -179,7 +179,8 @@ ggplot(z3, aes(x=x,y=y)) +
                                          size=12),
                axis.text=element_text(#family="Times",
                                       size=8),
-               axis.title=element_text(family="Times", size=12),
+               axis.title=element_text(#family="Times", 
+                 size=12),
                panel.background = element_rect(fill = "white",
                                                colour = NA),
                panel.border = element_rect(fill = NA, size = 1,
@@ -195,6 +196,12 @@ ggplot(z3, aes(x=x,y=y)) +
                                  size = 16),
        panel.spacing = unit(4, "lines"))
 
+```
+
+
+```{r S2dotpattern,fig.cap="Sample dot patterns - more simple for the control group (a) and higher complexity for the experimental condition (b)",include=TRUE,fig.height=2, fig.width=6}
+
+suppressWarnings(print(g))
 
 ```
 
@@ -555,10 +562,50 @@ test_condition <- test
 rm(x,y)
 ```
 
-```{r S2ch5S2fig2criticalcondition, fig.cap="Study S2: Responses to critical slide for the experimental group (*N* = 51) and the control group (*N* = 49)", include=FALSE}
+
+```{r}
+
+x <- df3
+
+se_fun <- function(a,b){
+  k <- length(a$gender)
+  n <- length(b$gender)
+  
+  pbar <- k/n
+  a$pbar <- pbar
+  a$se = sqrt(pbar * (1 - pbar)/n)
+  a}
+# https://www.r-tutor.com/elementary-statistics/interval-estimation/interval-estimate-population-proportion
+
+y <- rbind(
+  se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong and I can provide a valid reason."),]
+         ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="control"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="control"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$condition=="cog_load"),])
+  ,se_fun(x[which(x$condition=="cog_load"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$condition=="cog_load"),])
+)
+
+y1 <- y %>% select("InCS","condition","pbar","se")
 
 
-g1 <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive load","Control")))) +
+test1 <- dplyr::left_join(test,y1, by = c("condition","InCS") )
+
+
+test_condition <- test1
+
+```
+
+```{r S2ch5S2fig2criticalcondition, fig.cap="Study S2: Responses to critical slide for the experimental group (*N* = 51) and the control group (*N* = 49); (error bars represent standard error of the proportion)", include=FALSE}
+
+
+g1 <- ggplot(test1, aes(x=reorder(InCS), y=perc, fill=factor(condition,labels=c("Cognitive load","Control")))) +
   scale_y_continuous(limits = c(-.03,1),
                      labels = percent_format()
   )+ 
@@ -566,24 +613,31 @@ g1 <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive
            color="black",
            size=.2
   )+
-  geom_text(#family = "Times", 
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), width=.2,
+               position=position_dodge(.9), color="black" #"#5a5a5a"
+                 )+
+  geom_text(#family = "Times",
             size=4.2,
-            aes( label = scales::percent(perc, accuracy=1),
+            aes( label = scales::percent(perc, accuracy = 1),
                  y= perc ),
             stat= "identity",
             vjust = -.5,
+            hjust = +1.1,
             position = position_dodge(.9),
             fontface='plain'
             )+
   geom_text(#family = "Times", 
             size=4.2,
             aes(label = format(Freq),
-                y= -3*(..count../100)/(..count..)),
+                y= -2*(..count../100)/(..count..)),
             stat= "count",
             position = position_dodge(0.9),
             #vjust = -.05,
             fontface='plain'
-            ) +
+            )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), width=.2,
+               position=position_dodge(.9), color="black" #"#5a5a5a"
+                 )+
   xlab("Response to Critical Slide") +
   ylab("Percentage of participants selecting each response")+
   scale_x_discrete(labels=c("Reasons", "Dumbfounded","Nothing Wrong")) +
@@ -601,22 +655,23 @@ g1 <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Cognitive
         legend.text=element_text(#family="Times",
                                  size=8
                                  ),
-          legend.title=element_text(#family="Times",
+        legend.title=element_text(#family="Times",
                                     size=10
-                                    ),
-          axis.text=element_text(#family="Times",
+                                 ),
+        axis.text=element_text(#family="Times",
                                  colour = "black",
                                  size=8
                                  ),
-          axis.ticks.x = element_blank(),
-          axis.title=element_text(#family="Times",
+        axis.ticks.x = element_blank(),
+        axis.title=element_text(#family="Times",
                                   size=12
                                   ),
-          strip.text=element_text(#family = "Times",
+        strip.text=element_text(#family = "Times",
                                   size = 12
                                   ),
-         # strip.background = element_rect(fill = "white"),
-          legend.position="right")
+        #strip.background = element_rect(fill = "white"),
+        legend.position="right")
+
 
 
 
@@ -674,10 +729,52 @@ test_engaged <- test
 
 ```
 
-```{r S2ch5S2fig2criticalengaged, fig.cap="Study S2: Responses to critical slide depending on engagement (*N* = 56) or non-engagement (*N* = 44) with the memory task", include=FALSE}
 
 
-g2 <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Engaged","Not Engaged")))) +
+```{r}
+
+
+
+se_fun <- function(a,b){
+  k <- length(a$gender)
+  n <- length(b$gender)
+  
+  pbar <- k/n
+  a$pbar <- pbar
+  a$se = sqrt(pbar * (1 - pbar)/n)
+  a}
+# https://www.r-tutor.com/elementary-statistics/interval-estimation/interval-estimate-population-proportion
+
+y <- rbind(
+  se_fun(  x[which(x$engaged=="not engaged"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$engaged=="not engaged"),])
+  ,se_fun( x[which(x$engaged=="not engaged"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$engaged=="not engaged"),])
+  ,se_fun( x[which(x$engaged=="not engaged"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$engaged=="not engaged"),])
+  ,se_fun( x[which(x$engaged=="engaged"&x$InCS=="It's wrong and I can provide a valid reason."),]
+          ,x[which(x$engaged=="engaged"),])
+  ,se_fun( x[which(x$engaged=="engaged"&x$InCS=="There is nothing wrong."),]
+          ,x[which(x$engaged=="engaged"),])
+  ,se_fun( x[which(x$engaged=="engaged"&x$InCS=="It's wrong but I can't think of a reason."),]
+          ,x[which(x$engaged=="engaged"),])
+)
+
+
+y1 <- y %>% select("InCS","engaged","pbar","se")
+y1 <- `colnames<-`(y1, c("InCS","condition","pbar","se"))
+
+test1 <- dplyr::left_join(test,y1, by = c("condition","InCS"), multiple="all" )
+
+test_engaged <- test1
+
+
+```
+
+```{r S2ch5S2fig2criticalengaged, fig.cap="Study S2: Responses to critical slide depending on engagement (*N* = 56) or non-engagement (*N* = 44) with the memory task; (error bars represent standard error of the proportion)", include=FALSE}
+
+
+g2 <- ggplot(test1, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Engaged","Not Engaged")))) +
   scale_y_continuous(limits = c(-.03,1),
                      labels = percent_format()
   )+ 
@@ -685,24 +782,31 @@ g2 <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Engaged",
            color="black",
            size=.2
   )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), width=.2,
+               position=position_dodge(.9), color="black" #"#5a5a5a"
+                 )+
   geom_text(#family = "Times",
             size=4.2,
-            aes( label = scales::percent(perc,accuracy = 1),
+            aes( label = scales::percent(perc, accuracy = 1),
                  y= perc ),
             stat= "identity",
             vjust = -.5,
+            hjust = +1.1,
             position = position_dodge(.9),
             fontface='plain'
             )+
-  geom_text(#family = "Times",
+  geom_text(#family = "Times", 
             size=4.2,
             aes(label = format(Freq),
-                y= -3*(..count../100)/(..count..)),
+                y= -2*(..count../100)/(..count..)),
             stat= "count",
             position = position_dodge(0.9),
             #vjust = -.05,
             fontface='plain'
-            ) +
+            )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), width=.2,
+               position=position_dodge(.9), color="black" #"#5a5a5a"
+                 )+
   xlab("Response to Critical Slide") +
   ylab("Percentage of participants selecting each response")+
   scale_x_discrete(labels=c("Reasons", "Dumbfounded","Nothing Wrong")) +
@@ -720,22 +824,22 @@ g2 <- ggplot(test, aes(x=InCS, y=perc, fill=factor(condition,labels=c("Engaged",
         legend.text=element_text(#family="Times",
                                  size=8
                                  ),
-          legend.title=element_text(#family="Times",
+        legend.title=element_text(#family="Times",
                                     size=10
-                                    ),
-          axis.text=element_text(#family="Times",
+                                 ),
+        axis.text=element_text(#family="Times",
                                  colour = "black",
                                  size=8
                                  ),
-          axis.ticks.x = element_blank(),
-          axis.title=element_text(#family="Times",
+        axis.ticks.x = element_blank(),
+        axis.title=element_text(#family="Times",
                                   size=12
                                   ),
-          strip.text=element_text(#family = "Times",
+        strip.text=element_text(#family = "Times",
                                   size = 12
                                   ),
-         # strip.background = element_rect(fill = "white"),
-          legend.position="right")
+        #strip.background = element_rect(fill = "white"),
+        legend.position="right")
 
 
 
@@ -768,38 +872,38 @@ test1$condition <-
 
 ```
 
-```{r S2figboth, fig.cap="Study S2: Responses to critical slide for (left) the experimental group (*N* = 51) vs the control group (*N* = 49); and (right) depending on engagement (*N* = 56) or non-engagement (*N* = 44) with the memory task", include=TRUE,fig.height = 3}
-
-ggplot(test1, aes(x=InCS, y=perc
+```{r}
+g <- ggplot(test1, aes(x=InCS, y=perc
                   , fill=factor(condition
                                 ,labels=c("Cognitive load\n(engaged)"
                                           ,"Control\n(not engaged)")
                                              ))) +
   facet_wrap(~measure,scales='free')+
-  scale_y_continuous(limits = c(-.05,1),
+  scale_y_continuous(limits = c(-.03,1),
                      labels = percent_format()
   )+ 
   geom_col(position = "dodge",
            color="black",
            size=.2
   )+
+  geom_errorbar(aes(ymin=perc-se, ymax=perc+se), size=.1, width=.1,
+               position=position_dodge(.9), color=#"black" #
+                 "#5a5a5a"
+                 )+
   geom_text(#family = "Times",
-            size=2.5,
-            aes( label = scales::percent(perc,accuracy = 1),
-                 y= perc-.005
-                 #, color=factor(scenario)
-                 ),
+            size=1.5,
+            aes( label = scales::percent(perc, accuracy = 1),
+                 y= perc ),
             stat= "identity",
             vjust = -.5,
+            hjust = +1.1,
             position = position_dodge(.9),
             fontface='plain'
             )+
   geom_text(#family = "Times", 
-            size=2.5,
+            size=1.8,
             aes(label = format(Freq),
-                y= -4.5*(..count../100)/(..count..)
-                #, color=factor(scenario)
-                ),
+                y= -2.5*(..count../100)/(..count..)),
             stat= "count",
             position = position_dodge(0.9),
             #vjust = -.05,
@@ -851,6 +955,14 @@ ggplot(test1, aes(x=InCS, y=perc
 ```
 
 
+```{r S2figboth, fig.cap="Study S2: Responses to critical slide for (left) the experimental group (N = 51) vs the control group (N = 49); and (right) depending on engagement (N = 56) or non-engagement (N = 44) with the memory task (error bars represent standard error of the proportion)", include=TRUE,fig.height = 3}
+
+
+suppressWarnings(print(g))
+
+```
+
+
 
 ```{r S2prepplottinglogit2}
 
@@ -890,24 +1002,24 @@ ggplot(logit_plot,
                           #, labels=c("Dumbfounded","Nothing Wrong","Reasons")
                           )+
   theme_bw() +
-  theme(plot.title=element_text(family="Times",
+  theme(plot.title=element_text(#family="Times",
                                 size=12
   ),
-  legend.text=element_text(family="Times",
+  legend.text=element_text(#family="Times",
                            size=8
   ),
-  legend.title=element_text(family="Times",
+  legend.title=element_text(#family="Times",
                             size=10
   ),
-  axis.text=element_text(family="Times",
+  axis.text=element_text(#family="Times",
                          colour = "black",
                          size=8
   ),
   axis.ticks.x = element_blank(),
-  axis.title=element_text(family="Times",
+  axis.title=element_text(#family="Times",
                           size=12
   ),
-  strip.text=element_text(family = "Times",
+  strip.text=element_text(#family = "Times",
                           size = 12
   ),
   strip.background = element_rect(fill = "white"),

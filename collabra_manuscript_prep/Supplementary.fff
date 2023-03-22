@@ -1,0 +1,69 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics[width=6.25in,height=\textheight]{../resources/images/attention1a.png}
+\caption{Screenshot of Attention Check}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics[width=5.20833in,height=\textheight]{../resources/images/attention2a.png}
+\caption{Screenshot of Attention Check}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S1S1fig2criticalcondition-1} \caption{Study S1: Responses to critical slide and for the experimental group (*N* = 33) and the control group (*N* = 33)}\label{fig:S1S1fig2criticalcondition}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S1ggplotlogit1-1} \caption{Study S1: Probability of selecting each response to the critical slide depending on Need for Cognition}\label{fig:S1ggplotlogit1}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S2dotpattern-1} \caption{Sample dot patterns - more simple for the control group (a) and higher complexity for the experimental condition (b)}\label{fig:S2dotpattern}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S2figboth-1} \caption{Study S2: Responses to critical slide for (left) the experimental group (*N* = 51) vs the control group (*N* = 49); and (right) depending on engagement (*N* = 56) or non-engagement (*N* = 44) with the memory task}\label{fig:S2figboth}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S2ggplotlogit2-1} \caption{Study S2: Probability of selecting each response to the critical slide depending on Need for Cognition}\label{fig:S2ggplotlogit2}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S3ch5S3fig2criticalcondition-1} \caption{Study S3: Responses to critical slide for the cognitive load group (*N* = 68) and the control group (*N* = 61)}\label{fig:S3ch5S3fig2criticalcondition}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/S3ggplotlogit3-1} \caption{Study S3: Probability of selecting each response to the critical slide depending on Need for Cognition}\label{fig:S3ggplotlogit3}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/ch5S4fig2criticalcondition-1} \caption{Study S4: Responses to critical slide for the cognitive load group (*N* = 64) and the control group (*N* = 61)}\label{fig:ch5S4fig2criticalcondition}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/ggplotlogit4-1} \caption{Study S4: Probability of selecting each response to the critical slide depending on Need for Cognition}\label{fig:ggplotlogit4}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/ch5S5fig2criticalcondition-1} \caption{Study S5: Responses to critical slide and for the experimental group (*N* = 98) and the control group (*N* = 106)}\label{fig:ch5S5fig2criticalcondition}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+[!h]
+\includegraphics{Supplementary_files/figure-latex/ggplotlogit5-1} \caption{Study S5: Probability of selecting each response to the critical slide depending on Need for Cognition}\label{fig:ggplotlogit5}
+\end{figure*}
